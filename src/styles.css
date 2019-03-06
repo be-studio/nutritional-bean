@@ -1,9 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i");
 @font-face {
   font-family: "Domaine";
-  src: url("../../assets/fonts/domaine/DomaineTextWeb-Light.eot");
-  src: url("../../assets/fonts/domaine/DomaineTextWeb-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/domaine/DomaineTextWeb-Light.woff") format("woff"), url("../../assets/fonts/domaine/DomaineTextWeb-Light.woff2") format("woff2");
+  src: url("./assets/fonts/domaine/DomaineTextWeb-Light.eot");
+  src: url("./assets/fonts/domaine/DomaineTextWeb-Light.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/domaine/DomaineTextWeb-Light.woff") format("woff"), url("./assets/fonts/domaine/DomaineTextWeb-Light.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
+
+html,
+body {
+  font-family: "Domaine", "Times New Roman", serif;
+  margin: 0;
+  padding: 0; }
+
+.home_ctr {
+  width: 100%; }
+
+.home_ctr_poster {
+  width: 100%;
+  height: 500px;
+  background-image: url("/assets/tnb_homepage.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: -1; }
+
+.home_ctr_bacteria {
+  width: 250px !important;
+  margin: -80px 50px 0 auto !important; }
+  .home_ctr_bacteria img {
+    width: 100%; }
+
+.home_ctr_top-panel {
+  width: 100%;
+  height: 500px;
+  background-color: white; }
 
 /*# sourceMappingURL=styles.css.map */
