@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: "Domaine", "Times New Roman", serif;
+  font-family: $serifText;
   margin: 0;
   padding: 0;
 }
@@ -10,4 +10,12 @@ h1 {
     size: 50px;
     weight: normal;
   }
+}
+
+a {
+  font-family: $sansText;
+  color: $beanGreen;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid $beanGreen;
 }

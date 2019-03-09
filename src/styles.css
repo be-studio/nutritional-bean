@@ -8,13 +8,20 @@
 
 html,
 body {
-  font-family: "Domaine", "Times New Roman", serif;
+  font-family: "Domaine", "Georgia", "Times New Roman", serif;
   margin: 0;
   padding: 0; }
 
 h1 {
   font-size: 50px;
   font-weight: normal; }
+
+a {
+  font-family: "Space Mono", "Courier", monospace;
+  color: #57ab53;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #57ab53; }
 
 .home_ctr {
   width: 100%; }
@@ -65,5 +72,47 @@ h1 {
 
 .home_txt_intro {
   font-size: 18px; }
+
+.home_ctr_second-image {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/tnb-homepage-herbs.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.home_ctr_marquee {
+  width: 100%;
+  height: 40px;
+  background-color: #57ab53; }
+
+.home_ctr_bottom-panel {
+  width: 100%;
+  padding: 150px 0;
+  background-color: white; }
+  .home_ctr_bottom-panel > div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 70%;
+    margin: 0 auto; }
+    .home_ctr_bottom-panel > div > div:first-child {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 50%;
+              flex: 0 0 50%;
+      padding-top: 20px; }
+      .home_ctr_bottom-panel > div > div:first-child img {
+        width: 100%; }
+    .home_ctr_bottom-panel > div > div:last-child {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 50%;
+              flex: 0 0 50%;
+      padding-left: 100px; }
+      .home_ctr_bottom-panel > div > div:last-child p {
+        font-size: 30px;
+        line-height: 1.2em;
+        text-transform: uppercase; }
+
+.home_img_bean {
+  width: 30px; }
 
 /*# sourceMappingURL=styles.css.map */
