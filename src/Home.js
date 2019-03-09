@@ -59,6 +59,8 @@ export class Home extends Component {
             </div>
           </div>
         </div>
+
+        <div className="home_ctr_bottom-blank"></div>
       </div>
     );
   }
