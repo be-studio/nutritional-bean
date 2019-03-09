@@ -31,7 +31,25 @@ export class Navigation extends Component {
 
         <div className="navigation_ctr_menu" style={this.state.menuOpen ? { left: 0 } : { left: "-350px" }}>
           <div>
-            Hello
+            <div>
+              <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Therapy</li>
+                <li>About Harriet</li>
+                <li>Blog</li>
+                <li>Bookings</li>
+                <li>Privacy</li>
+                <li>Terms of Business</li>
+                <li>Contact</li>
+              </ul>
+
+              <ul>
+                <li>Follow:</li>
+                <li>Instagram</li>
+                <li>Facebook</li>
+              </ul>
+            </div>
           </div>
         </div>
       </>

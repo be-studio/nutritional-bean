@@ -1,0 +1,30 @@
+.newsletter_ctr {
+  width: 200px;
+  font: 11px $sansText;
+  color: $darkGrey;
+  margin-left: auto;
+
+  input {
+    background-color: transparent;
+    font: 11px $sansText;
+    margin-left: -5px;
+    border: 0;
+    outline: none;
+  }
+
+  button {
+    background-color: transparent;
+    font: 11px $sansText;
+    color: $beanGreen;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.newsletter_ele_line {
+  width: 100%;
+  height: 1px;
+  background-color: $lightGrey;
+  margin: 5px 0;
+}

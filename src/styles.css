@@ -9,6 +9,7 @@
 html,
 body {
   font-family: "Domaine", "Georgia", "Times New Roman", serif;
+  color: #2c3042;
   margin: 0;
   padding: 0; }
 
@@ -97,12 +98,29 @@ a {
   width: 350px;
   height: 100vh;
   background-color: #57ab53;
+  font-size: 24px;
   color: white;
   -webkit-transition: 1s all ease-in-out;
   transition: 1s all ease-in-out;
   z-index: 1500; }
   .navigation_ctr_menu > div {
+    position: relative;
+    height: calc(100vh - 130px);
     padding: 100px 30px 30px 75px; }
+    .navigation_ctr_menu > div > div {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .navigation_ctr_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .navigation_ctr_menu ul:first-child {
+      margin-bottom: 40px; }
+    .navigation_ctr_menu ul:last-child li:first-child {
+      font-size: 0.6em;
+      text-transform: uppercase; }
 
 .footer_ctr {
   width: 100%;
@@ -125,17 +143,19 @@ a {
   display: flex; }
   .footer_ctr_menu > div {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 150px;
-            flex: 0 0 150px; }
+    -webkit-flex: 0 0 180px;
+            flex: 0 0 180px; }
     .footer_ctr_menu > div:first-child {
       font-size: 24px;
       text-transform: lowercase;
       line-height: 1.2em; }
       .footer_ctr_menu > div:first-child img {
-        width: 30px;
+        width: 15px;
         margin-top: 20px; }
     .footer_ctr_menu > div ul {
-      list-style-type: none; }
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
       .footer_ctr_menu > div ul li {
         margin-bottom: 2px; }
   .footer_ctr_menu a {
@@ -232,5 +252,30 @@ a {
         font-size: 30px;
         line-height: 1.2em;
         text-transform: uppercase; }
+
+.newsletter_ctr {
+  width: 200px;
+  font: 11px "Space Mono", "Courier", monospace;
+  color: #666;
+  margin-left: auto; }
+  .newsletter_ctr input {
+    background-color: transparent;
+    font: 11px "Space Mono", "Courier", monospace;
+    margin-left: -5px;
+    border: 0;
+    outline: none; }
+  .newsletter_ctr button {
+    background-color: transparent;
+    font: 11px "Space Mono", "Courier", monospace;
+    color: #57ab53;
+    border: 0;
+    outline: none;
+    cursor: pointer; }
+
+.newsletter_ele_line {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 5px 0; }
 
 /*# sourceMappingURL=styles.css.map */

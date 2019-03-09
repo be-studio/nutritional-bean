@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FooterMenu } from "./FooterMenu";
+import { NewsletterSignUp } from "./NewsletterSignUp";
 
 
 export class Footer extends Component {
@@ -12,7 +13,7 @@ export class Footer extends Component {
           </div>
 
           <div>
-
+            <NewsletterSignUp />
           </div>
         </div>
       </div>

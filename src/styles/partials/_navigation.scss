@@ -50,11 +50,37 @@
   width: 350px;
   height: 100vh;
   background-color: $beanGreen;
+  font-size: 24px;
   color: $white;
   transition: 1s all ease-in-out;
   z-index: 1500;
 
   >div {
+    position: relative;
+    height: calc(100vh - 130px);
     padding: 100px 30px 30px 75px;
+
+    >div {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &:first-child {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      li:first-child {
+        font-size: 0.6em;
+        text-transform: uppercase;
+      }
+    }
   }
 }
