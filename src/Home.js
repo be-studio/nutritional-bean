@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Controller, Scene } from "react-scrollmagic";
 import { Title } from "./Title";
+import { FixedContent } from "./FixedContent";
 
 export class Home extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export class Home extends Component {
     return (
       <div className="home_ctr">
         <Title absolute />
+        <FixedContent />
 
         <div className="home_ctr_poster"></div>
 
@@ -57,10 +59,6 @@ export class Home extends Component {
                 True healing is<br />
                 a journey &mdash;<br />
                 Let me guide you!
-              </p>
-
-              <p>
-                <img className="home_img_bean" src="/assets/bean.svg" />
               </p>
 
               <a href="#" title="Get in touch">Get in touch&nbsp;&#8594;</a>
