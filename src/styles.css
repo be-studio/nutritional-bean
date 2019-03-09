@@ -12,12 +12,16 @@ body {
   margin: 0;
   padding: 0; }
 
+h1 {
+  font-size: 50px;
+  font-weight: normal; }
+
 .home_ctr {
   width: 100%; }
 
 .home_ctr_poster {
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background-image: url("/assets/tnb_homepage.jpg");
   background-position: center;
   background-size: cover;
@@ -31,7 +35,35 @@ body {
 
 .home_ctr_top-panel {
   width: 100%;
-  height: 500px;
+  padding: 150px 0;
   background-color: white; }
+  .home_ctr_top-panel > div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 70%;
+    margin: 0 auto; }
+    .home_ctr_top-panel > div > div {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+              flex: 1 1 auto; }
+      .home_ctr_top-panel > div > div:first-child {
+        padding-right: 80px; }
+      .home_ctr_top-panel > div > div:last-child {
+        text-align: right; }
+        .home_ctr_top-panel > div > div:last-child img {
+          width: 100%; }
+
+.home_txt_intro-title {
+  display: inline-block;
+  position: relative; }
+  .home_txt_intro-title img {
+    position: absolute;
+    width: 30px;
+    top: 45px;
+    right: -10px; }
+
+.home_txt_intro {
+  font-size: 18px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -10,27 +10,26 @@ export class Home extends Component {
   render() {
     return (
       <div className="home_ctr">
+        <div className="home_ctr_poster"></div>
 
+        <div className="home_ctr_top-panel">
+          <div>
+            <div>
+              <span className="home_txt_intro-title">
+                <h1>Hello! I'm Bean,</h1>
+                <img src="/assets/bean.svg" alt="" />
+              </span>
 
-        <Controller>
-          <Scene triggerHook="onLeave" pin>
-            <div className="home_ctr_poster"></div>
-          </Scene>
-
-          <Scene triggerHook="onLeave" duration={'200%'}>
-            <div className="home_ctr_bacteria">
-              <img src="assets/tnb_bacteria.png" />
+              <p className="home_txt_intro">
+                a registered Nutritional Therapist, Health Coach, wife and mother. I work with adults and children to restore health and wellbeing. My personal/primary mission is to educate, motivate and support YOU to make diet and lifestyle changes so that work for YOU.
+              </p>
             </div>
-          </Scene>
 
-          <Scene triggerHook="onLeave">
-            <div className="home_ctr_top-panel">
-              Home
+            <div>
+              <img src="assets/harriet-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "assets/harriet.jpg")} onMouseOut={e => (e.currentTarget.src = "assets/harriet-black-white.jpg")} alt="Bean" />
             </div>
-          </Scene>
-        </Controller>
-
-        <div style={{ height: '1000px' }}></div>
+          </div>
+        </div>
       </div>
     );
   }
