@@ -1,5 +1,6 @@
 {
   "name": "nutritional-bean",
+  "homepage": "http://www.thenutritionalbean.com/stage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,10 +30,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.3.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-sass": "^3.2.1",
-    "gulp-sourcemaps": "^2.6.4"
+    "gulp-sourcemaps": "^2.6.4",
+    "eslint-plugin-jsx-a11y": "^6.0.2"
   }
 }

@@ -23,12 +23,14 @@
   position: absolute;
   left: 50%;
   width: 20px;
-  height: 0.5px;
+  height: 1px;
   background-color: black;
   transform: translateX(-50%);
+  transition: 300ms all ease-in-out;
 
   &:first-child {
     top: 10px;
+    transform-origin: left;
   }
 
   &:nth-child(2) {
@@ -37,6 +39,7 @@
 
   &:last-child {
     top: 20px;
+    transform-origin: left;
   }
 }
 

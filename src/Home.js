@@ -1,15 +1,10 @@
 import React, { Component } from "react";
-import { Controller, Scene } from "react-scrollmagic";
 import { Title } from "./Title";
-import { FixedContent } from "./FixedContent";
 
 export class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-
   render() {
+    const noHref = "#";
+
     return (
       <div className="home_ctr">
         <Title absolute />
@@ -29,7 +24,7 @@ export class Home extends Component {
               </p>
 
               <p>
-                <a href="#" title="Keep reading">Keep reading&nbsp;&#8594;</a>
+                <a href={noHref} title="Keep reading">Keep reading&nbsp;&#8594;</a>
               </p>
             </div>
 
@@ -60,7 +55,7 @@ export class Home extends Component {
                 Let me guide you!
               </p>
 
-              <a href="#" title="Get in touch">Get in touch&nbsp;&#8594;</a>
+              <a href={noHref} title="Get in touch">Get in touch&nbsp;&#8594;</a>
             </div>
           </div>
         </div>

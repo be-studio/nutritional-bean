@@ -6,11 +6,6 @@ import { FixedContent } from "./FixedContent";
 import { Navigation } from "./Navigation";
 
 export class Content extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-
   render() {
     return (
       <div className="content_ctr">

@@ -7,7 +7,7 @@ export function Title(props) {
   if(props.absolute) {
     titleStyle = {
       position: "absolute",
-      top: "60px",
+      top: "64px",
       left: "50%",
       transform: "translate(-50%, -50%)"
     };

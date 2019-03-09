@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i");
 @font-face {
   font-family: "Domaine";
-  src: url("./assets/fonts/domaine/DomaineTextWeb-Light.eot");
-  src: url("./assets/fonts/domaine/DomaineTextWeb-Light.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/domaine/DomaineTextWeb-Light.woff") format("woff"), url("./assets/fonts/domaine/DomaineTextWeb-Light.woff2") format("woff2");
+  src: url("./fonts/domaine/DomaineTextWeb-Light.eot");
+  src: url("./fonts/domaine/DomaineTextWeb-Light.eot?#iefix") format("embedded-opentype"), url("./fonts/domaine/DomaineTextWeb-Light.woff") format("woff"), url("./fonts/domaine/DomaineTextWeb-Light.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
@@ -24,7 +24,7 @@ a {
   border-bottom: 1px solid #57ab53; }
 
 .title_ctr img {
-  width: 30%; }
+  width: 20%; }
 
 .fixed-content_ctr_left,
 .fixed-content_ctr_right {
@@ -40,7 +40,8 @@ a {
 .fixed-content_ctr_left {
   left: -50px;
   -webkit-transform: rotateZ(-90deg);
-          transform: rotateZ(-90deg); }
+          transform: rotateZ(-90deg);
+  z-index: 3000; }
 
 .fixed-content_ctr_right {
   right: -100px;
@@ -72,16 +73,22 @@ a {
   position: absolute;
   left: 50%;
   width: 20px;
-  height: 0.5px;
+  height: 1px;
   background-color: black;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%); }
+          transform: translateX(-50%);
+  -webkit-transition: 300ms all ease-in-out;
+  transition: 300ms all ease-in-out; }
   .navigation_ctr_icon:first-child {
-    top: 10px; }
+    top: 10px;
+    -webkit-transform-origin: left;
+            transform-origin: left; }
   .navigation_ctr_icon:nth-child(2) {
     top: 15px; }
   .navigation_ctr_icon:last-child {
-    top: 20px; }
+    top: 20px;
+    -webkit-transform-origin: left;
+            transform-origin: left; }
 
 .navigation_ctr_menu {
   position: fixed;

@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <ParallaxProvider>
-          <Router>
+          <Router basename={"/stage"}>
             <Content />
           </Router>
         </ParallaxProvider>
