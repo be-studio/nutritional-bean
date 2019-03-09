@@ -136,10 +136,19 @@ a {
     display: flex;
     width: 70%;
     margin: 0 auto; }
+    @media (max-width: 800px) {
+      .footer_ctr > div {
+        -webkit-flex-wrap: wrap;
+                flex-wrap: wrap; } }
     .footer_ctr > div > div {
       -webkit-box-flex: 1;
       -webkit-flex: 1 1 auto;
               flex: 1 1 auto; }
+      @media (max-width: 800px) {
+        .footer_ctr > div > div {
+          -webkit-box-flex: 0;
+          -webkit-flex: 0 0 100%;
+                  flex: 0 0 100%; } }
 
 .footer_ctr_menu {
   display: -webkit-box;

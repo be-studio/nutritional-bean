@@ -1,7 +1,15 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Title } from "./Title";
 
-export class Home extends Component {
+export function mapStateToProps(state) {
+  return {
+    footerHeight: state.footerHeight
+  };
+}
+
+
+export class ConnectedHome extends Component {
   render() {
     const noHref = "#";
 
@@ -60,8 +68,11 @@ export class Home extends Component {
           </div>
         </div>
 
-        <div className="home_ctr_bottom-blank"></div>
+        <div className="home_ctr_bottom-blank" style={{ height: this.props.footerHeight }}></div>
       </div>
     );
   }
 }
+
+const Home = connect(mapStateToProps, null)(ConnectedHome);
+export default Home;

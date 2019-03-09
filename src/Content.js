@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
-import { Home } from "./Home";
+import Home from "./Home";
 import { FixedContent } from "./FixedContent";
 import { Navigation } from "./Navigation";
-import { Footer } from "./Footer";
+import Footer from "./Footer";
 
 export class Content extends Component {
   render() {
