@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Controller, Scene } from "react-scrollmagic";
+import { Title } from "./Title";
 
 export class Home extends Component {
   constructor(props) {
@@ -10,6 +11,8 @@ export class Home extends Component {
   render() {
     return (
       <div className="home_ctr">
+        <Title absolute />
+
         <div className="home_ctr_poster"></div>
 
         <div className="home_ctr_top-panel">

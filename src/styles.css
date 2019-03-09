@@ -24,6 +24,7 @@ a {
   border-bottom: 1px solid #57ab53; }
 
 .home_ctr {
+  position: relative;
   width: 100%; }
 
 .home_ctr_poster {
@@ -114,5 +115,8 @@ a {
 
 .home_img_bean {
   width: 30px; }
+
+.title_ctr img {
+  width: 30%; }
 
 /*# sourceMappingURL=styles.css.map */
