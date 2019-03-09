@@ -13,7 +13,6 @@ export class Home extends Component {
     return (
       <div className="home_ctr">
         <Title absolute />
-        <FixedContent />
 
         <div className="home_ctr_poster"></div>
 

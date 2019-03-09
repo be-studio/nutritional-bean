@@ -1,0 +1,57 @@
+.navigation_ctr_bean {
+  position: fixed;
+  top: 50px;
+  left: 60px;
+  width: 50px;
+  height: 31px;
+  background: {
+    image: url("/assets/bean.svg");
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
+  transition: 300ms all ease-in-out;
+  z-index: 2000;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.navigation_ctr_icon {
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 0.5px;
+  background-color: black;
+  transform: translateX(-50%);
+
+  &:first-child {
+    top: 10px;
+  }
+
+  &:nth-child(2) {
+    top: 15px;
+  }
+
+  &:last-child {
+    top: 20px;
+  }
+}
+
+.navigation_ctr_menu {
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 350px;
+  height: 100vh;
+  background-color: $beanGreen;
+  color: $white;
+  transition: 1s all ease-in-out;
+  z-index: 1500;
+
+  >div {
+    padding: 100px 30px 30px 75px;
+  }
+}
