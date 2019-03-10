@@ -1,5 +1,9 @@
 .title_ctr {
   img {
     width: 20%;
+
+    @media(max-width: $tablet) {
+      width: 65%;
+    }
   }
 }

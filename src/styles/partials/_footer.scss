@@ -5,7 +5,11 @@
   width: 100%;
   background-color: $grey;
   padding: 80px 0 120px;
-  z-index: -1;
+  z-index: -2;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
 
   >div {
     display: flex;
@@ -14,6 +18,7 @@
 
     @media(max-width: $tablet) {
       flex-wrap: wrap;
+      width: 90%;
     }
 
     >div {

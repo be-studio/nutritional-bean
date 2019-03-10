@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Controller, Scene } from "react-scrollmagic";
+import { Tween } from "react-gsap";
+
 import { Title } from "./Title";
 
 export function mapStateToProps(state) {
@@ -17,7 +20,43 @@ export class ConnectedHome extends Component {
       <div className="home_ctr">
         <Title absolute />
 
-        <div className="home_ctr_poster"></div>
+        <div className="home_ctr_poster">
+          <Controller>
+            <Scene triggerElement=".home_ctr_poster" triggerHook="onLeave" offset={100} duration={1200}>
+              {(progress) => (
+                <Tween to={{ css: { bottom: "100px" } }} totalProgress={progress} paused>
+                  <div className="home_img_bacteria">
+                    <img src="assets/tnb_bacteria.png" alt="" />
+                  </div>
+                </Tween>
+              )}
+            </Scene>
+          </Controller>
+        </div>
+
+        <div className="home_ctr_anim">
+          <Controller>
+            <Scene triggerElement=".home_ctr_mobile-poster" triggerHook="onLeave" offset={-0.05} duration={500}>
+              {(progress) => (
+                <Tween to={{ css: { position: 'relative', height: '200px' } }} ease="Strong.easeOut" totalProgress={progress} paused>
+                  <div className="home_ctr_mobile-poster"></div>
+                </Tween>
+              )}
+            </Scene>
+
+
+
+            <Scene triggerElement=".home_ctr_anim" triggerHook="onLeave" duration={300}>
+              {(progress) => (
+                <Tween to={{ css: { top: "50px" } }} totalProgress={progress} paused>
+                  <div className="home_img_bacteria-mobile">
+                    <img src="assets/tnb_bacteria.png" alt="" />
+                  </div>
+                </Tween>
+              )}
+            </Scene>
+          </Controller>
+        </div>
 
         <div className="home_ctr_top-panel">
           <div>
@@ -41,7 +80,13 @@ export class ConnectedHome extends Component {
             </div>
 
             <div>
-              <img src="assets/harriet-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "assets/harriet.jpg")} onMouseOut={e => (e.currentTarget.src = "assets/harriet-black-white.jpg")} alt="Bean" />
+              <span className="home_img_harriet">
+                <img src="assets/harriet-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "assets/harriet.jpg")} onMouseOut={e => (e.currentTarget.src = "assets/harriet-black-white.jpg")} alt="Bean" />
+              </span>
+
+              <span className="home_img_harriet-mobile">
+                <img src="assets/harriet-mobile-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "assets/harriet.jpg")} onMouseOut={e => (e.currentTarget.src = "assets/harriet-black-white.jpg")} alt="Bean" />
+              </span>
             </div>
           </div>
         </div>

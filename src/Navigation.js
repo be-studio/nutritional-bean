@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Controller, Scene } from "react-scrollmagic";
+import { Tween } from "react-gsap";
 
 
 export class Navigation extends Component {
@@ -28,6 +30,22 @@ export class Navigation extends Component {
           <div className="navigation_ctr_icon" style={this.state.menuOpen ? { opacity: 0 } : { opacity: 1 }}></div>
           <div className="navigation_ctr_icon" style={this.state.menuOpen ? { transform: "rotateZ(-45deg) translate(-50%, -7px)" } : { transform: "rotateZ(0) translateX(-50%)" }}></div>
         </div>
+
+        <Controller>
+          <Scene triggerElement=".home_ctr_anim" triggerHook="onLeave" duration={150}>
+            {(progress) => (
+              <Tween to={{ css: { "background-size": "100%" } }} totalProgress={progress} paused>
+                <div className="navigation_ctr_bean-mobile" onClick={this.toggleMenu}>
+                  <div className="navigation_ctr_icon" style={this.state.menuOpen ? { transform: "rotateZ(45deg) translate(-50%, 7px)" } : { transform: "rotateZ(0) translateX(-50%)" }}></div>
+                  <div className="navigation_ctr_icon" style={this.state.menuOpen ? { opacity: 0 } : { opacity: 1 }}></div>
+                  <div className="navigation_ctr_icon" style={this.state.menuOpen ? { transform: "rotateZ(-45deg) translate(-50%, -7px)" } : { transform: "rotateZ(0) translateX(-50%)" }}></div>
+                </div>
+              </Tween>
+            )}
+          </Scene>
+        </Controller>
+
+
 
         <div className="navigation_ctr_menu" style={this.state.menuOpen ? { left: 0 } : { left: "-350px" }}>
           <div>

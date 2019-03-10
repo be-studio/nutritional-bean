@@ -11,6 +11,11 @@ h1 {
     size: 50px;
     weight: normal;
   }
+  line-height: 1.2em;
+
+  @media(max-width: $tablet) {
+    font-size: 28px;
+  }
 }
 
 a {

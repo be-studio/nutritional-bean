@@ -7,6 +7,10 @@
   letter-spacing: 3px;
   transform: translateY(-50%);
   z-index: 1000;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
 }
 
 .fixed-content_ctr_left {

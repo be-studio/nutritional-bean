@@ -9,6 +9,7 @@ export function Title(props) {
       position: "absolute",
       top: "64px",
       left: "50%",
+      height: "100px",
       transform: "translate(-50%, -50%)"
     };
   } else {
