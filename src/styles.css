@@ -358,7 +358,7 @@ a {
       .home_ctr_bottom-panel > div {
         -webkit-flex-wrap: wrap;
                 flex-wrap: wrap;
-        width: 100%; } }
+        width: 88%; } }
     .home_ctr_bottom-panel > div > div:first-child {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 50%;
