@@ -93,7 +93,7 @@ export class ConnectedHome extends Component {
               </span>
 
               <span className="home_img_harriet-mobile">
-                <img src="assets/harriet-mobile-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "assets/harriet.jpg")} onMouseOut={e => (e.currentTarget.src = "assets/harriet-black-white.jpg")} alt="Bean" />
+                <img src="assets/harriet-mobile-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "assets/harriet-mobile.jpg")} onMouseOut={e => (e.currentTarget.src = "assets/harriet-mobile-black-white.jpg")} alt="Bean" />
               </span>
             </div>
           </div>
@@ -118,7 +118,7 @@ export class ConnectedHome extends Component {
                 </p>
               </ScrollAnimation>
 
-              <ScrollAnimation animateIn="fadeInUp">
+              <ScrollAnimation animateIn="fadeInUp" offset={20}>
                 <a href={noHref} title="Get in touch">Get in touch&nbsp;&#8594;</a>
               </ScrollAnimation>
             </div>
