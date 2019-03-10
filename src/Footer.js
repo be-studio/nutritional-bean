@@ -26,7 +26,7 @@ export class ConnectedFooter extends Component {
 
 
   componentDidMount() {
-    this.props.setFooterHeight(document.querySelector(".footer_ctr").clientHeight - 84);
+    this.props.setFooterHeight(document.querySelector(".footer_ctr").clientHeight);
     window.addEventListener("resize", this.onWindowResize);
   }
 
