@@ -103,7 +103,7 @@ export class ConnectedHome extends Component {
 
         <div className="home_ctr_marquee"></div>
 
-        <div className="home_ctr_bottom-panel">
+        <div className="home_ctr_bottom-panel" style={{ "margin-bottom": this.props.footerHeight }}>
           <div>
             <div>
               <img src="/assets/tnb-journey.jpg" alt="" />
@@ -124,8 +124,6 @@ export class ConnectedHome extends Component {
             </div>
           </div>
         </div>
-
-        <div className="home_ctr_bottom-blank" style={{ height: this.props.footerHeight }}></div>
       </div>
     );
   }
