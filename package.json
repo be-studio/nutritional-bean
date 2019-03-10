@@ -6,6 +6,7 @@
   "dependencies": {
     "node-sass": "^4.11.0",
     "react": "^16.8.3",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.8.3",
     "react-gsap": "^1.2.0",
     "react-redux": "^6.0.1",

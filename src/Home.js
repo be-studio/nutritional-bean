@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import { Title } from "./Title";
 
@@ -61,18 +62,25 @@ export class ConnectedHome extends Component {
         <div className="home_ctr_top-panel">
           <div>
             <div>
-              <span className="home_txt_intro-title">
-                <h1>Hello! I'm Bean,</h1>
-                <img src="/assets/bean.svg" alt="" />
-              </span>
+              <ScrollAnimation animateIn="fadeInUp">
+                <span className="home_txt_intro-title">
+                  <h1>Hello! I'm Bean,</h1>
+                  <img src="/assets/bean.svg" alt="" />
+                </span>
+              </ScrollAnimation>
 
-              <p className="home_txt_intro">
-                a registered Nutritional Therapist, Health Coach, wife and mother. I work with adults and children to restore health and wellbeing. My personal/primary mission is to educate, motivate and support YOU to make diet and lifestyle changes so that work for YOU.
-              </p>
+              <ScrollAnimation animateIn="fadeInUp">
+                <p className="home_txt_intro">
+                  a registered Nutritional Therapist, Health Coach, wife and mother. I work with adults and children to restore health and wellbeing. My personal/primary mission is to educate, motivate and support YOU to make diet and lifestyle changes so that work for YOU.
+                </p>
+              </ScrollAnimation>
 
-              <p>
-                <a href={noHref} title="Keep reading">Keep reading&nbsp;&#8594;</a>
-              </p>
+              <ScrollAnimation animateIn="fadeInUp">
+                <p>
+                  <a href={noHref} title="Keep reading">Keep reading&nbsp;&#8594;</a>
+                </p>
+              </ScrollAnimation>
+
             </div>
 
             <div className="home_ctr_accreditations">
@@ -102,13 +110,17 @@ export class ConnectedHome extends Component {
             </div>
 
             <div>
-              <p>
-                True healing is<br />
-                a journey &mdash;<br />
-                Let me guide you!
-              </p>
+              <ScrollAnimation animateIn="fadeInUp">
+                <p>
+                  True healing is<br />
+                  a journey &mdash;<br />
+                  Let me guide you!
+                </p>
+              </ScrollAnimation>
 
-              <a href={noHref} title="Get in touch">Get in touch&nbsp;&#8594;</a>
+              <ScrollAnimation animateIn="fadeInUp">
+                <a href={noHref} title="Get in touch">Get in touch&nbsp;&#8594;</a>
+              </ScrollAnimation>
             </div>
           </div>
         </div>

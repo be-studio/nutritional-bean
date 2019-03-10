@@ -29,7 +29,8 @@ a {
   border-bottom: 1px solid #57ab53; }
 
 .title_ctr img {
-  width: 20%; }
+  width: 20%;
+  z-index: 1; }
   @media (max-width: 800px) {
     .title_ctr img {
       width: 65%; } }
