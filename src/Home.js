@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Controller, Scene } from "react-scrollmagic";
-import { Tween } from "react-gsap";
+import { Timeline, Tween } from "react-gsap";
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import { Title } from "./Title";
@@ -100,7 +100,19 @@ export class ConnectedHome extends Component {
           </div>
         </div>
 
-        <div className="home_ctr_second-image"></div>
+        <div className="home_ctr_parallax">
+          <Controller>
+            <Scene triggerHook="onEnter" duration="200%">
+              <Timeline wrapper={<div className="home_ctr_second-image" />}>
+                <Tween position="0" from={{ yPercent: -50 }} to={{ yPercent: 0 }}>
+                  <img src="/assets/tnb-homepage-herbs.jpg" />
+                </Tween>
+              </Timeline>
+            </Scene>
+          </Controller>
+        </div>
+
+        <div className="home_ctr_second-image-mobile"></div>
 
         <div className="home_ctr_marquee"></div>
 
