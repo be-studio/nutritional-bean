@@ -60,7 +60,7 @@ export class ConnectedHome extends Component {
         </div>
 
         <div className="home_ctr_top-panel">
-          <div>
+          <div className="home_ctr_top-panel-content">
             <div>
               <ScrollAnimation animateIn="fadeInUp">
                 <span className="home_txt_intro-title">
@@ -83,10 +83,6 @@ export class ConnectedHome extends Component {
 
             </div>
 
-            <div className="home_ctr_accreditations">
-
-            </div>
-
             <div>
               <span className="home_img_harriet">
                 <img src="assets/harriet-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "assets/harriet.jpg")} onMouseOut={e => (e.currentTarget.src = "assets/harriet-black-white.jpg")} alt="Bean" />
@@ -97,13 +93,18 @@ export class ConnectedHome extends Component {
               </span>
             </div>
           </div>
+
+          <div className="home_ctr_accreditations">
+            <img src="assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "assets/bant-logo.gif")} alt="Member of BANT" />
+            <img src="assets/cnhc-logo.gif" onMouseOver={e => (e.currentTarget.src = "assets/cnhc-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "assets/cnhc-logo.gif")} alt="Complementary and Natural Healthcare Council" />
+          </div>
         </div>
 
         <div className="home_ctr_second-image"></div>
 
         <div className="home_ctr_marquee"></div>
 
-        <div className="home_ctr_bottom-panel" style={{ "margin-bottom": this.props.footerHeight }}>
+        <div className="home_ctr_bottom-panel" style={{ "marginBottom": this.props.footerHeight }}>
           <div>
             <div>
               <img src="/assets/tnb-journey.jpg" alt="" />

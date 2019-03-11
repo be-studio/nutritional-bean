@@ -22,6 +22,7 @@ h1 {
       font-size: 28px; } }
 
 a {
+  background-color: #ddeccf;
   font-family: "Space Mono", "Courier", monospace;
   color: #57ab53;
   text-decoration: none;
@@ -210,6 +211,7 @@ a {
       .footer_ctr_menu > div ul li {
         margin-bottom: 2px; }
   .footer_ctr_menu a {
+    background-color: transparent;
     font-size: 11px;
     color: #666;
     border: 0; }
@@ -264,35 +266,36 @@ a {
 
 .home_ctr_top-panel {
   width: 100%;
-  padding: 150px 0;
+  padding: 150px 0 100px;
   background-color: white; }
   @media (max-width: 800px) {
     .home_ctr_top-panel {
-      padding: 120px 0 100px; } }
-  .home_ctr_top-panel > div {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    width: 70%;
-    margin: 0 auto; }
-    @media (max-width: 800px) {
-      .home_ctr_top-panel > div {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: reverse;
-        -webkit-flex-direction: row-reverse;
-                flex-direction: row-reverse;
-        width: 100%; } }
-    .home_ctr_top-panel > div > div {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 1 auto;
-              flex: 1 1 auto; }
-      .home_ctr_top-panel > div > div:first-child {
-        padding-right: 80px; }
-        @media (max-width: 800px) {
-          .home_ctr_top-panel > div > div:first-child {
-            padding: 0 10px 0 20px; } }
-      .home_ctr_top-panel > div > div:last-child {
-        text-align: right; }
+      padding: 120px 0 0; } }
+
+.home_ctr_top-panel-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 70%;
+  margin: 0 auto; }
+  @media (max-width: 800px) {
+    .home_ctr_top-panel-content {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: row-reverse;
+              flex-direction: row-reverse;
+      width: 100%; } }
+  .home_ctr_top-panel-content > div {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+            flex: 1 1 auto; }
+    .home_ctr_top-panel-content > div:first-child {
+      padding-right: 80px; }
+      @media (max-width: 800px) {
+        .home_ctr_top-panel-content > div:first-child {
+          padding: 0 10px 0 20px; } }
+    .home_ctr_top-panel-content > div:last-child {
+      text-align: right; }
 
 .home_txt_intro-title {
   display: inline-block;
@@ -328,6 +331,21 @@ a {
       .home_img_harriet-mobile img {
         width: 130px;
         margin-top: 26px; } }
+
+.home_ctr_accreditations {
+  width: 70%;
+  text-align: right;
+  margin: 100px auto; }
+  @media (max-width: 800px) {
+    .home_ctr_accreditations {
+      width: 100%;
+      text-align: center; } }
+  .home_ctr_accreditations img {
+    height: 20px;
+    margin-right: 10px; }
+    @media (max-width: 800px) {
+      .home_ctr_accreditations img {
+        margin: 0 20px; } }
 
 .home_ctr_second-image {
   width: 100%;
