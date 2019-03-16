@@ -573,34 +573,53 @@ a {
   .about_lst_links li {
     margin-bottom: 4px; }
 
-.privacy_ctr_content {
+.privacy_ctr_content,
+.terms_ctr_content {
   width: 70%;
   margin: 0 auto; }
   @media (max-width: 800px) {
-    .privacy_ctr_content {
+    .privacy_ctr_content,
+    .terms_ctr_content {
       width: 90%; } }
-  .privacy_ctr_content h2 {
+  .privacy_ctr_content h2,
+  .terms_ctr_content h2 {
     margin-top: 30px; }
   .privacy_ctr_content p,
   .privacy_ctr_content li,
   .privacy_ctr_content th,
-  .privacy_ctr_content td {
+  .privacy_ctr_content td,
+  .terms_ctr_content p,
+  .terms_ctr_content li,
+  .terms_ctr_content th,
+  .terms_ctr_content td {
     font-size: 12px;
     font-weight: normal; }
-  .privacy_ctr_content p {
+  .privacy_ctr_content p,
+  .terms_ctr_content p {
     margin: 10px 0; }
-  .privacy_ctr_content ul {
+  .privacy_ctr_content ul,
+  .terms_ctr_content ul {
     list-style-type: none;
     margin: 0;
     padding: 0; }
-    .privacy_ctr_content ul li:before {
+    .privacy_ctr_content ul li:before,
+    .terms_ctr_content ul li:before {
       content: "\2014\a0";
       margin-right: 15px; }
-  .privacy_ctr_content th {
+  .privacy_ctr_content ol,
+  .terms_ctr_content ol {
+    margin: 15px;
+    padding: 0; }
+    .privacy_ctr_content ol li,
+    .terms_ctr_content ol li {
+      padding-left: 15px; }
+  .privacy_ctr_content th,
+  .terms_ctr_content th {
     width: 20%;
     text-align: left;
     font-size: 0.8em; }
-  .privacy_ctr_content td {
+  .privacy_ctr_content td,
+  .terms_ctr_content td {
     width: 80%; }
 
 /*# sourceMappingURL=styles.css.map */

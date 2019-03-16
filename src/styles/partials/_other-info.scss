@@ -1,4 +1,5 @@
-.privacy_ctr_content {
+.privacy_ctr_content,
+.terms_ctr_content {
   width: 70%;
   margin: 0 auto;
 
@@ -32,6 +33,15 @@
     li:before {
       content: "\2014\a0";
       margin-right: 15px;
+    }
+  }
+
+  ol {
+    margin: 15px;
+    padding: 0;
+
+    li {
+      padding-left: 15px;
     }
   }
 

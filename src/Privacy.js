@@ -11,6 +11,11 @@ function mapStateToProps(state) {
 
 
 export class ConnectedPrivacy extends Component {
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
+
+
   render() {
     return (
       <div className="privacy_ctr _ctr_shell" style={{ marginBottom: this.props.footerHeight }}>
