@@ -102,7 +102,7 @@ export class ConnectedHome extends Component {
 
         <div className="home_ctr_parallax">
           <Controller>
-            <Scene triggerHook="onEnter" duration="200%">
+            <Scene triggerHook="onEnter" duration="150%" indicators={true}>
               <Timeline wrapper={<div className="home_ctr_second-image" />}>
                 <Tween position="0" from={{ yPercent: -50 }} to={{ yPercent: 0 }}>
                   <img src="/assets/tnb-homepage-herbs.jpg" />
