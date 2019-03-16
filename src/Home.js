@@ -14,6 +14,10 @@ export function mapStateToProps(state) {
 
 
 export class ConnectedHome extends Component {
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
+
   render() {
     const noHref = "#";
 

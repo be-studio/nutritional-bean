@@ -1,6 +1,11 @@
 .about_ctr {
   background-color: $white;
   padding-bottom: 120px;
+
+  @media(max-width: $tablet) {
+    margin-bottom: 0 !important;
+    padding-bottom: 60px;
+  }
 }
 
 .about_ctr_desktop {
@@ -21,6 +26,10 @@
   display: flex;
   width: 70%;
   margin: 0 auto;
+
+  @media(max-width: $tablet) {
+    width: 90%;
+  }
 
   >div {
     flex: 0 0 50%;
@@ -53,7 +62,7 @@
   height: 90vh;
   background: {
     image: url("/assets/harriet.jpg");
-    position: center;
+    position: top;
     size: cover;
   }
 }
@@ -62,17 +71,23 @@
   width: 100%;
   margin-top: 80px;
 
-  @media(max-width: $tablet) {
-    width: 100%;
-    text-align: center;
-  }
-
   img {
     height: 20px;
     margin-right: 10px;
+  }
+}
 
-    @media(max-width: $tablet) {
-      margin: 0 20px;
+.about_ctr_accreditations-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+
+    img {
+      height: 18px;
+      margin: 0 10px;
     }
   }
 }

@@ -41,7 +41,7 @@ export class Navigation extends Component {
         </div>
 
         <Controller>
-          <Scene triggerElement=".home_ctr_anim" triggerHook="onLeave" duration={150}>
+          <Scene triggerElement=".content_ctr" triggerHook="onLeave" duration={150}>
             {(progress) => (
               <Tween to={{ css: { "background-size": "100%" } }} totalProgress={progress} paused>
                 <div className="navigation_ctr_bean-mobile" onClick={this.toggleMenu}>

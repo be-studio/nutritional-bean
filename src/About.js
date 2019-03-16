@@ -15,6 +15,11 @@ function mapStateToProps(state) {
 
 
 export class ConnectedAbout extends Component {
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
+
+
   render() {
     return (
       <div className="about_ctr" style={{ marginBottom: this.props.footerHeight }}>
@@ -76,6 +81,13 @@ export class ConnectedAbout extends Component {
                     <a href="https://nutriadmin.com" target="_blank" rel="noopener noreferrer" title="https://nutriadmin.com">https://nutriadmin.com</a>
                   </li>
                 </ul>
+              </ScrollAnimation>
+
+              <ScrollAnimation animateIn="fadeInUp" offset={20}>
+                <div className="about_ctr_accreditations-mobile">
+                  <img src="/assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/bant-logo.gif")} alt="Member of BANT" />
+                  <img src="/assets/cnhc-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/cnhc-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/cnhc-logo.gif")} alt="Complementary and Natural Healthcare Council" />
+                </div>
               </ScrollAnimation>
             </div>
           </div>

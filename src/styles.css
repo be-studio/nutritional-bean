@@ -484,6 +484,10 @@ a {
 .about_ctr {
   background-color: white;
   padding-bottom: 120px; }
+  @media (max-width: 800px) {
+    .about_ctr {
+      margin-bottom: 0 !important;
+      padding-bottom: 60px; } }
 
 @media (max-width: 800px) {
   .about_ctr_desktop {
@@ -501,6 +505,9 @@ a {
   display: flex;
   width: 70%;
   margin: 0 auto; }
+  @media (max-width: 800px) {
+    .about_ctr_content {
+      width: 90%; } }
   .about_ctr_content > div {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 50%;
@@ -525,22 +532,26 @@ a {
   width: 100%;
   height: 90vh;
   background-image: url("/assets/harriet.jpg");
-  background-position: center;
+  background-position: top;
   background-size: cover; }
 
 .about_ctr_accreditations {
   width: 100%;
   margin-top: 80px; }
-  @media (max-width: 800px) {
-    .about_ctr_accreditations {
-      width: 100%;
-      text-align: center; } }
   .about_ctr_accreditations img {
     height: 20px;
     margin-right: 10px; }
-    @media (max-width: 800px) {
-      .about_ctr_accreditations img {
-        margin: 0 20px; } }
+
+.about_ctr_accreditations-mobile {
+  display: none; }
+  @media (max-width: 800px) {
+    .about_ctr_accreditations-mobile {
+      display: block;
+      text-align: center;
+      margin-top: 40px; }
+      .about_ctr_accreditations-mobile img {
+        height: 18px;
+        margin: 0 10px; } }
 
 .about_lst_links {
   font-size: 11px;
