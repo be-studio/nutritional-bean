@@ -18,6 +18,20 @@ h1 {
   }
 }
 
+h2 {
+  font: {
+    size: 18px;
+    weight: normal;
+  }
+}
+
+h3 {
+  font: {
+    size: 14px;
+    weight: normal;
+  }
+}
+
 p {
   font-size: 14px;
   line-height: 1.5em;
@@ -37,4 +51,14 @@ a {
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 1px solid $beanGreen;
+}
+
+._ctr_shell {
+  background-color: $white;
+  padding-bottom: 120px;
+
+  @media(max-width: $tablet) {
+    margin-bottom: 0 !important;
+    padding-bottom: 60px;
+  }
 }

@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 
 import Home from "./Home";
 import About from "./About";
+import Privacy from "./Privacy";
 import { FixedContent } from "./FixedContent";
 import { Navigation } from "./Navigation";
 import Footer from "./Footer";
@@ -15,6 +16,7 @@ export class Content extends Component {
         <FixedContent />
         <Route exact path="/" component={Home} />
         <Route path="/about" component ={About} />
+        <Route path="/privacy" component={Privacy} />
         <Footer />
       </div>
     );

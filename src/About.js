@@ -22,7 +22,7 @@ export class ConnectedAbout extends Component {
 
   render() {
     return (
-      <div className="about_ctr" style={{ marginBottom: this.props.footerHeight }}>
+      <div className="about_ctr _ctr_shell" style={{ marginBottom: this.props.footerHeight }}>
         <div className="about_ctr_desktop">
           <Title page="About Harriet" />
         </div>

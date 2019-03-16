@@ -45,7 +45,7 @@ export function FooterMenu(props) {
             <a href="https://www.facebook.com/thenutritionalbean" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
           </li>
           <li>
-            <a href={noHref} title="Privacy">Privacy</a>
+            <Link to="/privacy">Privacy</Link>
           </li>
           <li>
             <a href={noHref} title="Access">Access</a>

@@ -1,0 +1,47 @@
+.privacy_ctr_content {
+  width: 70%;
+  margin: 0 auto;
+
+  @media(max-width: $tablet) {
+    width: 90%;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  p,
+  li,
+  th,
+  td {
+    font: {
+      size: 12px;
+      weight: normal;
+    }
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li:before {
+      content: "\2014\a0";
+      margin-right: 15px;
+    }
+  }
+
+  th {
+    width: 20%;
+    text-align: left;
+    font-size: 0.8em;
+  }
+
+  td {
+    width: 80%;
+  }
+}

@@ -70,7 +70,9 @@ export class Navigation extends Component {
                 </li>
                 <li>Blog</li>
                 <li>Bookings</li>
-                <li>Privacy</li>
+                <li>
+                  <Link to="/privacy" onClick={this.closeMenu}>Privacy</Link>
+                </li>
                 <li>Terms of Business</li>
                 <li>Contact</li>
               </ul>
