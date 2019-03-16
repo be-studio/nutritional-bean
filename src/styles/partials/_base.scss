@@ -18,6 +18,16 @@ h1 {
   }
 }
 
+p {
+  font-size: 12px;
+  line-height: 1.3em;
+  margin: 0 0 20px;
+
+  &._txt_intro {
+    font-size: 1.2em;
+  }
+}
+
 a {
   background-color: $linkGreen;
   font-family: $sansText;
