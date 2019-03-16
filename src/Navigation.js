@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
 
@@ -12,12 +13,20 @@ export class Navigation extends Component {
     };
 
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   }
 
 
   toggleMenu() {
     this.setState({
       menuOpen: !this.state.menuOpen
+    });
+  }
+
+
+  closeMenu() {
+    this.setState({
+      menuOpen: false
     });
   }
 
@@ -51,10 +60,14 @@ export class Navigation extends Component {
           <div>
             <div>
               <ul>
-                <li>Home</li>
+                <li>
+                  <Link to="/" onClick={this.closeMenu}>Home</Link>
+                </li>
                 <li>Services</li>
                 <li>Therapy</li>
-                <li>About Harriet</li>
+                <li>
+                  <Link to="/about" onClick={this.closeMenu}>About Harriet</Link>
+                </li>
                 <li>Blog</li>
                 <li>Bookings</li>
                 <li>Privacy</li>

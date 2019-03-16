@@ -1,4 +1,8 @@
 .title_ctr {
+  width: 100%;
+  text-align: center;
+  margin: 49px 0;
+
   img {
     width: 20%;
     z-index: 1;
@@ -6,5 +10,15 @@
     @media(max-width: $tablet) {
       width: 65%;
     }
+  }
+
+  a {
+    background-color: transparent;
+    border: none;
+  }
+
+  ._txt_page-title {
+    font: 12px $sansText;
+    margin-top: 20px;
   }
 }

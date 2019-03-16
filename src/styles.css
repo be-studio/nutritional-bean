@@ -29,12 +29,22 @@ a {
   padding-bottom: 2px;
   border-bottom: 1px solid #57ab53; }
 
-.title_ctr img {
-  width: 20%;
-  z-index: 1; }
-  @media (max-width: 800px) {
-    .title_ctr img {
-      width: 65%; } }
+.title_ctr {
+  width: 100%;
+  text-align: center;
+  margin: 49px 0; }
+  .title_ctr img {
+    width: 20%;
+    z-index: 1; }
+    @media (max-width: 800px) {
+      .title_ctr img {
+        width: 65%; } }
+  .title_ctr a {
+    background-color: transparent;
+    border: none; }
+  .title_ctr ._txt_page-title {
+    font: 12px "Space Mono", "Courier", monospace;
+    margin-top: 20px; }
 
 .fixed-content_ctr_left,
 .fixed-content_ctr_right {
@@ -156,6 +166,12 @@ a {
     .navigation_ctr_menu ul:last-child li:first-child {
       font-size: 0.6em;
       text-transform: uppercase; }
+  .navigation_ctr_menu a {
+    background-color: transparent;
+    font: 24px "Domaine", "Georgia", "Times New Roman", serif;
+    color: white; }
+    .navigation_ctr_menu a:hover {
+      opacity: 0.5; }
 
 .footer_ctr {
   position: fixed;

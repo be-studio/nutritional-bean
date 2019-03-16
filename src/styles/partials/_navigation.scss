@@ -109,4 +109,14 @@
       }
     }
   }
+
+  a {
+    background-color: transparent;
+    font: 24px $serifText;
+    color: $white;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }

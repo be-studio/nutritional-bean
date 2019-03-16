@@ -10,7 +10,7 @@ export function FooterMenu(props) {
         The<br />
         Nutritional<br />
         Bean<br />
-        <img src="assets/bean.svg" alt="Bean" />
+        <img src="/assets/bean.svg" alt="Bean" />
       </div>
 
       <div>

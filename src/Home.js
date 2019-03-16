@@ -27,7 +27,7 @@ export class ConnectedHome extends Component {
               {(progress) => (
                 <Tween to={{ css: { bottom: "100px" } }} totalProgress={progress} paused>
                   <div className="home_img_bacteria">
-                    <img src="assets/tnb_bacteria.png" alt="" />
+                    <img src="/assets/tnb_bacteria.png" alt="" />
                   </div>
                 </Tween>
               )}
@@ -51,7 +51,7 @@ export class ConnectedHome extends Component {
               {(progress) => (
                 <Tween to={{ css: { top: "50px" } }} totalProgress={progress} paused>
                   <div className="home_img_bacteria-mobile">
-                    <img src="assets/tnb_bacteria.png" alt="" />
+                    <img src="/assets/tnb_bacteria.png" alt="" />
                   </div>
                 </Tween>
               )}
@@ -85,24 +85,24 @@ export class ConnectedHome extends Component {
 
             <div>
               <span className="home_img_harriet">
-                <img src="assets/harriet-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "assets/harriet.jpg")} onMouseOut={e => (e.currentTarget.src = "assets/harriet-black-white.jpg")} alt="Bean" />
+                <img src="/assets/harriet-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "/assets/harriet.jpg")} onMouseOut={e => (e.currentTarget.src = "/assets/harriet-black-white.jpg")} alt="Bean" />
               </span>
 
               <span className="home_img_harriet-mobile">
-                <img src="assets/harriet-mobile-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "assets/harriet-mobile.jpg")} onMouseOut={e => (e.currentTarget.src = "assets/harriet-mobile-black-white.jpg")} alt="Bean" />
+                <img src="/assets/harriet-mobile-black-white.jpg" onMouseOver={e => (e.currentTarget.src = "/assets/harriet-mobile.jpg")} onMouseOut={e => (e.currentTarget.src = "/assets/harriet-mobile-black-white.jpg")} alt="Bean" />
               </span>
             </div>
           </div>
 
           <div className="home_ctr_accreditations">
-            <img src="assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "assets/bant-logo.gif")} alt="Member of BANT" />
-            <img src="assets/cnhc-logo.gif" onMouseOver={e => (e.currentTarget.src = "assets/cnhc-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "assets/cnhc-logo.gif")} alt="Complementary and Natural Healthcare Council" />
+            <img src="/assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/bant-logo.gif")} alt="Member of BANT" />
+            <img src="/assets/cnhc-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/cnhc-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/cnhc-logo.gif")} alt="Complementary and Natural Healthcare Council" />
           </div>
         </div>
 
         <div className="home_ctr_parallax">
           <Controller>
-            <Scene triggerHook="onEnter" duration="150%" indicators={true}>
+            <Scene triggerHook="onEnter" duration="150%">
               <Timeline wrapper={<div className="home_ctr_second-image" />}>
                 <Tween position="0" from={{ yPercent: -50 }} to={{ yPercent: 0 }}>
                   <img src="/assets/tnb-homepage-herbs.jpg" />
