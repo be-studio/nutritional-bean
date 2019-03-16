@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { Controller, Scene } from "react-scrollmagic";
 import { Timeline, Tween } from "react-gsap";
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -81,7 +82,7 @@ export class ConnectedHome extends Component {
 
               <ScrollAnimation animateIn="fadeInUp">
                 <p>
-                  <a href={noHref} title="Keep reading">Keep reading&nbsp;&#8594;</a>
+                  <Link to="/about" title="Keep reading">Keep reading&nbsp;&#8594;</Link>
                 </p>
               </ScrollAnimation>
 
@@ -109,7 +110,7 @@ export class ConnectedHome extends Component {
             <Scene triggerHook="onEnter" duration="150%">
               <Timeline wrapper={<div className="home_ctr_second-image" />}>
                 <Tween position="0" from={{ yPercent: -50 }} to={{ yPercent: 0 }}>
-                  <img src="/assets/tnb-homepage-herbs.jpg" />
+                  <img src="/assets/tnb-homepage-herbs.jpg" alt="" />
                 </Tween>
               </Timeline>
             </Scene>

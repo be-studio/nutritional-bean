@@ -68,5 +68,11 @@
     font-size: 11px;
     color: $darkGrey;
     border: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $beanGreen;
+    }
   }
 }

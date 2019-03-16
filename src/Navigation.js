@@ -77,8 +77,12 @@ export class Navigation extends Component {
 
               <ul>
                 <li>Follow:</li>
-                <li>Instagram</li>
-                <li>Facebook</li>
+                <li>
+                  <a href="https://www.instagram.com/thenutritionalbean" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/thenutritionalbean" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
+                </li>
               </ul>
             </div>
           </div>

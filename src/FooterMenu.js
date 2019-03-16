@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 export function FooterMenu(props) {
   const noHref = "#";
@@ -22,7 +22,7 @@ export function FooterMenu(props) {
             <a href={noHref} title="Therapy">Therapy</a>
           </li>
           <li>
-            <a href={noHref} title="About Harriet">About Harriet</a>
+            <Link to="/about" title="About Harriet">About Harriet</Link>
           </li>
           <li>
             <a href={noHref} title="Blog">Blog</a>
@@ -39,10 +39,10 @@ export function FooterMenu(props) {
             <a href={noHref} title="Contact">Contact</a>
           </li>
           <li>
-            <a href={noHref} title="Instagram">Instagram</a>
+            <a href="https://www.instagram.com/thenutritionalbean" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
           </li>
           <li>
-            <a href={noHref} title="Facebook">Facebook</a>
+            <a href="https://www.facebook.com/thenutritionalbean" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
           </li>
           <li>
             <a href={noHref} title="Privacy">Privacy</a>

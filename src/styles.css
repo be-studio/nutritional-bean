@@ -26,7 +26,9 @@ p {
   line-height: 1.5em;
   margin: 0 0 20px; }
   p._txt_intro {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-bottom: 30px; }
 
 a {
   background-color: #ddeccf;
@@ -240,6 +242,8 @@ a {
     font-size: 11px;
     color: #666;
     border: 0; }
+    .footer_ctr_menu a:hover, .footer_ctr_menu a:focus, .footer_ctr_menu a:active {
+      color: #57ab53; }
 
 .newsletter_ctr {
   width: 200px;
