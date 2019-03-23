@@ -1,0 +1,81 @@
+$border: 1px solid $linesBdrs;
+
+.contact_ctr_content {
+  width: 50%;
+  margin: 0 auto;
+
+  p {
+    text-align: center;
+  }
+}
+
+.contact_ctr_form {
+  font: 12px $sansText;
+  border: $border;
+
+  ._ele_row {
+    display: flex;
+    width: 100%;
+    border-bottom: $border;
+
+    >div {
+      padding: 10px;
+
+      &:first-child {
+        flex: 0 0 80px;
+      }
+
+      &:last-child {
+        flex: 1 1 auto;
+
+        input {
+          width: 100%;
+          font: 12px $sansText;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  ._ele_message {
+    padding: 10px;
+    border-bottom: $border;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      font: 12px $sansText;
+      padding: 0;
+      border: none;
+      outline: none;
+      resize: none;
+    }
+  }
+
+  ._ele_check {
+    padding: 10px;
+  }
+}
+
+.contact_ctr_submit {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+
+  button {
+    background-color: transparent;
+    font: 24px $serifText;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

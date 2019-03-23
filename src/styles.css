@@ -573,6 +573,65 @@ a {
   .about_lst_links li {
     margin-bottom: 4px; }
 
+.contact_ctr_content {
+  width: 50%;
+  margin: 0 auto; }
+  .contact_ctr_content p {
+    text-align: center; }
+
+.contact_ctr_form {
+  font: 12px "Space Mono", "Courier", monospace;
+  border: 1px solid #2c3042; }
+  .contact_ctr_form ._ele_row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #2c3042; }
+    .contact_ctr_form ._ele_row > div {
+      padding: 10px; }
+      .contact_ctr_form ._ele_row > div:first-child {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 80px;
+                flex: 0 0 80px; }
+      .contact_ctr_form ._ele_row > div:last-child {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+                flex: 1 1 auto; }
+        .contact_ctr_form ._ele_row > div:last-child input {
+          width: 100%;
+          font: 12px "Space Mono", "Courier", monospace;
+          border: none;
+          outline: none; }
+  .contact_ctr_form ._ele_message {
+    padding: 10px;
+    border-bottom: 1px solid #2c3042; }
+    .contact_ctr_form ._ele_message label {
+      display: block;
+      margin-bottom: 10px; }
+    .contact_ctr_form ._ele_message textarea {
+      width: 100%;
+      height: 100px;
+      font: 12px "Space Mono", "Courier", monospace;
+      padding: 0;
+      border: none;
+      outline: none;
+      resize: none; }
+  .contact_ctr_form ._ele_check {
+    padding: 10px; }
+
+.contact_ctr_submit {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0; }
+  .contact_ctr_submit button {
+    background-color: transparent;
+    font: 24px "Domaine", "Georgia", "Times New Roman", serif;
+    border: none;
+    cursor: pointer; }
+    .contact_ctr_submit button:hover {
+      opacity: 0.5; }
+
 .privacy_ctr_content,
 .terms_ctr_content {
   width: 70%;

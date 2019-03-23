@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import { Title } from "./Title";
 
@@ -71,26 +72,66 @@ export class Contact extends Component {
         <Title page="Contact" />
 
         <div className="contact_ctr_content">
+          <p>Please complete the form below to get in touch:</p>
+
           <form onSubmit={this.handleSubmit}>
-            <label>Name</label>
-            <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange.bind(this, "name")} />
 
-            <label>Email Address</label>
-            <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange.bind(this, "email")} />
+            <div className="contact_ctr_form">
+              <div className="_ele_row">
+                <div>
+                  <label>Name:</label>
+                </div>
 
-            <label>Phone Number</label>
-            <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange.bind(this, "phone")} />
+                <div>
+                  <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange.bind(this, "name")} />
+                </div>
+              </div>
 
-            <label>Subject</label>
-            <input type="text" id="subject" name="subject" value={this.state.subject} onChange={this.handleChange.bind(this, "subject")} />
+              <div className="_ele_row">
+                <div>
+                  <label>Email:</label>
+                </div>
 
-            <label>Message</label>
-            <textarea value={this.state.message} onChange={this.handleChange.bind(this, "message")}></textarea>
+                <div>
+                  <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange.bind(this, "email")} />
+                </div>
+              </div>
 
-            <input type="checkbox" id="privacy" name="privacy" value={this.state.privacy} onChange={this.handleChange.bind(this, "privacy")} />
-            <label>Privacy</label>
+              <div className="_ele_row">
+                <div>
+                  <label>Phone:</label>
+                </div>
 
-            <button type="submit">Submit</button>
+                <div>
+                  <input type="text" id="phone" name="phone" value={this.state.phone} onChange={this.handleChange.bind(this, "phone")} />
+                </div>
+              </div>
+
+              <div className="_ele_row">
+                <div>
+                  <label>Subject:</label>
+                </div>
+
+                <div>
+                  <input type="text" id="subject" name="subject" value={this.state.subject} onChange={this.handleChange.bind(this, "subject")} />
+                </div>
+              </div>
+
+              <div className="_ele_message">
+                <label>Message:</label>
+                <textarea value={this.state.message} onChange={this.handleChange.bind(this, "message")}></textarea>
+              </div>
+
+              <div className="_ele_check">
+                <label>
+                  <input type="checkbox" id="privacy" name="privacy" value={this.state.privacy} onChange={this.handleChange.bind(this, "privacy")} />&nbsp;I agree to the <Link to="/privacy">Privacy Policy</Link>.
+                </label>
+              </div>
+            </div>
+
+            <div className="contact_ctr_submit">
+              <button type="submit">Submit</button>
+            </div>
           </form>
         </div>
       </div>
