@@ -1,8 +1,18 @@
 $border: 1px solid $linesBdrs;
 
+.contact_ctr {
+  min-height: calc(100vh - 170px);
+}
+
 .contact_ctr_content {
   width: 50%;
   margin: 0 auto;
+
+  @media(max-width: $tablet) {
+    width: 100%;
+    border-right: none;
+    border-left: none;
+  }
 
   p {
     text-align: center;
@@ -12,6 +22,10 @@ $border: 1px solid $linesBdrs;
 .contact_ctr_form {
   font: 12px $sansText;
   border: $border;
+
+  @media(max-width: $tablet) {
+    font-size: 14px;
+  }
 
   ._ele_row {
     display: flex;
@@ -23,6 +37,10 @@ $border: 1px solid $linesBdrs;
 
       &:first-child {
         flex: 0 0 80px;
+
+        @media(max-width: $tablet) {
+          padding-top: 14px;
+        }
       }
 
       &:last-child {
@@ -33,6 +51,10 @@ $border: 1px solid $linesBdrs;
           font: 12px $sansText;
           border: none;
           outline: none;
+
+          @media(max-width: $tablet) {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -55,6 +77,10 @@ $border: 1px solid $linesBdrs;
       border: none;
       outline: none;
       resize: none;
+
+      @media(max-width: $tablet) {
+        font-size: 18px;
+      }
     }
   }
 

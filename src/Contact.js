@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import { Title } from "./Title";
 
 
-export class Contact extends Component {
+function mapStateToProps(state) {
+  return {
+    footerHeight: state.footerHeight
+  };
+}
+
+
+export class ConnectedContact extends Component {
   constructor(props) {
     super(props);
 
@@ -37,8 +45,11 @@ export class Contact extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
-    console.log(process.env.REACT_APP_API_URL);
+
+    if(!this.state.privacy) {
+      alert("You must accept the Privacy Policy to submit your message.");
+      return;
+    }
 
     axios.get(process.env.REACT_APP_API_URL + "/utility/csrf", {
       withCredentials: true
@@ -68,7 +79,7 @@ export class Contact extends Component {
 
   render() {
     return (
-      <div className="contact_ctr _ctr_shell">
+      <div className="contact_ctr _ctr_shell"  style={{ marginBottom: this.props.footerHeight }}>
         <Title page="Contact" />
 
         <div className="contact_ctr_content">
@@ -138,3 +149,6 @@ export class Contact extends Component {
     );
   }
 }
+
+const Contact = connect(mapStateToProps, null)(ConnectedContact);
+export default Contact;
