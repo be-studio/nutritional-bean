@@ -10,8 +10,6 @@ $border: 1px solid $linesBdrs;
 
   @media(max-width: $tablet) {
     width: 100%;
-    border-right: none;
-    border-left: none;
   }
 
   p {
@@ -20,11 +18,14 @@ $border: 1px solid $linesBdrs;
 }
 
 .contact_ctr_form {
+  position: relative;
   font: 12px $sansText;
   border: $border;
 
   @media(max-width: $tablet) {
     font-size: 14px;
+    border-right: none;
+    border-left: none;
   }
 
   ._ele_row {
@@ -53,6 +54,7 @@ $border: 1px solid $linesBdrs;
           outline: none;
 
           @media(max-width: $tablet) {
+            width: 90%;
             font-size: 18px;
           }
         }
@@ -103,5 +105,34 @@ $border: 1px solid $linesBdrs;
     &:hover {
       opacity: 0.5;
     }
+  }
+}
+
+.contact_img,
+.contact_img_mobile {
+  width: 80px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.contact_img {
+  position: absolute;
+  width: 80px;
+  right: -120px;
+  bottom: 40px;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.contact_img_mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    margin: 20px auto;
   }
 }

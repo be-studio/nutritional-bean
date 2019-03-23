@@ -138,12 +138,20 @@ export class ConnectedContact extends Component {
                   <input type="checkbox" id="privacy" name="privacy" value={this.state.privacy} onChange={this.handleChange.bind(this, "privacy")} />&nbsp;I agree to the <Link to="/privacy">Privacy Policy</Link>.
                 </label>
               </div>
+
+              <div className="contact_img">
+                <img src="/assets/tnb-contact.jpg" alt="" />
+              </div>
             </div>
 
             <div className="contact_ctr_submit">
               <button type="submit">Submit</button>
             </div>
           </form>
+
+          <div className="contact_img_mobile">
+            <img src="/assets/tnb-contact.jpg" alt="" />
+          </div>
         </div>
       </div>
     );
