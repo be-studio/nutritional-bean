@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
+import ReactCursorPosition from "react-cursor-position";
 
 import Home from "./Home";
 import About from "./About";
@@ -13,7 +14,9 @@ export class Content extends Component {
   render() {
     return (
       <div className="content_ctr">
-        <Navigation />
+        <ReactCursorPosition>
+          <Navigation />
+        </ReactCursorPosition>
         <FixedContent />
         <Route exact path="/" component={Home} />
         <Route path="/about" component ={About} />

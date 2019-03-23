@@ -16,7 +16,6 @@ export class Navigation extends Component {
     this.closeMenu = this.closeMenu.bind(this);
   }
 
-
   toggleMenu() {
     this.setState({
       menuOpen: !this.state.menuOpen
