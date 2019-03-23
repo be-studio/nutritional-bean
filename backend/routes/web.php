@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get("/utility/csrf", "UserController@getCsrfToken");
 Route::post("/contact", "MailController@sendMail");

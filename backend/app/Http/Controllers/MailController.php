@@ -8,22 +8,24 @@ use Illuminate\Http\Request;
 
 class MailController extends Controller {
   public function sendMail(Request $request) {
-    $name = $request->name;
-    $email = $request->email;
-    $subject = $request->subject;
+    $name = $request->get("name");
+    $email = $request->get("email");
+    $subject = $request->get("subject");
+
+    $privacyString = $request->get("privacy") ? "Yes" : "No";
 
     $data = [
-      "name" => $request->name,
-      "email" => $request->email,
-      "phone" => $request->phone,
-      "subject" => $request->subject,
-      "message" => $request->message,
-      "privacy" => $request->privacy
+      "name" => $request->get("name"),
+      "email" => $request->get("email"),
+      "phone" => $request->get("phone"),
+      "subject" => $request->get("subject"),
+      "msg" => $request->get("message"),
+      "privacy" => $privacyString
     ];
 
     try {
-      Mail::send("mail.contact", $data, function($message) use($name, $email, $subject) {
-        $message
+      Mail::send("mail.contact", $data, function($mail) use($name, $email, $subject) {
+        $mail
           ->to("eric.lew@icloud.com", "The Nutritional Bean")
           ->from($email, $name)
           ->subject("[The Nutritional Bean] Contact Form Message: '" . $subject . "'");

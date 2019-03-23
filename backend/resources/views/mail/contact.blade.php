@@ -20,6 +20,10 @@
 
   <h3>Message</h3>
 
-  <p>{{ $message }}</p>
+  <p>{{ $msg }}</p>
+
+  <hr />
+
+  <small>Powered by BE Studio Mail Service, Copyrght &copy; 2019.</small>
 </body>
 </html>

@@ -75,7 +75,9 @@ export class Navigation extends Component {
                 <li>
                   <Link to="/terms" onClick={this.closeMenu}>Terms of Business</Link>
                 </li>
-                <li>Contact</li>
+                <li>
+                  <Link to="/contact" onClick={this.closeMenu}>Contact</Link>
+                </li>
               </ul>
 
               <ul>
