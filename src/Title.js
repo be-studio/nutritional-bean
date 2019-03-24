@@ -9,12 +9,12 @@ export function Title(props) {
   if(props.absolute) {
     titleCtrStyle = {
       width: "auto",
-      margin: 0
+      margin: "-12px"
     };
 
     titleStyle = {
       position: "absolute",
-      top: "64px",
+      top: "76px",
       left: "50%",
       height: "100px",
       transform: "translate(-50%, -50%)"
@@ -23,7 +23,7 @@ export function Title(props) {
     pageTitleStyle = {
       display: props.page ? "block" : "none",
       position: "absolute",
-      top: "70px",
+      top: "96px",
       width: "100%"
 
     };
