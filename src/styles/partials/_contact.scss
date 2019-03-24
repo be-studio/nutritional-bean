@@ -48,13 +48,12 @@ $border: 1px solid $linesBdrs;
         flex: 1 1 auto;
 
         input {
-          width: 100%;
+          width: 90%;
           font: 12px $sansText;
           border: none;
           outline: none;
 
           @media(max-width: $tablet) {
-            width: 90%;
             font-size: 18px;
           }
         }

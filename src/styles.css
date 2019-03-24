@@ -386,7 +386,11 @@ button {
         .home_ctr_top-panel-content > div:first-child {
           padding: 0 10px 0 20px; } }
     .home_ctr_top-panel-content > div:last-child {
-      text-align: right; }
+      text-align: right;
+      padding-top: 40px; }
+      @media (max-width: 800px) {
+        .home_ctr_top-panel-content > div:last-child {
+          padding-top: 0; } }
 
 .home_txt_intro-title {
   display: inline-block;
@@ -631,13 +635,12 @@ button {
         -webkit-flex: 1 1 auto;
                 flex: 1 1 auto; }
         .contact_ctr_form ._ele_row > div:last-child input {
-          width: 100%;
+          width: 90%;
           font: 12px "Space Mono", "Courier", monospace;
           border: none;
           outline: none; }
           @media (max-width: 800px) {
             .contact_ctr_form ._ele_row > div:last-child input {
-              width: 90%;
               font-size: 18px; } }
   .contact_ctr_form ._ele_message {
     padding: 10px;

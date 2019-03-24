@@ -96,6 +96,11 @@
 
     &:last-child {
       text-align: right;
+      padding-top: 40px;
+
+      @media(max-width: $tablet) {
+        padding-top: 0;
+      }
     };
   }
 }
