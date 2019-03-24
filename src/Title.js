@@ -9,7 +9,7 @@ export function Title(props) {
   if(props.absolute) {
     titleCtrStyle = {
       width: "auto",
-      margin: "-12px"
+      margin: "-12px 0"
     };
 
     titleStyle = {
