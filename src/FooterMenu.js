@@ -36,7 +36,7 @@ export function FooterMenu(props) {
       <div>
         <ul>
           <li>
-            <a href={noHref} title="Contact">Contact</a>
+            <Link to="/contact" title="Contact">Contact</Link>
           </li>
           <li>
             <a href="https://www.instagram.com/thenutritionalbean" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
@@ -45,7 +45,7 @@ export function FooterMenu(props) {
             <a href="https://www.facebook.com/thenutritionalbean" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
           </li>
           <li>
-            <Link to="/privacy">Privacy</Link>
+            <Link to="/privacy" title="Privacy">Privacy</Link>
           </li>
           <li>
             <a href={noHref} title="Access">Access</a>

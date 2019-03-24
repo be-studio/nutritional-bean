@@ -138,7 +138,7 @@ export class ConnectedHome extends Component {
               </ScrollAnimation>
 
               <ScrollAnimation animateIn="fadeInUp" offset={20}>
-                <a href={noHref} title="Get in touch">Get in touch&nbsp;<span className="_txt_bean">a</span></a>
+                <Link to="/contact" title="Get in touch">Get in touch&nbsp;<span className="_txt_bean">a</span></Link>
               </ScrollAnimation>
             </div>
           </div>
