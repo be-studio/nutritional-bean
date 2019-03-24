@@ -163,7 +163,7 @@ export class ConnectedContact extends Component {
             </div>
 
             <div className="contact_ctr_submit">
-              <button type="submit">Submit&nbsp;&#8594;</button>
+              <button type="submit">Submit&nbsp;<span className="_txt_bean">a</span></button>
             </div>
           </form>
 
@@ -175,7 +175,7 @@ export class ConnectedContact extends Component {
             </div>
 
             <div className="contact_ctr_news-submit">
-              <button type="submit">Submit&nbsp;&#8594;</button>
+              <button type="submit">Submit&nbsp;<span className="_txt_bean">a</span></button>
             </div>
           </form>
 

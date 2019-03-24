@@ -20,7 +20,7 @@ export class NewsletterSignUp extends Component {
               </td>
 
               <td>
-                <button type="submit">OK&nbsp;&#8594;</button>
+                <button type="submit">OK&nbsp;<span className="_txt_bean">a</span></button>
               </td>
             </tr>
           </tbody>

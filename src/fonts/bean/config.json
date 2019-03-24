@@ -1,0 +1,25 @@
+{
+  "name": "bean",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "copyright": "Copyright © BE, 2019.",
+  "glyphs": [
+    {
+      "uid": "dfb6c6b341861e27a874ff6ce98245b3",
+      "css": "arrow",
+      "code": 97,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M956 995L830.5 869.5 1047 653 1170 584 1157.5 554.5 1047 589H3.5V412H1046.5L1157 446.5 1169.5 417 1046.5 348 830 131.5 955.5 6 1332 382.5V618.5L956 995Z",
+        "width": 1350
+      },
+      "search": [
+        "arrow"
+      ]
+    }
+  ]
+}

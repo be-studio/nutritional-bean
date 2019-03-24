@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright © BE, 2019.</metadata>
+<defs>
+<font id="bean" horiz-adv-x="1000" >
+<font-face font-family="bean" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="arrow" unicode="&#x61;" d="M956-145l-125 125 216 217 123 69-12 30-111-35h-1043v177h1043l110-34 13 29-123 69-217 217 126 125 376-376v-236l-376-377z" horiz-adv-x="1350" />
+</font>
+</defs>
+</svg>
