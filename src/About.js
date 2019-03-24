@@ -43,7 +43,7 @@ export class ConnectedAbout extends Component {
 
         <div className="about_ctr_content">
             <div>
-              <img className="about_img_harriet" src="/assets/harriet.jpg" alt="Harriet" />
+              <img className="about_img_harriet" src="/assets/tnb-about.jpg" alt="Harriet" />
 
               <div className="about_ctr_accreditations">
                 <img src="/assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/bant-logo.gif")} alt="Member of BANT" />
