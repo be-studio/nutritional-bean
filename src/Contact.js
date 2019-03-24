@@ -23,10 +23,13 @@ export class ConnectedContact extends Component {
       phone: "",
       subject: "",
       message: "",
-      privacy: false
+      privacy: false,
+      newsEmail: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleNewsSubmit = this.handleNewsSubmit.bind(this);
+    this.handleNewsEmailChange = this.handleNewsEmailChange.bind(this);
   }
 
 
@@ -74,6 +77,21 @@ export class ConnectedContact extends Component {
         .catch(() => alert("There has been a problem sending your message. Please try again later."));
     })
     .catch(() => alert("There has been a problem sending your message. Please try again later."));
+  }
+
+
+  handleNewsEmailChange(event) {
+    this.setState({
+      newsEmail: event.target.value
+    });
+  }
+
+
+  handleNewsSubmit(event) {
+    // TODO: To implement newsletter subscription sign-up.
+    event.preventDefault();
+
+    alert("This feature has not been implemented yet.");
   }
 
 
@@ -145,6 +163,18 @@ export class ConnectedContact extends Component {
             </div>
 
             <div className="contact_ctr_submit">
+              <button type="submit">Submit&nbsp;&#8594;</button>
+            </div>
+          </form>
+
+          <span className="contact_ttl_newsletter">Newsletter Sign-up:</span>
+
+          <form onSubmit={this.handleNewsSubmit}>
+            <div className="contact_ctr_news-form">
+              <input type="text" id="newsEmail" name="newsEmail" placeholder="Email" value={this.state.newsEmail} onChange={this.handleNewsEmailChange} />
+            </div>
+
+            <div className="contact_ctr_news-submit">
               <button type="submit">Submit&nbsp;&#8594;</button>
             </div>
           </form>

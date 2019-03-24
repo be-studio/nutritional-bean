@@ -654,12 +654,42 @@ button {
   .contact_ctr_form ._ele_check {
     padding: 10px; }
 
-.contact_ctr_submit {
+.contact_ctr_submit,
+.contact_ctr_news-submit {
   width: 100%;
   padding: 20px 0; }
   @media (max-width: 800px) {
-    .contact_ctr_submit button {
+    .contact_ctr_submit button,
+    .contact_ctr_news-submit button {
       margin-left: 10px; } }
+
+.contact_ctr_news-submit {
+  display: none; }
+  @media (max-width: 800px) {
+    .contact_ctr_news-submit {
+      display: block; } }
+
+.contact_ttl_newsletter {
+  display: none; }
+  @media (max-width: 800px) {
+    .contact_ttl_newsletter {
+      display: block;
+      font-size: 24px;
+      margin: 40px 0 20px 10px; } }
+
+.contact_ctr_news-form {
+  display: none; }
+  @media (max-width: 800px) {
+    .contact_ctr_news-form {
+      display: block;
+      padding: 10px;
+      border-top: 1px solid #2c3042;
+      border-bottom: 1px solid #2c3042; }
+      .contact_ctr_news-form input {
+        width: 90%;
+        font: 18px "Space Mono", "Courier", monospace;
+        border: none;
+        outline: none; } }
 
 .contact_img img,
 .contact_img_mobile img {
