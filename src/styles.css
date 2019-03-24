@@ -60,7 +60,7 @@ button {
   font: 14px "Space Mono", "Courier", monospace;
   color: #57ab53;
   text-decoration: none;
-  padding-bottom: 2px;
+  padding: 0 2px 2px;
   border: none;
   border-bottom: 1px solid #57ab53;
   cursor: pointer; }
@@ -68,8 +68,8 @@ button {
     opacity: 0.5; }
 
 ._txt_bean {
-  font: 0.7em "bean";
-  vertical-align: 1px; }
+  font: 0.5em "bean";
+  vertical-align: 2px; }
 
 .title_ctr {
   width: 100%;
@@ -702,7 +702,7 @@ button {
 
 .contact_img {
   position: absolute;
-  width: 80px;
+  width: 110px;
   right: -120px;
   bottom: 40px; }
   @media (max-width: 800px) {

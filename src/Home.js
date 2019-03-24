@@ -19,6 +19,7 @@ export class ConnectedHome extends Component {
     window.scroll(0, 0);
   }
 
+
   render() {
     const noHref = "#";
 

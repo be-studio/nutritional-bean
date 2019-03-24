@@ -68,7 +68,7 @@ button {
   font: 14px $sansText;
   color: $beanGreen;
   text-decoration: none;
-  padding-bottom: 2px;
+  padding: 0 2px 2px;
   border: none;
   border-bottom: 1px solid $beanGreen;
   cursor: pointer;
@@ -79,6 +79,6 @@ button {
 }
 
 ._txt_bean {
-  font: 0.7em $beanText;
-  vertical-align: 1px;
+  font: 0.5em $beanText;
+  vertical-align: 2px;
 }

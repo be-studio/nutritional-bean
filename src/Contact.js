@@ -33,8 +33,13 @@ export class ConnectedContact extends Component {
   }
 
 
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
+
+
   handleChange(input, event) {
-    if(input == "privacy") {
+    if(input === "privacy") {
       this.setState({
         privacy: event.target.checked
       })
