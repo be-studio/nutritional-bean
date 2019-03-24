@@ -43,7 +43,7 @@ a {
   font-family: "Space Mono", "Courier", monospace;
   color: #57ab53;
   text-decoration: none;
-  padding-bottom: 2px;
+  padding: 0 2px 2px;
   border-bottom: 1px solid #57ab53; }
 
 ._ctr_shell {
@@ -53,6 +53,18 @@ a {
     ._ctr_shell {
       margin-bottom: 0 !important;
       padding-bottom: 60px; } }
+
+button {
+  background-color: #ddeccf;
+  font: 14px "Space Mono", "Courier", monospace;
+  color: #57ab53;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border: none;
+  border-bottom: 1px solid #57ab53;
+  cursor: pointer; }
+  button:hover {
+    opacity: 0.5; }
 
 .title_ctr {
   width: 100%;
@@ -644,22 +656,14 @@ a {
 
 .contact_ctr_submit {
   width: 100%;
-  text-align: center;
   padding: 20px 0; }
-  .contact_ctr_submit button {
-    background-color: transparent;
-    font: 24px "Domaine", "Georgia", "Times New Roman", serif;
-    border: none;
-    cursor: pointer; }
-    .contact_ctr_submit button:hover {
-      opacity: 0.5; }
+  @media (max-width: 800px) {
+    .contact_ctr_submit button {
+      margin-left: 10px; } }
 
-.contact_img,
-.contact_img_mobile {
-  width: 80px; }
-  .contact_img img,
-  .contact_img_mobile img {
-    width: 100%; }
+.contact_img img,
+.contact_img_mobile img {
+  width: 100%; }
 
 .contact_img {
   position: absolute;
@@ -675,6 +679,7 @@ a {
   @media (max-width: 800px) {
     .contact_img_mobile {
       display: block;
+      width: 150px;
       margin: 20px auto; } }
 
 .privacy_ctr_content,

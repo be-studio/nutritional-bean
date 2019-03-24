@@ -93,25 +93,17 @@ $border: 1px solid $linesBdrs;
 
 .contact_ctr_submit {
   width: 100%;
-  text-align: center;
   padding: 20px 0;
 
   button {
-    background-color: transparent;
-    font: 24px $serifText;
-    border: none;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.5;
+    @media(max-width: $tablet) {
+      margin-left: 10px;
     }
   }
 }
 
 .contact_img,
 .contact_img_mobile {
-  width: 80px;
-
   img {
     width: 100%;
   }
@@ -133,6 +125,7 @@ $border: 1px solid $linesBdrs;
 
   @media(max-width: $tablet) {
     display: block;
+    width: 150px;
     margin: 20px auto;
   }
 }

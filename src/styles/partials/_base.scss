@@ -49,7 +49,7 @@ a {
   font-family: $sansText;
   color: $beanGreen;
   text-decoration: none;
-  padding-bottom: 2px;
+  padding: 0 2px 2px;
   border-bottom: 1px solid $beanGreen;
 }
 
@@ -60,5 +60,20 @@ a {
   @media(max-width: $tablet) {
     margin-bottom: 0 !important;
     padding-bottom: 60px;
+  }
+}
+
+button {
+  background-color: $linkGreen;
+  font: 14px $sansText;
+  color: $beanGreen;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border: none;
+  border-bottom: 1px solid $beanGreen;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
   }
 }

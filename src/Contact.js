@@ -145,7 +145,7 @@ export class ConnectedContact extends Component {
             </div>
 
             <div className="contact_ctr_submit">
-              <button type="submit">Submit</button>
+              <button type="submit">Submit&nbsp;&#8594;</button>
             </div>
           </form>
 
