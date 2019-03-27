@@ -78,6 +78,13 @@ button {
   }
 }
 
+._spc {
+  &._dim_20 {
+    width: 100%;
+    height: 20px;
+  }
+}
+
 ._txt_bean {
   font: 0.5em $beanText;
   vertical-align: 2px;

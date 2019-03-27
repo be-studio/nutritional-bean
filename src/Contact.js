@@ -172,7 +172,9 @@ export class ConnectedContact extends Component {
             </div>
           </form>
 
-          <span className="contact_ttl_newsletter">Newsletter Sign-up:</span>
+          <div className="_spc _dim_20"></div>
+
+          <p>Please sign-up for our newsletter:</p>
 
           <form onSubmit={this.handleNewsSubmit}>
             <div className="contact_ctr_news-form">

@@ -67,6 +67,10 @@ button {
   button:hover {
     opacity: 0.5; }
 
+._spc._dim_20 {
+  width: 100%;
+  height: 20px; }
+
 ._txt_bean {
   font: 0.5em "bean";
   vertical-align: 2px; }
@@ -286,7 +290,7 @@ button {
   .newsletter_ctr input {
     background-color: transparent;
     font: 11px "Space Mono", "Courier", monospace;
-    margin-left: -5px;
+    margin-left: -3px;
     border: 0;
     outline: none; }
   .newsletter_ctr button {
@@ -296,6 +300,10 @@ button {
     border: 0;
     outline: none;
     cursor: pointer; }
+
+.newsletter_tbl {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc; }
 
 .newsletter_ele_line {
   width: 100%;
@@ -593,9 +601,6 @@ button {
   padding: 0; }
   .about_lst_links li {
     margin-bottom: 4px; }
-
-.contact_ctr {
-  min-height: calc(100vh - 170px); }
 
 .contact_ctr_content {
   width: 50%;

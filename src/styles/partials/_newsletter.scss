@@ -7,7 +7,7 @@
   input {
     background-color: transparent;
     font: 11px $sansText;
-    margin-left: -5px;
+    margin-left: -3px;
     border: 0;
     outline: none;
   }
@@ -20,6 +20,11 @@
     outline: none;
     cursor: pointer;
   }
+}
+
+.newsletter_tbl {
+  padding-bottom: 10px;
+  border-bottom: 1px solid $lightGrey;
 }
 
 .newsletter_ele_line {

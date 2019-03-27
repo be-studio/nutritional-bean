@@ -10,7 +10,7 @@ export class NewsletterSignUp extends Component {
       <div className="newsletter_ctr">
         <p>Newsletter Sign-up</p>
 
-        <table>
+        <table className="newsletter_tbl">
           <tbody>
             <tr>
               <td width="80%">
