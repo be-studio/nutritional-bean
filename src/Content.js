@@ -4,6 +4,7 @@ import ReactCursorPosition from "react-cursor-position";
 
 import Home from "./Home";
 import About from "./About";
+import { Services } from "./Services";
 import Contact from "./Contact";
 import Privacy from "./Privacy";
 import Terms from "./Terms";
@@ -21,6 +22,7 @@ export class Content extends Component {
         <FixedContent />
         <Route exact path="/" component={Home} />
         <Route path="/about" component ={About} />
+        <Route path="/services" component={Services} />
         <Route path="/contact" component={Contact} />
         <Route path="/terms" component={Terms} />
         <Route path="/privacy" component={Privacy} />

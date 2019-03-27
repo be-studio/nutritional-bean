@@ -48,7 +48,7 @@ export function FooterMenu(props) {
             <Link to="/privacy" title="Privacy">Privacy</Link>
           </li>
           <li>
-            <a href={noHref} title="Access">Access</a>
+            <a href={noHref} title="Access">Terms</a>
           </li>
         </ul>
       </div>
