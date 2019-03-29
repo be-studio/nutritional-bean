@@ -21,8 +21,6 @@ export class ConnectedHome extends Component {
 
 
   render() {
-    const noHref = "#";
-
     return (
       <div className="home_ctr">
         <Title absolute />

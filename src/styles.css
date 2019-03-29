@@ -23,8 +23,10 @@ h1 {
       font-size: 28px; } }
 
 h2 {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: normal; }
+  h2._ttl_other-info {
+    font-size: 18px; }
 
 h3 {
   font-size: 14px;
@@ -74,6 +76,10 @@ button {
 ._txt_bean {
   font: 0.5em "bean";
   vertical-align: 2px; }
+
+._txt_green-mono {
+  font-family: "Space Mono", "Courier", monospace;
+  color: #57ab53; }
 
 .title_ctr {
   width: 100%;
@@ -601,6 +607,26 @@ button {
   padding: 0; }
   .about_lst_links li {
     margin-bottom: 4px; }
+
+.services_ctr_content {
+  width: 80%;
+  margin: 0 auto; }
+
+.services_ctr_consult {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%; }
+  .services_ctr_consult > div:first-child {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 40%;
+            flex: 0 0 40%; }
+    .services_ctr_consult > div:first-child > div {
+      width: 70%; }
+  .services_ctr_consult > div:last-child {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 60%;
+            flex: 0 0 60%; }
 
 .contact_ctr_content {
   width: 50%;

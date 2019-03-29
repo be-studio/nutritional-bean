@@ -24,13 +24,13 @@ export class ConnectedPrivacy extends Component {
         <div className="privacy_ctr_content">
           <p>The Nutritional Bean holds some information about you. This document outlines how that information is used, who The Nutritional Bean may share that information with and how we keep it secure. This notice does not provide exhaustive detail. However, we are happy to provide any additional information or explanation needed. Any requests for this should be sent to the bean@thenutritionalbean.com. The Nutritional Bean keeps our Privacy Notice under regular review. This Privacy Notice was last reviewed in April 2018.</p>
 
-          <h2>1. WHAT WE DO</h2>
+          <h2 className="_ttl_other-info">1. WHAT WE DO</h2>
           <p>The Nutritional Bean provides nutritional therapy services to clients to improve their health through diet and lifestyle interventions. We focus on preventative healthcare, the optimisation of physical and mental health and chronic health conditions. Through nutritional therapy consultations, dietary and lifestyle analysis and biochemical testing, we aim to understand the underlying causes of your health issues which we will seek to address through personalised dietary therapy, nutraceutical prescription (supplements) and lifestyle advice.</p>
 
           <p>The Nutritional Bean also runs regular online programmes, group workshops, educational talks and cookery classes.</p>
 
-          <h2>2. HOW WE OBTAIN YOUR PERSONAL DATA</h2>
-          <h3>INFORMATION PROVIDED BY YOU</h3>
+          <h2 className="_ttl_other-info">2. HOW WE OBTAIN YOUR PERSONAL DATA</h2>
+          <h3 className="_ttl_other-info">INFORMATION PROVIDED BY YOU</h3>
           <p>You provide us with personal data in the following ways:</p>
 
           <ul>
@@ -54,19 +54,19 @@ export class ConnectedPrivacy extends Component {
           <p>We use this information in order to provide you with direct healthcare. This means that the legal basis of our holding your personal data is for legitimate interest.</p>
           <p>Following completion of your healthcare we retain your personal data for the period defined by our professional association BANT and registrant body, CNHC. This enables us to process any complaint you may make. In this case the legal basis of our holding your personal data is for contract administration.</p>
 
-          <h3>INFORMATION WE GET FROM OTHER SOURCES</h3>
+          <h3 className="_ttl_other-info">INFORMATION WE GET FROM OTHER SOURCES</h3>
           <p>We may obtain sensitive medical information in the form of test results from biochemical testing companies. We use this information in order to provide you with direct healthcare. This means that the legal basis of our holding your personal data is for legitimate interest.</p>
 
           <p>We may obtain sensitive information from other healthcare providers. The provision of this information is subject to you giving us your express consent. If we do not receive this consent from you, we will not be able to coordinate your healthcare with that provided by other providers which means the healthcare provided by us may be less effective.</p>
 
-          <h2>3. HOW WE USE YOUR PERSONAL DATA</h2>
+          <h2 className="_ttl_other-info">3. HOW WE USE YOUR PERSONAL DATA</h2>
           <p>We act as a data controller for use of your personal data to provide direct healthcare. We also act as a controller and processor in regard to the processing of your data from third parties such as testing companies and other healthcare providers. We act as a data controller and processor in regard to the processing of credit card and online payments.</p>
 
           <p>We undertake at all times to protect your personal data, including any health and contact details, in a manner which is consistent with our duty of professional confidence and the requirements of the General Data Protection Regulation (GDPR) concerning data protection. We will also take reasonable security measures to protect your personal data storage.</p>
 
           <p>We may use your personal data where there is an overriding public interest in using the information e.g. in order to safeguard an individual, or to prevent a serious crime. Also, where there is a legal requirement such as a formal court order. We may use your data for marketing purposes such as newsletters, but this would be subject to you giving us your express consent.</p>
 
-          <h2>4. DO YOU SHARE MY INFORMATION WITH OTHER ORGANISATIONS?</h2>
+          <h2 className="_ttl_other-info">4. DO YOU SHARE MY INFORMATION WITH OTHER ORGANISATIONS?</h2>
           <p>We will keep information about you confidential. We will only disclose your information with other third parties with your express consent with the exception of the following categories of third parties:</p>
 
           <ul>
@@ -109,7 +109,7 @@ export class ConnectedPrivacy extends Component {
 
           <p>If you would like to invoke any of the above rights then please write to the Data Controller at 36a Grayling Road, London, N16 0BT or email bean@thenutritionalbean.com.</p>
 
-          <h2>6. WHAT SAFEGUARDS ARE IN PLACE TO ENSURE DATA THAT IDENTIFIES ME IS SECURE?</h2>
+          <h2 className="_ttl_other-info">6. WHAT SAFEGUARDS ARE IN PLACE TO ENSURE DATA THAT IDENTIFIES ME IS SECURE?</h2>
           <p>We only use information that may identify you in accordance with GDPR. This requires us to process personal data only if there is a legitimate basis for doing so and that any processing must be fair and lawful.</p>
 
           <p>Within the health sector, we also have to follow the common law duty of confidence, which means that where identifiable information about you has been given in confidence, it should be treated as confidential and only shared for the purpose of providing direct healthcare. We will protect your information, inform you of how your information will be used, and allow you to decide if and how your information can be shared.</p>
@@ -118,11 +118,11 @@ export class ConnectedPrivacy extends Component {
 
           <p>The Nutritional Bean is registered with the Information Commissioner’s Office (ICO) as a data controller and collects data for a variety of purposes. A copy of the registration is available through the ICO website (search by business name).</p>
 
-          <h2>7. HOW LONG DO YOU HOLD CONFIDENTIAL INFORMATION FOR?</h2>
+          <h2 className="_ttl_other-info">7. HOW LONG DO YOU HOLD CONFIDENTIAL INFORMATION FOR?</h2>
           <p>All records held by The Nutritional Bean will be kept for the duration specified by guidance from our professional association BANT.</p>
 
-          <h2>8. WEBSITE TECHNICAL DETAILS</h2>
-          <h3>A. FORMS</h3>
+          <h2 className="_ttl_other-info">8. WEBSITE TECHNICAL DETAILS</h2>
+          <h3 className="_ttl_other-info">A. FORMS</h3>
           <p>We do use electronic forms on our website making use of an available ‘forms module’ which has a number of built-in features to help ensure privacy. We also aim to use secure forms where appropriate.</p>
           <p>In compliance with EU legislation, the following table lists the use of cookies on this web site:</p>
 
@@ -166,10 +166,10 @@ export class ConnectedPrivacy extends Component {
           <p>To opt out of being tracked by Google Analytics across all websites visit http://tools.google.com/dlpage/gaoptout</p>
 
 
-          <h2>9. ANALYTICS</h2>
+          <h2 className="_ttl_other-info">9. ANALYTICS</h2>
           <p>Like most websites, we make use of analytics software in order to help us understand the trends in popularity of our website and of different sections. We make no use of personally identifiable information in any of the statistical reports we use from this package. We use an analytics package called Google Analytics who provide details of their privacy policy on the Google website.</p>
 
-          <h2>10. COMPLAINTS</h2>
+          <h2 className="_ttl_other-info">10. COMPLAINTS</h2>
           <p>If you have a complaint regarding the use of your personal data then please contact us by writing to Harriet Bindloss at 36a Grayling Road, London, N16 0BT or email bean@thenutritionalbean.com and we will do our best to help you.</p>
 
           <p>If your complaint is not resolved to your satisfaction and you wish to make a formal complaint to the Information Commissioner’s Office (ICO), you can contact them on 01625 545745 or 0303 1231113.</p>

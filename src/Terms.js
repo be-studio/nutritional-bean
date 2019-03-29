@@ -22,12 +22,12 @@ export class ConnectedTerms extends Component {
         <Title page="Terms of Business" />
 
         <div class="terms_ctr_content">
-          <h2>PAYMENT</h2>
+          <h2 className="_ttl_other-info">PAYMENT</h2>
           <ol>
             <li>Services must be paid for in advance by direct debit or cash as per the invoicing details provided by The Nutritional Bean to you.</li>
           </ol>
 
-          <h2>RE-SCHEDULING, CANCELLATIONS AND REFUNDS</h2>
+          <h2 className="_ttl_other-info">RE-SCHEDULING, CANCELLATIONS AND REFUNDS</h2>
           <ol start="2">
             <li>Please arrive at the agreed start time for your consultation, or be available for your call at the agreed start time; if you are late, the duration of the service may be reduced andThe Nutritional Bean will not be obliged to make up for any lost time.</li>
             <li>Consultations may be re-scheduled by giving 24 hour’s written notice by emailing bean@thenutritionalbean.com. This means that your consultation may be re-scheduled for another date but it will not be refunded. If you do not give 24 hour’s written notice, your Consultation and fees paid may be forfeited.</li>

@@ -20,8 +20,12 @@ h1 {
 
 h2 {
   font: {
-    size: 18px;
+    size: 28px;
     weight: normal;
+  }
+
+  &._ttl_other-info {
+    font-size: 18px;
   }
 }
 
@@ -88,4 +92,9 @@ button {
 ._txt_bean {
   font: 0.5em $beanText;
   vertical-align: 2px;
+}
+
+._txt_green-mono {
+  font-family: $sansText;
+  color: $beanGreen;
 }
