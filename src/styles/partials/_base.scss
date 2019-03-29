@@ -41,6 +41,14 @@ h3 {
   }
 }
 
+h4 {
+  font: {
+    size: 16px;
+    weight: normal;
+  }
+  margin-bottom: 8px;
+}
+
 p {
   font-size: 14px;
   line-height: 1.5em;
@@ -50,6 +58,26 @@ p {
     font-size: 1.2em;
     line-height: 1.2em;
     margin-bottom: 30px;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li:before {
+    content: "\2014\a0";
+    margin-right: 15px;
+  }
+}
+
+ol {
+  margin: 15px;
+  padding: 0;
+
+  li {
+    padding-left: 15px;
   }
 }
 
@@ -88,9 +116,20 @@ button {
 }
 
 ._spc {
+  width: 100%;
+
   &._dim_20 {
-    width: 100%;
     height: 20px;
+  }
+
+  &._dim_100 {
+    height: 100px;
+  }
+
+  &._dim_mob_50 {
+    @media(max-width: $tablet) {
+      height: 50px;
+    }
   }
 }
 
@@ -102,4 +141,13 @@ button {
 ._txt_green-mono {
   font-family: $sansText;
   color: $beanGreen;
+
+  li:before {
+    content: "*";
+    margin-right: 15px;
+  }
+}
+
+._mod_inline {
+  display: inline-block;
 }

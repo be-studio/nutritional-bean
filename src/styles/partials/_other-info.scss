@@ -25,26 +25,6 @@
     margin: 10px 0;
   }
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    li:before {
-      content: "\2014\a0";
-      margin-right: 15px;
-    }
-  }
-
-  ol {
-    margin: 15px;
-    padding: 0;
-
-    li {
-      padding-left: 15px;
-    }
-  }
-
   th {
     width: 20%;
     text-align: left;

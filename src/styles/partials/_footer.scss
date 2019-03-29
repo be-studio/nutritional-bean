@@ -59,6 +59,10 @@
 
       li {
         margin-bottom: 2px;
+
+        &:before {
+          content: '';
+        }
       }
     }
   }

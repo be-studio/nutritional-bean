@@ -4,7 +4,7 @@ import ReactCursorPosition from "react-cursor-position";
 
 import Home from "./Home";
 import About from "./About";
-import { Services } from "./Services";
+import Services from "./Services";
 import Contact from "./Contact";
 import Privacy from "./Privacy";
 import Terms from "./Terms";

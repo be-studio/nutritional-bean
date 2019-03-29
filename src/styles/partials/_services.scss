@@ -1,11 +1,42 @@
+.services_ctr {
+  position: relative;
+  width: 100%;
+
+  @media(max-width: $tablet) {
+    margin-bottom: 0 !important;
+  }
+}
+
+.services_ctr_panel {
+  width: 100%;
+  background-color: $white;
+  padding-bottom: 150px;
+
+  &._mod_pad-top {
+    padding-top: 200px;
+
+    @media(max-width: $tablet) {
+      padding-top: 100px;
+    }
+  }
+}
+
 .services_ctr_content {
   width: 80%;
   margin: 0 auto;
+
+  @media(max-width: $tablet) {
+    width: 90%;
+  }
 }
 
 .services_ctr_block {
   display: flex;
   width: 100%;
+
+  @media(max-width: $tablet) {
+    flex-wrap: wrap;
+  }
 
   >div {
     &:first-child {
@@ -13,17 +44,148 @@
 
       >div {
         width: 70%;
+
+        @media(max-width: $tablet) {
+          width: 100%;
+        }
       }
     }
 
     &:last-child {
       flex: 0 0 60%;
+      padding-top: 20px;
+    }
+
+    @media(max-width: $tablet) {
+      flex: 0 0 100% !important;
+      width: 100% !important;
     }
   }
 }
 
-.services_img_consult {
+.services_img_consult,
+.services_img_consult-mobile {
   display: block;
+}
+
+.services_img_consult {
   width: 80%;
   margin: 150px auto 0;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.services_img_consult-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    width: 70%;
+    margin: -50px auto 50px;
+  }
+}
+
+.services_ctr_parallax,
+.services_ctr_parallax-mobile {
+  position: relative;
+}
+
+.services_ctr_parallax {
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.services_ctr_parallax-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+  }
+}
+
+.services_ctr_parallax-image-mobile {
+  width: 100%;
+  height: 600px;
+  background: {
+    position: center;
+    size: cover;
+  }
+
+  &.parallax1 {
+    background-image: url("/assets/tnb-services-mobile.jpg");
+  }
+
+  &.parallax2 {
+    background-image: url("/assets/tnb-services-mobile-2.jpg");
+  }
+
+  &.parallax3 {
+    background-image: url("/assets/tnb-services-mobile-3.jpg");
+  }
+}
+
+.services_ctr_parallax-image,
+.services_ctr_parallax-image-bottom {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+
+  @media(max-width: $tablet) {
+    height: 400px;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+  }
+}
+
+.services_ctr_parallax-image-bottom {
+  img {
+    z-index: -3;
+  }
+}
+
+.services_img_workshops {
+  display: block;
+  width: 75%;
+  margin: 80px auto 0 0;
+}
+
+.services_img_family {
+  display: block;
+  width: 50%;
+  margin: 80px auto 0 0;
+}
+
+.services_img_plan,
+.services_img_bag {
+  position: absolute;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.services_img_plan {
+  bottom: -180px;
+  right: 15%;
+
+  img {
+    width: 200px;
+  }
+}
+
+.services_img_bag {
+  bottom: -160px;
+  left: 10%;
+
+  img {
+    width: 150px;
+  }
 }
