@@ -1,0 +1,38 @@
+html,
+body {
+  font-family: "Plain" !important;
+}
+
+p,
+a,
+li,
+button,
+label {
+  font-family: "Plain" !important;
+}
+
+/* LOGIN SCREEN */
+h1 {
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+}
+
+/* ADMIN INTERFACE */
+.title {
+  font-weight: 500;
+  text-transform: none !important;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.analytics-container {
+  display: none;
+}
+
+.mce-label {
+  display: none !important;
+}

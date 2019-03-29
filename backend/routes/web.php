@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::get("/utility/csrf", "UserController@getCsrfToken");
 Route::get("/content/{type}", "ContentController@getContent");
 Route::post("/contact", "MailController@sendMail");
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

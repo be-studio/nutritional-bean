@@ -17,6 +17,8 @@ class CreateContentTable extends Migration
             $table->bigIncrements('id');
             $table->string("key", 32);
             $table->string("type", 32);
+            $table->string("description", 256)
+            ->nullable();
             $table->text("content")
             ->nullable();
             $table->timestamps();
