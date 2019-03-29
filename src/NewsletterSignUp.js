@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { LinkArrow } from "./LinkArrow";
+
 
 export class NewsletterSignUp extends Component {
   render() {
@@ -20,7 +22,7 @@ export class NewsletterSignUp extends Component {
               </td>
 
               <td>
-                <button type="submit">OK&nbsp;<span className="_txt_bean">a</span></button>
+                <button type="submit">OK<LinkArrow /></button>
               </td>
             </tr>
           </tbody>

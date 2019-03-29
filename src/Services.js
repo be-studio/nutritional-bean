@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import SanitizedHTML from "react-sanitized-html";
 
 import { Title } from "./Title";
-
+import { LinkArrow } from "./LinkArrow";
 
 export class Services extends Component {
   constructor(props) {
@@ -16,6 +17,8 @@ export class Services extends Component {
 
 
   componentDidMount() {
+    window.scroll(0, 0);
+
     axios.get(process.env.REACT_APP_API_URL + "/utility/csrf", {
       withCredentials: true
     })
@@ -50,7 +53,7 @@ export class Services extends Component {
         <Title page="Services" />
 
         <div className="services_ctr_content">
-          <div className="services_ctr_consult">
+          <div className="services_ctr_block">
             <div>
               <div>
                 <h2>
@@ -60,12 +63,66 @@ export class Services extends Component {
                 </h2>
 
                 <SanitizedHTML className="_txt_green-mono" html={this.state.content.consult_summary} />
+
+                <img className="services_img_consult" src="/assets/tnb-one-to-one.jpg" alt="" />
               </div>
 
             </div>
 
             <div>
               <SanitizedHTML html={this.state.content.consult_para} />
+
+              <div className="_spc _dim_20"></div>
+
+              <h3>
+                <SanitizedHTML html={this.state.content.consult_option1_title} />
+              </h3>
+
+              <p className="_txt_green-mono">
+                <SanitizedHTML html={this.state.content.consult_option1_summary} />
+              </p>
+
+              <p>
+                <SanitizedHTML html={this.state.content.consult_option1_content} />
+              </p>
+
+              <div className="_spc _dim_20"></div>
+
+              <h3>
+                <SanitizedHTML html={this.state.content.consult_option2_title} />
+              </h3>
+
+              <p className="_txt_green-mono">
+                <SanitizedHTML html={this.state.content.consult_option2_summary} />
+              </p>
+
+              <p>
+                <SanitizedHTML html={this.state.content.consult_option2_content} />
+              </p>
+
+              <div className="_spc _dim_20"></div>
+
+              <h3>
+                <SanitizedHTML html={this.state.content.consult_option3_title} />
+              </h3>
+
+              <p className="_txt_green-mono">
+                <SanitizedHTML html={this.state.content.consult_option3_summary} />
+              </p>
+
+              <p>
+                <SanitizedHTML html={this.state.content.consult_option3_content} />
+              </p>
+
+              <div className="_spc _dim_20"></div>
+
+              <p>
+                <SanitizedHTML html={this.state.content.consult_end_note} />
+              </p>
+
+              <p>
+                <Link to="/contact" title="Get in touch">Get in touch<LinkArrow /></Link>
+              </p>
             </div>
           </div>
         </div>

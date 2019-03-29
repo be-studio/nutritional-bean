@@ -29,8 +29,11 @@ h2 {
     font-size: 18px; }
 
 h3 {
-  font-size: 14px;
-  font-weight: normal; }
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase; }
+  h3._ttl_other-info {
+    font-size: 14px; }
 
 p {
   font-size: 14px;
@@ -612,21 +615,26 @@ button {
   width: 80%;
   margin: 0 auto; }
 
-.services_ctr_consult {
+.services_ctr_block {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   width: 100%; }
-  .services_ctr_consult > div:first-child {
+  .services_ctr_block > div:first-child {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 40%;
             flex: 0 0 40%; }
-    .services_ctr_consult > div:first-child > div {
+    .services_ctr_block > div:first-child > div {
       width: 70%; }
-  .services_ctr_consult > div:last-child {
+  .services_ctr_block > div:last-child {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 60%;
             flex: 0 0 60%; }
+
+.services_img_consult {
+  display: block;
+  width: 80%;
+  margin: 150px auto 0; }
 
 .contact_ctr_content {
   width: 50%;

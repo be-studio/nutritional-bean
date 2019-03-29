@@ -6,6 +6,7 @@ import { Timeline, Tween } from "react-gsap";
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import { Title } from "./Title";
+import { LinkArrow } from "./LinkArrow";
 
 export function mapStateToProps(state) {
   return {
@@ -81,7 +82,7 @@ export class ConnectedHome extends Component {
 
               <ScrollAnimation animateIn="fadeInUp">
                 <p>
-                  <Link to="/about" title="Keep reading">Keep reading&nbsp;<span className="_txt_bean">a</span></Link>
+                  <Link to="/about" title="Keep reading">Keep reading<LinkArrow /></Link>
                 </p>
               </ScrollAnimation>
 
@@ -136,7 +137,7 @@ export class ConnectedHome extends Component {
               </ScrollAnimation>
 
               <ScrollAnimation animateIn="fadeInUp" offset={20}>
-                <Link to="/contact" title="Get in touch">Get in touch&nbsp;<span className="_txt_bean">a</span></Link>
+                <Link to="/contact" title="Get in touch">Get in touch<LinkArrow /></Link>
               </ScrollAnimation>
             </div>
           </div>

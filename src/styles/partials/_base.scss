@@ -31,8 +31,13 @@ h2 {
 
 h3 {
   font: {
-    size: 14px;
+    size: 24px;
     weight: normal;
+  }
+  text-transform: uppercase;
+
+  &._ttl_other-info {
+    font-size: 14px;
   }
 }
 
