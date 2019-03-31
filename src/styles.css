@@ -76,6 +76,8 @@ a {
   border-bottom: 1px solid #57ab53; }
   a._mod_no-style {
     background-color: transparent;
+    font-family: "Domaine", "Georgia", "Times New Roman", serif;
+    color: #2c3042;
     padding: 0;
     border: 0; }
 
@@ -284,33 +286,36 @@ button {
 .footer_ctr {
   width: 100%;
   background-color: #f0efec;
-  padding: 80px 0 120px;
+  padding: 80px 0 10px;
   z-index: -2; }
   @media (max-width: 800px) {
     .footer_ctr {
       display: none; } }
-  .footer_ctr > div {
+  .footer_ctr p {
+    font-size: 11px; }
+
+.footer_ctr_top {
+  width: 100%; }
+  .footer_ctr_top > div {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
     width: 70%;
     margin: 0 auto; }
     @media (max-width: 800px) {
-      .footer_ctr > div {
+      .footer_ctr_top > div {
         -webkit-flex-wrap: wrap;
                 flex-wrap: wrap;
         width: 90%; } }
-    .footer_ctr > div > div {
+    .footer_ctr_top > div > div {
       -webkit-box-flex: 1;
       -webkit-flex: 1 1 auto;
               flex: 1 1 auto; }
       @media (max-width: 800px) {
-        .footer_ctr > div > div {
+        .footer_ctr_top > div > div {
           -webkit-box-flex: 0;
           -webkit-flex: 0 0 100%;
                   flex: 0 0 100%; } }
-  .footer_ctr p {
-    font-size: 11px; }
 
 .footer_ctr_menu {
   display: -webkit-box;
@@ -343,6 +348,24 @@ button {
     border: 0; }
     .footer_ctr_menu a:hover, .footer_ctr_menu a:focus, .footer_ctr_menu a:active {
       color: #57ab53; }
+
+.footer_ctr_accreditations {
+  width: 100%;
+  text-align: center;
+  margin-top: 120px; }
+  .footer_ctr_accreditations ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .footer_ctr_accreditations ul li {
+      display: inline-block;
+      font-size: 0.7em;
+      margin: 0 10px; }
+      .footer_ctr_accreditations ul li::before {
+        content: "";
+        margin-right: 0; }
+  .footer_ctr_accreditations a:hover {
+    opacity: 0.5; }
 
 .newsletter_ctr {
   width: 200px;

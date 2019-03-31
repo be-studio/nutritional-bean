@@ -96,6 +96,8 @@ a {
 
   &._mod_no-style {
     background-color: transparent;
+    font-family: $serifText;
+    color: $textColour;
     padding: 0;
     border: 0;
   }
