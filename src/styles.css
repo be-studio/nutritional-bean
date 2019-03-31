@@ -63,6 +63,9 @@ ol {
   ol li {
     padding-left: 15px; }
 
+li {
+  font-size: 14px; }
+
 a {
   background-color: #ddeccf;
   font-family: "Space Mono", "Courier", monospace;
