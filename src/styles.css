@@ -259,9 +259,11 @@ button {
     .navigation_ctr_menu ul:last-child li:first-child {
       font-size: 0.6em;
       text-transform: uppercase; }
-    .navigation_ctr_menu ul li:before {
-      content: '';
-      margin-right: 0; }
+    .navigation_ctr_menu ul li {
+      font-size: 24px; }
+      .navigation_ctr_menu ul li::before {
+        content: "";
+        margin-right: 0; }
   .navigation_ctr_menu a {
     background-color: transparent;
     font: 24px "Domaine", "Georgia", "Times New Roman", serif;
