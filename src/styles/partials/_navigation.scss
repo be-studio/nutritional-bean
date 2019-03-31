@@ -108,6 +108,11 @@
         text-transform: uppercase;
       }
     }
+
+    li:before {
+      content: '';
+      margin-right: 0;
+    }
   }
 
   a {

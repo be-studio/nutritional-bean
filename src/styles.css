@@ -252,6 +252,9 @@ button {
     .navigation_ctr_menu ul:last-child li:first-child {
       font-size: 0.6em;
       text-transform: uppercase; }
+    .navigation_ctr_menu ul li:before {
+      content: '';
+      margin-right: 0; }
   .navigation_ctr_menu a {
     background-color: transparent;
     font: 24px "Domaine", "Georgia", "Times New Roman", serif;
@@ -315,7 +318,8 @@ button {
       .footer_ctr_menu > div ul li {
         margin-bottom: 2px; }
         .footer_ctr_menu > div ul li:before {
-          content: ''; }
+          content: '';
+          margin-right: 0; }
   .footer_ctr_menu a {
     background-color: transparent;
     font-size: 11px;
@@ -342,10 +346,6 @@ button {
     border: 0;
     outline: none;
     cursor: pointer; }
-
-.newsletter_tbl {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ccc; }
 
 .newsletter_ele_line {
   width: 100%;
