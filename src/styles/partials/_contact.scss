@@ -24,8 +24,8 @@ $border: 1px solid $linesBdrs;
 
   @media(max-width: $tablet) {
     font-size: 14px;
-    border-right: none;
-    border-left: none;
+    border-right: 0;
+    border-left: 0;
   }
 
   ._ele_row {
