@@ -24,7 +24,8 @@ h1 {
 
 h2 {
   font-size: 28px;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: 1.3em; }
   h2._ttl_other-info {
     font-size: 18px; }
 
@@ -73,6 +74,10 @@ a {
   text-decoration: none;
   padding: 0 2px 2px;
   border-bottom: 1px solid #57ab53; }
+  a._mod_no-style {
+    background-color: transparent;
+    padding: 0;
+    border: 0; }
 
 ._ctr_shell {
   background-color: white;
@@ -102,6 +107,8 @@ button {
   width: 100%; }
   ._spc._dim_20 {
     height: 20px; }
+  ._spc._dim_40 {
+    height: 40px; }
   ._spc._dim_100 {
     height: 100px; }
   @media (max-width: 800px) {
@@ -113,8 +120,11 @@ button {
   vertical-align: 2px; }
 
 ._txt_green-mono {
-  font-family: "Space Mono", "Courier", monospace;
+  font: 13px "Space Mono", "Courier", monospace;
   color: #57ab53; }
+  ._txt_green-mono p,
+  ._txt_green-mono li {
+    font-size: 13px; }
   ._txt_green-mono li::before {
     content: "*";
     margin-right: 15px; }
@@ -628,7 +638,7 @@ button {
   width: 100%;
   margin-top: 80px; }
   .about_ctr_accreditations img {
-    height: 20px;
+    height: 25px;
     margin-right: 10px; }
 
 .about_ctr_accreditations-mobile {
@@ -639,16 +649,25 @@ button {
       text-align: center;
       margin-top: 40px; }
       .about_ctr_accreditations-mobile img {
-        height: 18px;
+        height: 24px;
         margin: 0 10px; } }
 
-.about_lst_links {
-  font-size: 11px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-  .about_lst_links li {
-    margin-bottom: 4px; }
+.about_img_afmcp {
+  width: 200px;
+  margin-top: 5px; }
+  @media (max-width: 800px) {
+    .about_img_afmcp {
+      display: block;
+      margin: 0 auto; } }
+
+.about_img_afmcp-mobile {
+  display: none; }
+  @media (max-width: 800px) {
+    .about_img_afmcp-mobile {
+      display: block; } }
+
+.about_txt_afmcp p {
+  font-size: 0.7em; }
 
 .services_ctr {
   position: relative;

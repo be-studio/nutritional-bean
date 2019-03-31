@@ -62,7 +62,7 @@
   margin-top: 80px;
 
   img {
-    height: 20px;
+    height: 25px;
     margin-right: 10px;
   }
 }
@@ -76,19 +76,32 @@
     margin-top: 40px;
 
     img {
-      height: 18px;
+      height: 24px;
       margin: 0 10px;
     }
   }
 }
 
-.about_lst_links {
-  font-size: 11px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.about_img_afmcp {
+  width: 200px;
+  margin-top: 5px;
 
-  li {
-    margin-bottom: 4px;
+  @media(max-width: $tablet) {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.about_img_afmcp-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+  }
+}
+
+.about_txt_afmcp {
+  p {
+    font-size: 0.7em;
   }
 }

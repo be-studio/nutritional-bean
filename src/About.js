@@ -38,8 +38,13 @@ export class About extends Component {
             <img className="about_img_harriet" src="/assets/tnb-about.jpg" alt="Harriet" />
 
             <div className="about_ctr_accreditations">
-              <img src="/assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/bant-logo.gif")} alt="Member of BANT" />
-              <img src="/assets/cnhc-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/cnhc-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/cnhc-logo.gif")} alt="Complementary and Natural Healthcare Council" />
+              <a className="_mod_no-style" href="https://bant.org.uk" target="_blank" rel="noopener noreferrer" title="Member of BANT">
+                <img src="/assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/bant-logo.gif")} alt="Member of BANT" />
+              </a>
+
+              <a className="_mod_no-style" href="https://www.cnhc.org.uk" target="_blank" rel="noopener noreferrer" title="Complementary and Natural Healthcare Council">
+                <img src="/assets/cnhc-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/cnhc-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/cnhc-logo.gif")} alt="Complementary and Natural Healthcare Council" />
+              </a>
             </div>
           </div>
 
@@ -64,22 +69,48 @@ export class About extends Component {
               <p>I am registered with our professional body, The British Association of Applied Nutrition and Nutritional Therapy (BANT), and with the Complementary and Natural Healthcare Council (CNHC), which demand high standards of practice.</p>
 
               <p>I am fully insured. To keep abreast of the latest science and developments, I attend professional training events and seminars regularly.</p>
-
-              <ul className="about_lst_links">
-                <li>
-                  <a href="https://www.tickettailor.com" target="_blank" rel="noopener noreferrer" title="https://www.tickettailor.com">https://www.tickettailor.com</a>
-                </li>
-                <li>
-                  <a href="https://nutriadmin.com" target="_blank" rel="noopener noreferrer" title="https://nutriadmin.com">https://nutriadmin.com</a>
-                </li>
-              </ul>
             </ScrollAnimation>
 
             <ScrollAnimation animateIn="fadeInUp" offset={20}>
               <div className="about_ctr_accreditations-mobile">
-                <img src="/assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/bant-logo.gif")} alt="Member of BANT" />
-                <img src="/assets/cnhc-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/cnhc-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/cnhc-logo.gif")} alt="Complementary and Natural Healthcare Council" />
+                <a className="_mod_no-style" href="https://bant.org.uk" target="_blank" rel="noopener noreferrer" title="Member of BANT">
+                  <img src="/assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/bant-logo.gif")} alt="Member of BANT" />
+                </a>
+
+                <a className="_mod_no-style" href="https://www.cnhc.org.uk" target="_blank" rel="noopener noreferrer" title="Complementary and Natural Healthcare Council">
+                  <img src="/assets/cnhc-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/cnhc-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/cnhc-logo.gif")} alt="Complementary and Natural Healthcare Council" />
+                </a>
               </div>
+            </ScrollAnimation>
+          </div>
+        </div>
+
+        <div className="_spc _dim_40"></div>
+
+        <ScrollAnimation animateIn="fadeInUp" offset={20}>
+          <div className="about_img_afmcp-mobile">
+            <img className="about_img_afmcp" src="/assets/afmcp-graduate-2018-bw.gif" onMouseOver={e => (e.currentTarget.src = "/assets/afmcp-graduate-2018-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/afmcp-graduate-2018-bw.gif")} alt="AFMCP-UK Graduate" />
+          </div>
+        </ScrollAnimation>
+
+        <div className="about_ctr_content">
+          <div>
+            <img className="about_img_afmcp" src="/assets/afmcp-graduate-2018-bw.gif" onMouseOver={e => (e.currentTarget.src = "/assets/afmcp-graduate-2018-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/afmcp-graduate-2018-bw.gif")} alt="AFMCP-UK Graduate" />
+          </div>
+
+          <div className="about_txt_afmcp">
+            <ScrollAnimation animateIn="fadeInUp" offset={20}>
+              <p>
+                Functional medicine emphasises a definable and teachable process of integrating multiple knowledge bases within a pragmatic intellectual matrix that focuses on functionality at many levels, rather than a single treatment for a single diagnosis. Functional medicine uses the patient’s story as a key tool for integrating diagnosis, signs and symptoms, and evidence of clinical imbalances into a comprehensive approach to improve both the patient’s environmental inputs and his or her physiological function.
+              </p>
+
+              <p>
+                The Institute for Functional Medicine teaches health care professional’s how to apply these principles in practice through an intensive 5 day training course called Applying Functional Medicine in Clinical Practice&trade;.
+              </p>
+
+              <p>
+                I attended and completed the AFMCP&trade;-UK training in London in 2018.
+              </p>
             </ScrollAnimation>
           </div>
         </div>

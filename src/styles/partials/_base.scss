@@ -23,6 +23,7 @@ h2 {
     size: 28px;
     weight: normal;
   }
+  line-height: 1.3em;
 
   &._ttl_other-info {
     font-size: 18px;
@@ -92,6 +93,12 @@ a {
   text-decoration: none;
   padding: 0 2px 2px;
   border-bottom: 1px solid $beanGreen;
+
+  &._mod_no-style {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+  }
 }
 
 ._ctr_shell {
@@ -131,6 +138,10 @@ button {
     height: 20px;
   }
 
+  &._dim_40 {
+    height: 40px;
+  }
+
   &._dim_100 {
     height: 100px;
   }
@@ -148,8 +159,13 @@ button {
 }
 
 ._txt_green-mono {
-  font-family: $sansText;
+  font: 13px $sansText;
   color: $beanGreen;
+
+  p,
+  li {
+    font-size: 13px;
+  }
 
   li::before {
     content: "*";
