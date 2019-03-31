@@ -558,8 +558,10 @@ button {
 
 .home_ctr_marquee {
   width: 100%;
-  height: 40px;
-  background-color: #57ab53; }
+  background-color: #57ab53;
+  font-size: 16px;
+  color: white;
+  padding: 10px 0; }
 
 .home_ctr_bottom-panel {
   width: 100%;
@@ -610,6 +612,9 @@ button {
         @media (max-width: 800px) {
           .home_ctr_bottom-panel > div > div:last-child p {
             font-size: 24px; } }
+
+.MarqueeContent {
+  display: inline-block; }
 
 @media (max-width: 800px) {
   .about_ctr_desktop {

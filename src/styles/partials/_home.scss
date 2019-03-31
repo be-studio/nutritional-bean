@@ -209,8 +209,10 @@
 
 .home_ctr_marquee {
   width: 100%;
-  height: 40px;
   background-color: $beanGreen;
+  font-size: 16px;
+  color: $white;
+  padding: 10px 0;
 }
 
 .home_ctr_bottom-panel {
@@ -270,3 +272,6 @@
   }
 }
 
+.MarqueeContent {
+  display: inline-block;
+}

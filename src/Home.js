@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Controller, Scene } from "react-scrollmagic";
 import { Timeline, Tween } from "react-gsap";
 import ScrollAnimation from 'react-animate-on-scroll';
+import Marquee from "react-smooth-marquee";
 
 import { Title } from "./Title";
 import { LinkArrow } from "./LinkArrow";
@@ -117,7 +118,11 @@ export class Home extends Component {
 
         <div className="home_ctr_second-image-mobile"></div>
 
-        <div className="home_ctr_marquee"></div>
+        <div className="home_ctr_marquee">
+          <Marquee>
+            Welcome to The Nutritional Bean
+          </Marquee>
+        </div>
 
         <div className="home_ctr_bottom-panel">
           <div>
