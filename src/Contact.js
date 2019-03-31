@@ -1,19 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 
 import { Title } from "./Title";
 
 
-function mapStateToProps(state) {
-  return {
-    footerHeight: state.footerHeight
-  };
-}
-
-
-export class ConnectedContact extends Component {
+export class Contact extends Component {
   constructor(props) {
     super(props);
 
@@ -102,7 +94,7 @@ export class ConnectedContact extends Component {
 
   render() {
     return (
-      <div className="contact_ctr _ctr_shell"  style={{ marginBottom: this.props.footerHeight }}>
+      <div className="contact_ctr _ctr_shell">
         <Title page="Contact" />
 
         <div className="contact_ctr_content">
@@ -174,7 +166,7 @@ export class ConnectedContact extends Component {
 
           <div className="_spc _dim_20"></div>
 
-          <p>Please sign-up for our newsletter:</p>
+          <p className="contact_txt_sign-up-instruct">Please sign-up for our newsletter:</p>
 
           <form onSubmit={this.handleNewsSubmit}>
             <div className="contact_ctr_news-form">
@@ -194,6 +186,3 @@ export class ConnectedContact extends Component {
     );
   }
 }
-
-const Contact = connect(mapStateToProps, null)(ConnectedContact);
-export default Contact;

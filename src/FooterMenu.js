@@ -16,7 +16,7 @@ export function FooterMenu(props) {
       <div>
         <ul>
           <li>
-            <a href={noHref} title="Services">Services</a>
+            <Link to="/services" title="Services">Services</Link>
           </li>
           <li>
             <a href={noHref} title="Therapy">Therapy</a>
@@ -48,7 +48,7 @@ export function FooterMenu(props) {
             <Link to="/privacy" title="Privacy">Privacy</Link>
           </li>
           <li>
-            <a href={noHref} title="Access">Terms</a>
+            <Link to="/terms" title="Access">Terms</Link>
           </li>
         </ul>
       </div>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -7,14 +6,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { Title } from "./Title";
 
 
-function mapStateToProps(state) {
-  return {
-    footerHeight: state.footerHeight
-  };
-}
-
-
-export class ConnectedAbout extends Component {
+export class About extends Component {
   componentDidMount() {
     window.scroll(0, 0);
   }
@@ -22,7 +14,7 @@ export class ConnectedAbout extends Component {
 
   render() {
     return (
-      <div className="about_ctr _ctr_shell" style={{ marginBottom: this.props.footerHeight }}>
+      <div className="about_ctr _ctr_shell">
         <div className="about_ctr_desktop">
           <Title page="About Harriet" />
         </div>
@@ -95,6 +87,3 @@ export class ConnectedAbout extends Component {
     );
   }
 }
-
-const About = connect(mapStateToProps, null)(ConnectedAbout);
-export default About;

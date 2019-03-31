@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import SanitizedHTML from "react-sanitized-html";
 import { Controller, Scene } from "react-scrollmagic";
@@ -10,14 +9,7 @@ import { Title } from "./Title";
 import { LinkArrow } from "./LinkArrow";
 
 
-function mapStateToProps(state) {
-  return {
-    footerHeight: state.footerHeight
-  };
-}
-
-
-export class ConnectedServices extends Component {
+export class Services extends Component {
   constructor(props) {
     super(props);
 
@@ -57,7 +49,7 @@ export class ConnectedServices extends Component {
   render() {
     if(this.state.content) {
       return (
-        <div className="services_ctr" style={{ marginBottom: this.props.footerHeight }}>
+        <div className="services_ctr">
         <Title page="Services" />
 
         <div className="services_ctr_panel">
@@ -357,10 +349,7 @@ export class ConnectedServices extends Component {
       </div>
       );
     } else {
-      return (<div></div>);
+      return (<div className="_ctr_blank"></div>);
     }
   }
 }
-
-const Services = connect(mapStateToProps, null)(ConnectedServices);
-export default Services;

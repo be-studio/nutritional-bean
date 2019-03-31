@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Controller, Scene } from "react-scrollmagic";
 import { Timeline, Tween } from "react-gsap";
@@ -8,14 +7,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { Title } from "./Title";
 import { LinkArrow } from "./LinkArrow";
 
-export function mapStateToProps(state) {
-  return {
-    footerHeight: state.footerHeight
-  };
-}
 
-
-export class ConnectedHome extends Component {
+export class Home extends Component {
   componentDidMount() {
     window.scroll(0, 0);
   }
@@ -121,7 +114,7 @@ export class ConnectedHome extends Component {
 
         <div className="home_ctr_marquee"></div>
 
-        <div className="home_ctr_bottom-panel" style={{ "marginBottom": this.props.footerHeight }}>
+        <div className="home_ctr_bottom-panel">
           <div>
             <div>
               <img src="/assets/tnb-journey.jpg" alt="" />
@@ -146,6 +139,3 @@ export class ConnectedHome extends Component {
     );
   }
 }
-
-const Home = connect(mapStateToProps, null)(ConnectedHome);
-export default Home;

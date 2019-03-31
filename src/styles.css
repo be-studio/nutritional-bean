@@ -79,6 +79,10 @@ a {
       margin-bottom: 0 !important;
       padding-bottom: 60px; } }
 
+._ctr_blank {
+  width: 100%;
+  height: 100vh; }
+
 button {
   background-color: #ddeccf;
   font: 14px "Space Mono", "Courier", monospace;
@@ -263,9 +267,6 @@ button {
       opacity: 0.5; }
 
 .footer_ctr {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   background-color: #f0efec;
   padding: 80px 0 120px;
@@ -866,10 +867,12 @@ button {
     .contact_ctr_news-submit button {
       margin-left: 10px; } }
 
-.contact_ctr_news-submit {
+.contact_ctr_news-submit,
+.contact_txt_sign-up-instruct {
   display: none; }
   @media (max-width: 800px) {
-    .contact_ctr_news-submit {
+    .contact_ctr_news-submit,
+    .contact_txt_sign-up-instruct {
       display: block; } }
 
 .contact_ttl_newsletter {

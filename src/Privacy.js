@@ -1,16 +1,8 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import { Title } from "./Title";
 
 
-function mapStateToProps(state) {
-  return {
-    footerHeight: state.footerHeight
-  };
-}
-
-
-export class ConnectedPrivacy extends Component {
+export class Privacy extends Component {
   componentDidMount() {
     window.scroll(0, 0);
   }
@@ -18,7 +10,7 @@ export class ConnectedPrivacy extends Component {
 
   render() {
     return (
-      <div className="privacy_ctr _ctr_shell" style={{ marginBottom: this.props.footerHeight }}>
+      <div className="privacy_ctr _ctr_shell">
         <Title page="Privacy Policy" />
 
         <div className="privacy_ctr_content">
@@ -178,6 +170,3 @@ export class ConnectedPrivacy extends Component {
     );
   }
 }
-
-const Privacy = connect(mapStateToProps, null)(ConnectedPrivacy);
-export default Privacy;

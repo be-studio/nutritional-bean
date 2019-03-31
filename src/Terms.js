@@ -1,24 +1,16 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
 import { Title } from "./Title";
 
 
-function mapStateToProps(state) {
-  return {
-    footerHeight: state.footerHeight
-  };
-}
-
-
-export class ConnectedTerms extends Component {
+export class Terms extends Component {
   componentDidMount() {
     window.scroll(0, 0);
   }
 
   render() {
     return(
-      <div className="terms_ctr _ctr_shell" style={{ marginBottom: this.props.footerHeight }}>
+      <div className="terms_ctr _ctr_shell">
         <Title page="Terms of Business" />
 
         <div class="terms_ctr_content">
@@ -41,6 +33,3 @@ export class ConnectedTerms extends Component {
     );
   }
 }
-
-const Terms = connect(mapStateToProps, null)(ConnectedTerms);
-export default Terms;
