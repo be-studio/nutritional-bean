@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::get("/utility/csrf", "UserController@getCsrfToken");
 Route::get("/content/{type}", "ContentController@getContent");
+Route::get("/marquee", "MarqueeController@getMarqueeItems");
 Route::post("/contact", "MailController@sendMail");
 
 

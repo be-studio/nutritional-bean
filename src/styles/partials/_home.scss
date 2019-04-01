@@ -213,6 +213,21 @@
   font-size: 16px;
   color: $white;
   padding: 10px 0;
+
+  a {
+    background-color: transparent;
+    font-family: $serifText;
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.home_txt_marquee-item {
+  display: inline;
+  margin: 0 20px;
 }
 
 .home_ctr_bottom-panel {
@@ -274,4 +289,27 @@
 
 .MarqueeContent {
   display: inline-block;
+}
+
+.home_lst_marquee {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 20px;
+
+    &::before {
+      content: "";
+      margin-right: 0;
+    }
+
+    a {
+      display: inline-block;
+      color: $white;
+      padding-bottom: 1px;
+      border-bottom: 1px solid $white;
+    }
+  }
 }

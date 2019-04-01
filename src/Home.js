@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
+import SanitizedHTML from "react-sanitized-html";
 import { Controller, Scene } from "react-scrollmagic";
 import { Timeline, Tween } from "react-gsap";
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -10,12 +12,60 @@ import { LinkArrow } from "./LinkArrow";
 
 
 export class Home extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      marqueeItems: null
+    };
+  }
+
+
   componentDidMount() {
     window.scroll(0, 0);
+    this.getMarqueeItems();
+  }
+
+
+  getMarqueeItems() {
+    axios.get(process.env.REACT_APP_API_URL + "/utility/csrf", {
+      withCredentials: true
+    })
+    .then(() => {
+      axios.get(process.env.REACT_APP_API_URL + "/marquee", {
+        withCredentials: true
+      })
+      .then(response => {
+        this.setState({
+          marqueeItems: response.data
+        });
+        console.log(this.state.marqueeItems);
+      })
+      .catch(() => alert("There has been a problem retrieving certain data required for the home page. Please try again later."))
+    })
+    .catch(() => alert("There has been a problem retrieving certain data required for the home page. Please try again later."));
   }
 
 
   render() {
+    if(!this.state.marqueeItems) {
+      return (<div className="_ctr_blank"></div>);
+    }
+
+    let marqueeMarkup = "<ul class='home_lst_marquee'>";
+
+    this.state.marqueeItems.forEach(item => {
+      if(item.link) {
+        marqueeMarkup += `<li class="home_txt_marquee-item"><a href=${item.url} target="_blank" rel="noopener noreferrer" title=${item.text}>${item.text}</a></li>`;
+      } else {
+        marqueeMarkup += `<li class="home_txt_marquee-item">${item.text}</li>`;
+      }
+    });
+
+    marqueeMarkup += "</ul>";
+
+    console.log(marqueeMarkup);
+
     return (
       <div className="home_ctr">
         <Title absolute />
@@ -119,9 +169,9 @@ export class Home extends Component {
         <div className="home_ctr_second-image-mobile"></div>
 
         <div className="home_ctr_marquee">
-          <Marquee>
-            Welcome to The Nutritional Bean
-          </Marquee>
+          <marquee>
+            <SanitizedHTML allowedAttributes={{ "ul": ["class"], "a": ["href", "target", "rel", "title"] }} allowedTags={["a", "div", "ul", "li"]} html={marqueeMarkup} />
+          </marquee>
         </div>
 
         <div className="home_ctr_bottom-panel">
