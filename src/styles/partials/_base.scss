@@ -94,6 +94,10 @@ a {
   padding: 0 2px 2px;
   border-bottom: 1px solid $beanGreen;
 
+  &:hover {
+    font-style: italic;
+  }
+
   &._mod_no-style {
     background-color: transparent;
     font-family: $serifText;

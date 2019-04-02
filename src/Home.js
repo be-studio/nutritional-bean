@@ -66,6 +66,7 @@ export class Home extends Component {
 
     console.log(marqueeMarkup);
 
+    //noinspection HtmlDeprecatedTag
     return (
       <div className="home_ctr">
         <Title absolute />

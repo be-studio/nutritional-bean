@@ -74,6 +74,8 @@ a {
   text-decoration: none;
   padding: 0 2px 2px;
   border-bottom: 1px solid #57ab53; }
+  a:hover {
+    font-style: italic; }
   a._mod_no-style {
     background-color: transparent;
     font-family: "Domaine", "Georgia", "Times New Roman", serif;
@@ -566,8 +568,6 @@ button {
     background-color: transparent;
     font-family: "Domaine", "Georgia", "Times New Roman", serif;
     color: white; }
-    .home_ctr_marquee a:hover {
-      text-decoration: underline; }
 
 .home_txt_marquee-item {
   display: inline;
