@@ -537,10 +537,25 @@ button {
   .home_ctr_parallax {
     display: none; } }
 
+.home_ctr_parallax-mobile {
+  display: none; }
+  @media (max-width: 800px) {
+    .home_ctr_parallax-mobile {
+      display: block; } }
+
+.home_ctr_parallax-image-mobile {
+  width: 100%;
+  height: 800px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/assets/tnb-homepage-herbs.jpg"); }
+
+.home_ctr_parallax-image,
 .home_ctr_second-image {
   width: 100%;
   height: 600px;
   overflow: hidden; }
+  .home_ctr_parallax-image img,
   .home_ctr_second-image img {
     position: absolute;
     width: 100%;
@@ -580,7 +595,7 @@ button {
   @media (max-width: 800px) {
     .home_ctr_bottom-panel {
       margin-bottom: 0 !important;
-      padding: 50px 0; } }
+      padding: 50px 0 100px; } }
   .home_ctr_bottom-panel > div {
     display: -webkit-box;
     display: -webkit-flex;

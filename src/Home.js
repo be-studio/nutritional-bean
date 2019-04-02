@@ -87,7 +87,7 @@ export class Home extends Component {
 
         <div className="home_ctr_anim">
           <Controller>
-            <Scene triggerElement=".home_ctr_mobile-poster" triggerHook="onLeave" offset={-0.05} duration={500}>
+            <Scene triggerElement=".home_ctr_mobile-poster" triggerHook="onLeave" offset={-0.05} duration={2000}>
               {(progress) => (
                 <Tween to={{ css: { position: 'relative', height: '200px' } }} ease="Strong.easeOut" totalProgress={progress} paused>
                   <div className="home_ctr_mobile-poster"></div>
@@ -167,7 +167,17 @@ export class Home extends Component {
           </Controller>
         </div>
 
-        <div className="home_ctr_second-image-mobile"></div>
+        <div className="home_ctr_parallax-mobile">
+          <Controller>
+            <Scene triggerHook="onEnter" duration="250%">
+              <Timeline wrapper={<div className="home_ctr_parallax-image" />}>
+                <Tween position="0" from={{ yPercent: -50 }} to={{ yPercent: 0 }}>
+                  <div className="home_ctr_parallax-image-mobile"></div>
+                </Tween>
+              </Timeline>
+            </Scene>
+          </Controller>
+        </div>
 
         <div className="home_ctr_marquee">
           <marquee>
