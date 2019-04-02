@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "kute.js": "^1.6.6",
     "node-sass": "^4.11.0",
     "react": "^16.8.3",
     "react-animate-on-scroll": "^2.1.5",

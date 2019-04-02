@@ -94,7 +94,8 @@ a {
       margin-bottom: 0 !important;
       padding-bottom: 60px; } }
 
-._ctr_blank {
+._ctr_blank,
+._ctr_loading {
   width: 100%;
   height: 100vh; }
 
@@ -138,6 +139,15 @@ button {
 
 ._mod_inline {
   display: inline-block; }
+
+._ctr_loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  margin: 0 20px 0 10px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 .title_ctr {
   width: 100%;
