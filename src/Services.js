@@ -337,9 +337,9 @@ export class Services extends Component {
 
         <div className="services_ctr_parallax-mobile">
           <Controller>
-            <Scene triggerHook="onEnter" duration="250%">
+            <Scene triggerHook="onEnter" duration="120%">
               <Timeline wrapper={<div className="services_ctr_parallax-image" />}>
-                <Tween position="0" from={{ yPercent: -50 }} to={{ yPercent: 0 }}>
+                <Tween position="0" from={{ yPercent: -50 }} to={{ yPercent: 20 }}>
                   <div className="services_ctr_parallax-image-mobile parallax3"></div>
                 </Tween>
               </Timeline>

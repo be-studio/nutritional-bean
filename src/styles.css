@@ -835,7 +835,8 @@ button {
   .services_ctr_parallax-image-mobile.parallax2 {
     background-image: url("/assets/tnb-services-mobile-2.jpg"); }
   .services_ctr_parallax-image-mobile.parallax3 {
-    background-image: url("/assets/tnb-services-mobile-3.jpg"); }
+    background-image: url("/assets/tnb-services-3.jpg");
+    background-position: top right; }
 
 .services_ctr_parallax-image,
 .services_ctr_parallax-image-bottom {

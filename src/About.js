@@ -21,7 +21,7 @@ export class About extends Component {
 
         <div className="about_ctr_mobile">
           <Controller>
-            <Scene triggerElement=".about_ctr_harriet" triggerHook="onLeave" offset={-0.05} duration={500}>
+            <Scene triggerElement=".about_ctr_harriet" triggerHook="onLeave" offset={-0.05} duration={2000}>
               {(progress) => (
                 <Tween to={{ css: { position: 'relative', height: '200px' } }} ease="Strong.easeOut" totalProgress={progress} paused>
                   <div className="about_ctr_harriet">
