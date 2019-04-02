@@ -67,7 +67,7 @@ export class Services extends Component {
       }, {
         morphPrecision: 35,
         easing: 'easingCubicInOut',
-        duration: 1000,
+        duration: 750,
         morphIndex: 127
       }
     );
@@ -86,7 +86,7 @@ export class Services extends Component {
       }, {
         morphPrecision: 35,
         easing: 'easingCubicInOut',
-        duration: 1000,
+        duration: 750,
         morphIndex: 127
       }
     );
