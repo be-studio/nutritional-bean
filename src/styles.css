@@ -32,7 +32,8 @@ h2 {
 h3 {
   font-size: 24px;
   font-weight: normal;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.2em; }
   h3._ttl_other-info {
     font-size: 14px; }
 
@@ -45,6 +46,8 @@ p {
   font-size: 14px;
   line-height: 1.5em;
   margin: 0 0 20px; }
+  p._mod_pad-top {
+    margin-top: 20px; }
   p._txt_intro {
     font-size: 1.2em;
     line-height: 1.2em;
@@ -736,7 +739,24 @@ button {
       display: block; } }
 
 .about_txt_afmcp p {
-  font-size: 0.7em; }
+  font-size: 0.8em; }
+
+.about_ctr_media-accred {
+  display: none; }
+  @media (max-width: 800px) {
+    .about_ctr_media-accred {
+      display: block;
+      width: 90%;
+      margin: 50px auto 0; }
+      .about_ctr_media-accred ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0; }
+        .about_ctr_media-accred ul li {
+          font-size: 0.7em; }
+          .about_ctr_media-accred ul li::before {
+            content: "";
+            margin-right: 0; } }
 
 .services_ctr {
   position: relative;
@@ -886,6 +906,116 @@ button {
   left: 10%; }
   .services_img_bag img {
     width: 150px; }
+
+.therapy_ctr_panel {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 150px; }
+  .therapy_ctr_panel._mod_pad-top {
+    padding-top: 200px; }
+    @media (max-width: 800px) {
+      .therapy_ctr_panel._mod_pad-top {
+        padding-top: 100px; } }
+  .therapy_ctr_panel._ele_top-panel {
+    padding-top: 100px; }
+
+.therapy_ctr_poster {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/tnb-therapy.jpg");
+  background-position: center;
+  background-size: cover; }
+  @media (max-width: 800px) {
+    .therapy_ctr_poster {
+      display: none; } }
+
+.therapy_ctr_mobile-poster {
+  display: none; }
+  @media (max-width: 800px) {
+    .therapy_ctr_mobile-poster {
+      display: block;
+      width: 100%;
+      height: 90vh;
+      background-image: url("/assets/tnb-therapy-mobile.jpg");
+      background-position: bottom;
+      background-size: cover;
+      z-index: -1; } }
+
+.therapy_ctr_content {
+  width: 80%;
+  margin: 0 auto; }
+  @media (max-width: 800px) {
+    .therapy_ctr_content {
+      width: 90%; } }
+
+.therapy_ctr_block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%; }
+  @media (max-width: 800px) {
+    .therapy_ctr_block {
+      -webkit-flex-wrap: wrap;
+              flex-wrap: wrap; } }
+  .therapy_ctr_block > div {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+            flex: 0 0 50%; }
+    .therapy_ctr_block > div:first-child > div {
+      width: 70%; }
+      @media (max-width: 800px) {
+        .therapy_ctr_block > div:first-child > div {
+          width: 100%; } }
+    .therapy_ctr_block > div:last-child {
+      padding-top: 20px; }
+    @media (max-width: 800px) {
+      .therapy_ctr_block > div {
+        -webkit-box-flex: 0 !important;
+        -webkit-flex: 0 0 100% !important;
+                flex: 0 0 100% !important;
+        width: 100% !important; } }
+
+.therapy_ctr_parallax,
+.therapy_ctr_parallax-mobile {
+  position: relative; }
+
+@media (max-width: 800px) {
+  .therapy_ctr_parallax {
+    display: none; } }
+
+.therapy_ctr_parallax-mobile {
+  display: none; }
+  @media (max-width: 800px) {
+    .therapy_ctr_parallax-mobile {
+      display: block; } }
+
+.therapy_ctr_parallax-image-mobile {
+  width: 100%;
+  height: 600px;
+  background-image: url("/assets/tnb-therapy-mobile-2.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.therapy_ctr_parallax-image {
+  width: 100%;
+  height: 800px;
+  overflow: hidden; }
+  @media (max-width: 800px) {
+    .therapy_ctr_parallax-image {
+      height: 400px; } }
+  .therapy_ctr_parallax-image img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1; }
+
+.therapy_img_arrow {
+  width: 60px;
+  margin-bottom: -20px;
+  margin-left: -22px;
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg); }
 
 .contact_ctr_content {
   width: 50%;

@@ -24,8 +24,8 @@ export function Title(props) {
       display: props.page ? "block" : "none",
       position: "absolute",
       top: "96px",
-      width: "100%"
-
+      width: "100%",
+      zIndex: "1"
     };
   } else {
     titleCtrStyle = {};

@@ -49,11 +49,11 @@ export class About extends Component {
           </div>
 
           <div>
-            <ScrollAnimation animateIn="fadeInUp">
+            <ScrollAnimation animateIn="fadeInDown">
               <p className="_txt_intro">I AM HARRIET BINDLOSS, A FULLY QUALIFIED NUTRITIONAL THERAPIST PRACTISING IN STOKE NEWINGTON, SOMERSET AND CLAPHAM, LONDON.</p>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn="fadeInUp">
+            <ScrollAnimation animateIn="fadeInDown">
               <p>I use a robust but efficient method for assessing your health. Based on Functional Medicine. Science, research, clinical insights.</p>
 
               <p>As a mother, I have a good family understanding. Keen to support you make changes manageable and practical with family life. Manage it easily.</p>
@@ -71,7 +71,7 @@ export class About extends Component {
               <p>I am fully insured. To keep abreast of the latest science and developments, I attend professional training events and seminars regularly.</p>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn="fadeInUp" offset={20}>
+            <ScrollAnimation animateIn="fadeInDown" offset={20}>
               <div className="about_ctr_accreditations-mobile">
                 <a className="_mod_no-style" href="https://bant.org.uk" target="_blank" rel="noopener noreferrer" title="Member of BANT">
                   <img src="/assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/bant-logo.gif")} alt="Member of BANT" />
@@ -87,7 +87,7 @@ export class About extends Component {
 
         <div className="_spc _dim_40"></div>
 
-        <ScrollAnimation animateIn="fadeInUp" offset={20}>
+        <ScrollAnimation animateIn="fadeInDown" offset={20}>
           <div className="about_img_afmcp-mobile">
             <img className="about_img_afmcp" src="/assets/afmcp-graduate-2018-bw.gif" onMouseOver={e => (e.currentTarget.src = "/assets/afmcp-graduate-2018-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/afmcp-graduate-2018-bw.gif")} alt="AFMCP-UK Graduate" />
           </div>
@@ -99,7 +99,7 @@ export class About extends Component {
           </div>
 
           <div className="about_txt_afmcp">
-            <ScrollAnimation animateIn="fadeInUp" offset={20}>
+            <ScrollAnimation animateIn="fadeInDown">
               <p>
                 Functional medicine emphasises a definable and teachable process of integrating multiple knowledge bases within a pragmatic intellectual matrix that focuses on functionality at many levels, rather than a single treatment for a single diagnosis. Functional medicine uses the patient’s story as a key tool for integrating diagnosis, signs and symptoms, and evidence of clinical imbalances into a comprehensive approach to improve both the patient’s environmental inputs and his or her physiological function.
               </p>
@@ -114,6 +114,20 @@ export class About extends Component {
             </ScrollAnimation>
           </div>
         </div>
+
+        <ScrollAnimation animateIn="fadeInDown" offset={20}>
+          <div className="about_ctr_media-accred">
+            <ul>
+              <li>
+                Photos: <a className="_mod_no-style" href="https://www.instagram.com/hananoguchi" target="_blank" rel="noopener noreferrer" title="Hana Noguchi">Hana Noguchi</a>
+              </li>
+
+              <li>
+                Illustrations: <a className="_mod_no-style" href="https://www.instagram.com/chamarrant" target="_blank" rel="noopener noreferrer" title="Maureen Valfort">Maureen Valfort</a>
+              </li>
+            </ul>
+          </div>
+        </ScrollAnimation>
       </div>
     );
   }

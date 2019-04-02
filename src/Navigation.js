@@ -65,7 +65,9 @@ export class Navigation extends Component {
                 <li>
                   <Link to="/services" onClick={this.closeMenu}>Services</Link>
                 </li>
-                <li>Therapy</li>
+                <li>
+                  <Link to="/therapy" onClick={this.closeMenu}>Therapy</Link>
+                </li>
                 <li>
                   <Link to="/about" onClick={this.closeMenu}>About Harriet</Link>
                 </li>

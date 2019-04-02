@@ -19,7 +19,7 @@ export function FooterMenu(props) {
             <Link to="/services" title="Services">Services</Link>
           </li>
           <li>
-            <a href={noHref} title="Therapy">Therapy</a>
+            <Link to="/therapy" title="Therapy">Therapy</Link>
           </li>
           <li>
             <Link to="/about" title="About Harriet">About Harriet</Link>

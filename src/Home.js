@@ -112,20 +112,20 @@ export class Home extends Component {
         <div className="home_ctr_top-panel">
           <div className="home_ctr_top-panel-content">
             <div>
-              <ScrollAnimation animateIn="fadeInUp">
+              <ScrollAnimation animateIn="fadeInDown">
                 <span className="home_txt_intro-title">
                   <h1>Hello! I'm Bean,</h1>
                   <img src="/assets/bean.svg" alt="" />
                 </span>
               </ScrollAnimation>
 
-              <ScrollAnimation animateIn="fadeInUp">
+              <ScrollAnimation animateIn="fadeInDown">
                 <p className="home_txt_intro">
                   a registered Nutritional Therapist, Health Coach, wife and mother. I work with adults and children to restore health and wellbeing. My personal/primary mission is to educate, motivate and support YOU to make diet and lifestyle changes so that work for YOU.
                 </p>
               </ScrollAnimation>
 
-              <ScrollAnimation animateIn="fadeInUp">
+              <ScrollAnimation animateIn="fadeInDown">
                 <p>
                   <Link to="/about" title="Keep reading">Keep reading<LinkArrow /></Link>
                 </p>
@@ -192,7 +192,7 @@ export class Home extends Component {
             </div>
 
             <div>
-              <ScrollAnimation animateIn="fadeInUp">
+              <ScrollAnimation animateIn="fadeInDown">
                 <p>
                   True healing is<br />
                   a journey &mdash;<br />
@@ -200,7 +200,7 @@ export class Home extends Component {
                 </p>
               </ScrollAnimation>
 
-              <ScrollAnimation animateIn="fadeInUp" offset={20}>
+              <ScrollAnimation animateIn="fadeInDown" offset={20}>
                 <Link to="/contact" title="Get in touch">Get in touch<LinkArrow /></Link>
               </ScrollAnimation>
             </div>

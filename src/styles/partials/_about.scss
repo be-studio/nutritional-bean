@@ -102,6 +102,31 @@
 
 .about_txt_afmcp {
   p {
-    font-size: 0.7em;
+    font-size: 0.8em;
+  }
+}
+
+.about_ctr_media-accred {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    width: 90%;
+    margin: 50px auto 0;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-size: 0.7em;
+
+        &::before {
+          content: "";
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
