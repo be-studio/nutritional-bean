@@ -31,6 +31,35 @@
   }
 }
 
+.therapy_img_chem-guts {
+  position: absolute;
+  bottom: -280px;
+  right: 15%;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+
+  img {
+    width: 220px;
+  }
+}
+
+.therapy_img_chem-guts-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    position: absolute;
+    display: block;
+    top: 550px;
+    right: 20px;
+
+    img {
+      width: 150px;
+    }
+  }
+}
+
 .therapy_ctr_mobile-poster {
   display: none;
 
@@ -139,4 +168,22 @@
   margin-bottom: -20px;
   margin-left: -22px;
   transform: rotateZ(90deg);
+}
+
+.therapy_img_infographic {
+  width: 70%;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.therapy_img_infographic-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+  }
 }

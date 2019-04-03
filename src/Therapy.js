@@ -18,7 +18,19 @@ export class Therapy extends Component {
       <div className="therapy_ctr">
         <Title absolute page="Therapy" />
 
-        <div className="therapy_ctr_poster"></div>
+        <div className="therapy_ctr_poster">
+          <Controller>
+            <Scene triggerElement=".therapy_ctr_poster" triggerHook="onLeave" duration={1200}>
+              {(progress) => (
+                <Tween from={{ css: { bottom: "-80px" } }} to={{ css: { bottom: "150px" } }} totalProgress={progress} paused>
+                  <div className="therapy_img_chem-guts">
+                    <img src="/assets/tnb-therapy-1.png" alt="" />
+                  </div>
+                </Tween>
+              )}
+            </Scene>
+          </Controller>
+        </div>
 
         <div className="therapy_ctr_anim">
           <Controller>
@@ -26,6 +38,16 @@ export class Therapy extends Component {
               {(progress) => (
                 <Tween to={{ css: { position: 'relative', height: '200px' } }} ease="Strong.easeOut" totalProgress={progress} paused>
                   <div className="therapy_ctr_mobile-poster"></div>
+                </Tween>
+              )}
+            </Scene>
+
+            <Scene triggerElement=".therapy_ctr_anim" triggerHook="onLeave" duration={300}>
+              {(progress) => (
+                <Tween to={{ css: { top: "50px" } }} totalProgress={progress} paused>
+                  <div className="therapy_img_chem-guts-mobile">
+                    <img src="/assets/tnb-therapy-1.png" alt="" />
+                  </div>
                 </Tween>
               )}
             </Scene>
@@ -93,6 +115,8 @@ export class Therapy extends Component {
             <div className="therapy_ctr_block">
               <div>
                 <h2>Process</h2>
+
+                <img className="therapy_img_infographic" src="/assets/tnb-infographic-all.jpg" alt="" />
               </div>
 
               <div>
@@ -144,6 +168,8 @@ export class Therapy extends Component {
 
                   <p>This process requires time – our bodies are incredibly complex. It also requires a degree of effort from you. Therefore, Nutritional Therapy works really well with health coaching which I use to support you to establish the new habits and help you overcome any challenges that may emerge.</p>
                 </ScrollAnimation>
+
+                <img className="therapy_img_infographic-mobile" src="/assets/tnb-infographic-all.jpg" alt="" />
               </div>
             </div>
           </div>
