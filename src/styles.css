@@ -696,20 +696,22 @@ button {
   @media (max-width: 800px) {
     .about_ctr_content {
       width: 90%; } }
-  .about_ctr_content > div {
+  .about_ctr_content > div:first-child {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-            flex: 0 0 50%; }
-    @media (max-width: 800px) {
-      .about_ctr_content > div {
-        -webkit-box-flex: 0;
-        -webkit-flex: 0 0 100%;
-                flex: 0 0 100%; } }
+    -webkit-flex: 0 0 40%;
+            flex: 0 0 40%; }
     @media (max-width: 800px) {
       .about_ctr_content > div:first-child {
         display: none; } }
+  .about_ctr_content > div:last-child {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 60%;
+            flex: 0 0 60%; }
     @media (max-width: 800px) {
       .about_ctr_content > div:last-child {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+                flex: 0 0 100%;
         padding-top: 40px; } }
 
 .about_img_harriet {
@@ -928,6 +930,9 @@ button {
   width: 100%;
   background-color: white;
   padding-bottom: 150px; }
+  @media (max-width: 800px) {
+    .therapy_ctr_panel {
+      padding-bottom: 100px; } }
   .therapy_ctr_panel._mod_pad-top {
     padding-top: 200px; }
     @media (max-width: 800px) {
@@ -1013,6 +1018,22 @@ button {
         -webkit-flex: 0 0 100% !important;
                 flex: 0 0 100% !important;
         width: 100% !important; } }
+
+.therapy_img_puzzle {
+  display: block;
+  width: 40%;
+  margin: 100px auto 0 20px; }
+  @media (max-width: 800px) {
+    .therapy_img_puzzle {
+      display: none; } }
+
+.therapy_img_puzzle-mobile {
+  display: none; }
+  @media (max-width: 800px) {
+    .therapy_img_puzzle-mobile {
+      display: block;
+      width: 50%;
+      margin: 50px auto 0; } }
 
 .therapy_ctr_parallax,
 .therapy_ctr_parallax-mobile {

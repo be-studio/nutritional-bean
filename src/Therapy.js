@@ -62,6 +62,8 @@ export class Therapy extends Component {
                   What is<br />
                   Nutritional Therapy?
                 </h2>
+
+                <img className="therapy_img_puzzle" src="/assets/tnb-therapy-puzzle.jpg" alt="" />
               </div>
 
               <div>
@@ -81,6 +83,8 @@ export class Therapy extends Component {
                 </ul>
 
                 <p className="_mod_pad-top">Ultimately, Nutritional Therapy seeks to use personalised dietary and life- style analysis and changes to overcome barriers to your body realising its optimal health.</p>
+
+                <img className="therapy_img_puzzle-mobile" src="/assets/tnb-therapy-puzzle.jpg" alt="" />
               </div>
             </div>
           </div>

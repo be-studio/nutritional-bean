@@ -3,6 +3,10 @@
   background-color: $white;
   padding-bottom: 150px;
 
+  @media(max-width: $tablet) {
+    padding-bottom: 100px;
+  }
+
   &._mod_pad-top {
     padding-top: 200px;
 
@@ -114,6 +118,26 @@
       flex: 0 0 100% !important;
       width: 100% !important;
     }
+  }
+}
+
+.therapy_img_puzzle {
+  display: block;
+  width: 40%;
+  margin: 100px auto 0 20px;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.therapy_img_puzzle-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    width: 50%;
+    margin: 50px auto 0;
   }
 }
 
