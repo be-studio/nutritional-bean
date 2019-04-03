@@ -189,7 +189,7 @@
 
 .home_ctr_parallax-image-mobile {
   width: 100%;
-  height: 800px;
+  height: 600px;
   background: {
     position: center;
     size: cover;
@@ -211,6 +211,14 @@
   }
 }
 
+.home_ctr_second-image {
+  height: 600px;
+}
+
+.home_ctr_parallax-image {
+  height: 400px;
+}
+
 .home_ctr_second-image-mobile {
   display: none;
 
@@ -219,7 +227,7 @@
     width: 100%;
     height: 100vh;
     background: {
-      image: url("/assets/tnb-homepage-herbs.jpg");
+      image: url("/assets/tnb-home-mobile-herbs.jpg");
       position: center;
       size: cover;
     }
