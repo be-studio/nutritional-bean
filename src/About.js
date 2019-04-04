@@ -42,6 +42,8 @@ export class About extends Component {
                 <img src="/assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/bant-logo.gif")} alt="Member of BANT" />
               </a>
 
+              <br />
+
               <a className="_mod_no-style" href="https://www.cnhc.org.uk" target="_blank" rel="noopener noreferrer" title="Complementary and Natural Healthcare Council">
                 <img src="/assets/cnhc-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/cnhc-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/cnhc-logo.gif")} alt="Complementary and Natural Healthcare Council" />
               </a>

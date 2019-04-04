@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import { Title } from "./Title";
 
 
@@ -14,7 +16,7 @@ export class Privacy extends Component {
         <Title page="Privacy Policy" />
 
         <div className="privacy_ctr_content">
-          <p>The Nutritional Bean holds some information about you. This document outlines how that information is used, who The Nutritional Bean may share that information with and how we keep it secure. This notice does not provide exhaustive detail. However, we are happy to provide any additional information or explanation needed. Any requests for this should be sent to the bean@thenutritionalbean.com. The Nutritional Bean keeps our Privacy Notice under regular review. This Privacy Notice was last reviewed in April 2018.</p>
+          <p>The Nutritional Bean holds some information about you. This document outlines how that information is used, who The Nutritional Bean may share that information with and how we keep it secure. This notice does not provide exhaustive detail. However, we are happy to provide any additional information or explanation needed. Any requests for this should be sent to The Nutritional Bean by <Link to="/contact">email</Link>. The Nutritional Bean keeps our Privacy Notice under regular review. This Privacy Notice was last reviewed in April 2018.</p>
 
           <h2 className="_ttl_other-info">1. WHAT WE DO</h2>
           <p>The Nutritional Bean provides nutritional therapy services to clients to improve their health through diet and lifestyle interventions. We focus on preventative healthcare, the optimisation of physical and mental health and chronic health conditions. Through nutritional therapy consultations, dietary and lifestyle analysis and biochemical testing, we aim to understand the underlying causes of your health issues which we will seek to address through personalised dietary therapy, nutraceutical prescription (supplements) and lifestyle advice.</p>
@@ -75,10 +77,10 @@ export class Privacy extends Component {
 
           <p>We may share your case history in an anonymised form with our peers for the purpose of professional development. This may be at clinical supervision meetings, conferences, online forums, and through publishing in medical journals, trade magazines or online professional sites. We will seek your explicit consent before processing your data in this way.</p>
 
-          <h2>5. WHAT ARE YOUR RIGHTS?</h2>
+          <h2 className="_ttl_other-info">5. WHAT ARE YOUR RIGHTS?</h2>
           <p>Every individual has the right to see, amend, delete or have a copy, of data held that can identify you, with some exceptions. You do not need to give a reason to see your data.</p>
 
-          <p>If you want to access your data you must make a subject access request in writing to bean@thenutritionalbean.com. Under special circumstances, some information may be withheld. We shall respond within 20 working days from the point of receiving the request and all necessary information from you. Our response will include the details of the personal data we hold on you including:</p>
+          <p>If you want to access your data you must make a subject access request in writing to The Nutritional Bean by <Link to="/contact">email</Link>. Under special circumstances, some information may be withheld. We shall respond within 20 working days from the point of receiving the request and all necessary information from you. Our response will include the details of the personal data we hold on you including:</p>
 
           <ul>
             <li>Sources from which we acquired the information;</li>
@@ -99,7 +101,7 @@ export class Privacy extends Component {
 
           <p>We do not carry out any automated processing, which may lead to automated decision based on your personal data.</p>
 
-          <p>If you would like to invoke any of the above rights then please write to the Data Controller at 36a Grayling Road, London, N16 0BT or email bean@thenutritionalbean.com.</p>
+          <p>If you would like to invoke any of the above rights then please write to the Data Controller at 36a Grayling Road, London, N16 0BT or by <Link to="/contact">email</Link>.</p>
 
           <h2 className="_ttl_other-info">6. WHAT SAFEGUARDS ARE IN PLACE TO ENSURE DATA THAT IDENTIFIES ME IS SECURE?</h2>
           <p>We only use information that may identify you in accordance with GDPR. This requires us to process personal data only if there is a legitimate basis for doing so and that any processing must be fair and lawful.</p>
@@ -153,16 +155,16 @@ export class Privacy extends Component {
 
           <p>Advanced areas of this site may use cookies to store your presentation preferences in a purely technical fashion with no individually identifiable information. Note also our statement on analytics software below – as analytics software also uses cookies to function.</p>
 
-          <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit www.allaboutcookies.org</p>
+          <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit <a href="http://www.allaboutcookies.org" target="_blank" rel="noopener noreferrer">www.allaboutcookies.org</a></p>
 
-          <p>To opt out of being tracked by Google Analytics across all websites visit http://tools.google.com/dlpage/gaoptout</p>
+          <p>To opt out of being tracked by Google Analytics across all websites visit <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a></p>
 
 
           <h2 className="_ttl_other-info">9. ANALYTICS</h2>
           <p>Like most websites, we make use of analytics software in order to help us understand the trends in popularity of our website and of different sections. We make no use of personally identifiable information in any of the statistical reports we use from this package. We use an analytics package called Google Analytics who provide details of their privacy policy on the Google website.</p>
 
           <h2 className="_ttl_other-info">10. COMPLAINTS</h2>
-          <p>If you have a complaint regarding the use of your personal data then please contact us by writing to Harriet Bindloss at 36a Grayling Road, London, N16 0BT or email bean@thenutritionalbean.com and we will do our best to help you.</p>
+          <p>If you have a complaint regarding the use of your personal data then please contact us by writing to Harriet Bindloss at 36a Grayling Road, London, N16 0BT or <Link to="/contact">email</Link> and we will do our best to help you.</p>
 
           <p>If your complaint is not resolved to your satisfaction and you wish to make a formal complaint to the Information Commissioner’s Office (ICO), you can contact them on 01625 545745 or 0303 1231113.</p>
         </div>

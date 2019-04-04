@@ -55,11 +55,15 @@ p {
 
 ul {
   list-style-type: none;
+  list-style-position: outside;
   margin: 0;
-  padding: 0; }
-  ul li::before {
-    content: "\2014\a0";
-    margin-right: 15px; }
+  padding: 0 0 0 28px; }
+  ul li {
+    text-indent: -28px;
+    list-style-position: inside; }
+    ul li::before {
+      content: "\2014\a0";
+      margin-right: 15px; }
 
 ol {
   margin: 15px;
@@ -729,8 +733,8 @@ button {
   width: 100%;
   margin-top: 80px; }
   .about_ctr_accreditations img {
-    height: 25px;
-    margin-right: 10px; }
+    width: 200px;
+    margin-bottom: 20px; }
 
 .about_ctr_accreditations-mobile {
   display: none; }
@@ -1247,5 +1251,16 @@ button {
   .privacy_ctr_content td,
   .terms_ctr_content td {
     width: 80%; }
+  .privacy_ctr_content a,
+  .terms_ctr_content a {
+    background-color: transparent;
+    font-size: 11px;
+    color: #666;
+    border: 0; }
+    .privacy_ctr_content a:hover, .privacy_ctr_content a:focus, .privacy_ctr_content a:active,
+    .terms_ctr_content a:hover,
+    .terms_ctr_content a:focus,
+    .terms_ctr_content a:active {
+      color: #57ab53; }
 
 /*# sourceMappingURL=styles.css.map */
