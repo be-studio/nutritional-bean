@@ -357,6 +357,7 @@ button {
       margin: 0;
       padding: 0; }
       .footer_ctr_menu > div ul li {
+        text-indent: 0;
         margin-bottom: 2px; }
         .footer_ctr_menu > div ul li::before {
           content: "";
@@ -380,6 +381,7 @@ button {
     .footer_ctr_accreditations ul li {
       display: inline-block;
       font-size: 0.7em;
+      text-indent: 0;
       margin: 0 10px; }
       .footer_ctr_accreditations ul li::before {
         content: "";
