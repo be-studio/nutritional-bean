@@ -4,6 +4,14 @@
   color: $darkGrey;
   margin-left: auto;
 
+  table {
+    td {
+      &:first-child {
+        width: 80%;
+      }
+    }
+  }
+
   input {
     background-color: transparent;
     font: 11px $sansText;

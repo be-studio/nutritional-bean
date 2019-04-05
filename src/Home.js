@@ -5,12 +5,25 @@ import SanitizedHTML from "react-sanitized-html";
 import { Controller, Scene } from "react-scrollmagic";
 import { Timeline, Tween } from "react-gsap";
 import ScrollAnimation from 'react-animate-on-scroll';
-import Marquee from "react-smooth-marquee";
 
 import { Title } from "./Title";
 import { LinkArrow } from "./LinkArrow";
 import { Loader } from "./Loader";
 
+
+/**
+ * THE NUTRITIONAL BEAN
+ * BE Web Application
+ *
+ * @author Birute M., Eric L.
+ * @copyright 2019, BE
+ * @see https://itsbe.studio
+ * @version 1.x
+ */
+
+/**
+ * HOME PAGE COMPONENT
+ */
 export class Home extends Component {
   constructor(props) {
     super(props);
@@ -23,11 +36,14 @@ export class Home extends Component {
 
   componentDidMount() {
     window.scroll(0, 0);
+
     this.getMarqueeItems();
   }
 
 
   getMarqueeItems() {
+    const errorMsg = "There has been a problem retrieving certain data required for the home page. Please try again later.";
+
     axios.get(process.env.REACT_APP_API_URL + "/utility/csrf", {
       withCredentials: true
     })
@@ -41,9 +57,9 @@ export class Home extends Component {
         });
         console.log(this.state.marqueeItems);
       })
-      .catch(() => alert("There has been a problem retrieving certain data required for the home page. Please try again later."))
+      .catch(() => alert(errorMsg))
     })
-    .catch(() => alert("There has been a problem retrieving certain data required for the home page. Please try again later."));
+    .catch(() => alert(errorMsg));
   }
 
 

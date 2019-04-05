@@ -4,6 +4,20 @@ import { LinkArrow } from "./LinkArrow";
 
 
 export class NewsletterSignUp extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+
+  handleSubmit(event) {
+    event.preventDefault();
+
+    alert('This feature is not available yet. Please check back.');
+  }
+
+
   render() {
     const year = new Date().getFullYear().toString();
     const yearString = year === "2019" ? "2019" : "2019-" + year;
@@ -15,14 +29,14 @@ export class NewsletterSignUp extends Component {
         <table className="newsletter_tbl">
           <tbody>
             <tr>
-              <td width="80%">
+              <td>
                 <form>
                   <input type="text" id="email" name="email" placeholder="Email" />
                 </form>
               </td>
 
               <td>
-                <button type="submit">OK<LinkArrow /></button>
+                <button type="submit" onClick={this.handleSubmit}>OK<LinkArrow /></button>
               </td>
             </tr>
           </tbody>

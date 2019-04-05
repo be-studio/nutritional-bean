@@ -395,6 +395,8 @@ button {
   font: 11px "Space Mono", "Courier", monospace;
   color: #666;
   margin-left: auto; }
+  .newsletter_ctr table td:first-child {
+    width: 80%; }
   .newsletter_ctr input {
     background-color: transparent;
     font: 11px "Space Mono", "Courier", monospace;
