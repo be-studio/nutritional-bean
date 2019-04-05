@@ -292,7 +292,8 @@ button {
       font-size: 0.6em;
       text-transform: uppercase; }
     .navigation_ctr_menu ul li {
-      font-size: 24px; }
+      font-size: 24px;
+      text-indent: 0; }
       .navigation_ctr_menu ul li::before {
         content: "";
         margin-right: 0; }
