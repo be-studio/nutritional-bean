@@ -9,7 +9,7 @@ import Marquee from "react-smooth-marquee";
 
 import { Title } from "./Title";
 import { LinkArrow } from "./LinkArrow";
-
+import { Loader } from "./Loader";
 
 export class Home extends Component {
   constructor(props) {
@@ -49,7 +49,9 @@ export class Home extends Component {
 
   render() {
     if(!this.state.marqueeItems) {
-      return (<div className="_ctr_blank"></div>);
+      return (
+        <Loader />
+      );
     }
 
     let marqueeMarkup = "<ul class='home_lst_marquee'>";
