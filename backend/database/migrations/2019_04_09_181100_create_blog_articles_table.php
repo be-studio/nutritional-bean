@@ -15,7 +15,7 @@ class CreateBlogArticlesTable extends Migration
     {
         Schema::create('blog_articles', function (Blueprint $table) {
             $table->bigIncrements('id');
-          $table->unsignedInteger("author")
+          $table->unsignedBigInteger("author")
             ->nullable();
           $table->foreign("author")
             ->references("id")
