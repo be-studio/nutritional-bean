@@ -6,6 +6,7 @@ import { Home } from "./Home";
 import { About } from "./About";
 import { Services } from "./Services";
 import { Therapy } from "./Therapy";
+import { Blog } from "./Blog";
 import { Contact } from "./Contact";
 import { Privacy } from "./Privacy";
 import { Terms } from "./Terms";
@@ -25,6 +26,7 @@ export class Content extends Component {
         <Route path="/about" component ={About} />
         <Route path="/services" component={Services} />
         <Route path="/therapy" component={Therapy} />
+        <Route path="/blog" component={Blog} />
         <Route path="/contact" component={Contact} />
         <Route path="/terms" component={Terms} />
         <Route path="/privacy" component={Privacy} />
