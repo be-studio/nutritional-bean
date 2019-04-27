@@ -166,3 +166,33 @@ $border: 1px solid $linesBdrs;
     margin: 20px auto;
   }
 }
+
+.contact_frm_newsletter {
+  position: relative;
+  margin-bottom: 100px;
+  padding: 10px 0;
+  border-top: $border;
+  border-bottom: $border;
+
+  input {
+    width: 95%;
+    font: 18px $sansText;
+    padding-left: 6px;
+    outline: none;
+  }
+
+  button {
+    position: absolute;
+    bottom: -45px;
+    left: 10px;
+  }
+
+  .msg-alert {
+    font-family: $sansText;
+
+    p {
+      text-align: left;
+      padding: 6px;
+    }
+  }
+}

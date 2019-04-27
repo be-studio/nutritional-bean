@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import { Title } from "./Title";
+import Mailchimp from "react-mailchimp-form";
 
 
 export class Contact extends Component {
@@ -93,6 +94,21 @@ export class Contact extends Component {
 
 
   render() {
+    const styles = {
+      sendingMsg: {
+        color: "#57ab53"
+      },
+      successMsg: {
+        color: "#57ab53"
+      },
+      duplicateMsg: {
+        color: "#f00"
+      },
+      errorMsg: {
+        color: "#f00"
+      }
+    };
+
     return (
       <div className="contact_ctr _ctr_shell">
         <Title page="Contact" />
@@ -168,15 +184,8 @@ export class Contact extends Component {
 
           <p className="contact_txt_sign-up-instruct">Please sign-up for our newsletter:</p>
 
-          <form onSubmit={this.handleNewsSubmit}>
-            <div className="contact_ctr_news-form">
-              <input type="text" id="newsEmail" name="newsEmail" placeholder="Email" value={this.state.newsEmail} onChange={this.handleNewsEmailChange} />
-            </div>
-
-            <div className="contact_ctr_news-submit">
-              <button type="submit">Submit&nbsp;<span className="_txt_bean">a</span></button>
-            </div>
-          </form>
+          <Mailchimp action="https://facebook.us17.list-manage.com/subscribe/post?u=658695baea1965896de1eda7f&amp;id=1ff770049c" fields={ [{ name: "EMAIL", placeholder: "Email", type: "email", required: true }] } className="contact_frm_newsletter" messages = { { sending: "Submitting...", success: "Thank you for subscribing!", error: "There has been a problem. Please try again later.", empty: "Email address is required.",
+            duplicate: "This email address has already been used to subscribe.", button: "OK" } } styles={styles} />
 
           <div className="contact_img_mobile">
             <img src="/assets/tnb-contact.jpg" alt="" />
