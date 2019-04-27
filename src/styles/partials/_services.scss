@@ -39,9 +39,9 @@
   }
 
   >div {
-    &:first-child {
-      flex: 0 0 40%;
+    flex: 0 0 50%;
 
+    &:first-child {
       >div {
         width: 70%;
 
@@ -52,7 +52,6 @@
     }
 
     &:last-child {
-      flex: 0 0 60%;
       padding-top: 20px;
     }
 

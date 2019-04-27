@@ -79,7 +79,7 @@ export class Services extends Component {
                 <div className="_spc _dim_20"></div>
 
                 <h3>
-                  A. <SanitizedHTML className="_mod_inline" html={this.state.content.consult_option1_title} />
+                  <SanitizedHTML className="_mod_inline" html={this.state.content.consult_option1_title} />
                 </h3>
 
                 <SanitizedHTML className="_txt_green-mono" html={this.state.content.consult_option1_summary} />
@@ -87,34 +87,6 @@ export class Services extends Component {
                 <SanitizedHTML html={this.state.content.consult_option1_content} />
 
                 <div className="_spc _dim_20"></div>
-
-                <h3>
-                  B. <SanitizedHTML className="_mod_inline" html={this.state.content.consult_option2_title} />
-                </h3>
-
-                <SanitizedHTML className="_txt_green-mono" html={this.state.content.consult_option2_summary} />
-
-                <SanitizedHTML html={this.state.content.consult_option2_content} />
-
-                <div className="_spc _dim_20"></div>
-
-                <h3>
-                  C. <SanitizedHTML className="_mod_inline" html={this.state.content.consult_option3_title} />
-                </h3>
-
-                <SanitizedHTML className="_txt_green-mono" html={this.state.content.consult_option3_summary} />
-
-                <SanitizedHTML html={this.state.content.consult_option3_content} />
-
-                <div className="_spc _dim_20"></div>
-
-                <SanitizedHTML html={this.state.content.consult_end_note} />
-
-                <div className="_spc _dim_20"></div>
-
-                <p>
-                  <Link to="/contact" title="Get in touch">Get in touch<LinkArrow /></Link>
-                </p>
               </div>
             </div>
           </div>

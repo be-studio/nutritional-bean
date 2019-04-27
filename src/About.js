@@ -42,8 +42,6 @@ export class About extends Component {
                 <img src="/assets/bant-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/bant-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/bant-logo.gif")} alt="Member of BANT" />
               </a>
 
-              <br />
-
               <a className="_mod_no-style" href="https://www.cnhc.org.uk" target="_blank" rel="noopener noreferrer" title="Complementary and Natural Healthcare Council">
                 <img src="/assets/cnhc-logo.gif" onMouseOver={e => (e.currentTarget.src = "/assets/cnhc-logo-colour.gif")} onMouseOut={e => (e.currentTarget.src = "/assets/cnhc-logo.gif")} alt="Complementary and Natural Healthcare Council" />
               </a>
@@ -52,7 +50,7 @@ export class About extends Component {
 
           <div>
             <ScrollAnimation animateIn="fadeInDown">
-              <p className="_txt_intro">I AM HARRIET BINDLOSS, A FULLY QUALIFIED NUTRITIONAL THERAPIST PRACTISING IN STOKE NEWINGTON, SOMERSET AND CLAPHAM, LONDON.</p>
+              <p className="_txt_intro">I AM HARRIET BINDLOSS, A FULLY QUALIFIED NUTRITIONAL THERAPIST PRACTISING IN BURTON, SOMERSET, UK.</p>
             </ScrollAnimation>
 
             <ScrollAnimation animateIn="fadeInDown">
@@ -87,7 +85,7 @@ export class About extends Component {
           </div>
         </div>
 
-        <div className="_spc _dim_40"></div>
+        <div className="_spc _dim_20"></div>
 
         <ScrollAnimation animateIn="fadeInDown" offset={20}>
           <div className="about_img_afmcp-mobile">

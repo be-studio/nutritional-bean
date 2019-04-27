@@ -22,17 +22,15 @@
   }
 
   >div {
-    &:first-child {
-      flex: 0 0 40%;
+    flex: 0 0 50%;
 
+    &:first-child {
       @media(max-width: $tablet) {
         display: none;
       }
     }
 
     &:last-child {
-      flex: 0 0 60%;
-
       @media(max-width: $tablet) {
         flex: 0 0 100%;
         padding-top: 40px;
@@ -58,11 +56,11 @@
 
 .about_ctr_accreditations {
   width: 100%;
-  margin-top: 80px;
+  margin-top: 40px;
 
   img {
-    width: 200px;
-    margin-bottom: 20px;
+    height: 30px;
+    margin-right: 10px;
   }
 }
 
