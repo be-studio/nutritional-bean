@@ -22,7 +22,3 @@ This project has been constructed and maintained using the following technologie
 ## Enquiries
 
 If you wish to find out more about this or other projects built by BE Studio, or more about our work then please contact us at [hello@itsbe.studio](mailto:hello@itsbe.studio).
-
-## Update
-
-This document was updated 05 April 2019.
