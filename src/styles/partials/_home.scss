@@ -235,10 +235,10 @@
 }
 
 .home_ctr_marquee {
-  width: 150%;
   background-color: $beanGreen;
   font-size: 16px;
   color: $white;
+  white-space: nowrap;
   padding: 10px 0;
 
   a {

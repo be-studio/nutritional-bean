@@ -606,10 +606,10 @@ button {
       background-size: cover; } }
 
 .home_ctr_marquee {
-  width: 150%;
   background-color: #57ab53;
   font-size: 16px;
   color: white;
+  white-space: nowrap;
   padding: 10px 0; }
   .home_ctr_marquee a {
     background-color: transparent;
