@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Ticker from "react-ticker";
 import SanitizedHTML from "react-sanitized-html";
 import { Controller, Scene } from "react-scrollmagic";
 import { Timeline, Tween } from "react-gsap";
@@ -198,9 +199,11 @@ export class Home extends Component {
         </div>
 
         <div className="home_ctr_marquee">
-          <marquee>
-            <SanitizedHTML allowedAttributes={{ "ul": ["class"], "a": ["href", "target", "rel", "title"] }} allowedTags={["a", "div", "ul", "li"]} html={marqueeMarkup} />
-          </marquee>
+          <Ticker mode="await">
+            {() => (
+              <SanitizedHTML allowedAttributes={{ "ul": ["class"], "a": ["href", "target", "rel", "title"] }} allowedTags={["a", "div", "ul", "li"]} html={marqueeMarkup} />
+            )}
+          </Ticker>
         </div>
 
         <div className="home_ctr_bottom-panel">
