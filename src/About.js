@@ -50,7 +50,7 @@ export class About extends Component {
 
           <div>
             <ScrollAnimation animateIn="fadeInDown">
-              <p className="_txt_intro">I AM HARRIET BINDLOSS, A FULLY QUALIFIED NUTRITIONAL THERAPIST PRACTISING IN BURTON, SOMERSET, UK.</p>
+              <p className="_txt_intro">I AM HARRIET BINDLOSS, A FULLY QUALIFIED NUTRITIONAL THERAPIST PRACTISING IN BRUTON, SOMERSET, UK.</p>
             </ScrollAnimation>
 
             <ScrollAnimation animateIn="fadeInDown">
