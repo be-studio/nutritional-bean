@@ -1,0 +1,25 @@
+.fixed-content_ctr_left,
+.fixed-content_ctr_right {
+  position: fixed;
+  top: 50%;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: translateY(-50%);
+  z-index: 1000;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.fixed-content_ctr_left {
+  left: -50px;
+  transform: rotateZ(-90deg);
+  z-index: 3000;
+}
+
+.fixed-content_ctr_right {
+  right: -100px;
+  transform: rotateZ(90deg);
+}

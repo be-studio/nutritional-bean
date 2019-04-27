@@ -1,0 +1,132 @@
+.navigation_ctr_bean,
+.navigation_ctr_bean-mobile {
+  position: fixed;
+  top: 50px;
+  left: 60px;
+  width: 50px;
+  height: 31px;
+  background: {
+    image: url("/assets/bean.svg");
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
+  transition: 300ms all ease-in-out;
+  z-index: 2000;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.navigation_ctr_bean {
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.navigation_ctr_bean-mobile {
+  display: none;
+
+  &:hover {
+    transform: scale(0.8);
+  }
+
+  @media(max-width: $tablet) {
+    display: block;
+    left: 10px;
+    background-size: 0;
+    transform: scale(0.8);
+  }
+}
+
+.navigation_ctr_icon {
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 1px;
+  background-color: $black;
+  transform: translateX(-50%);
+  transition: 300ms all ease-in-out;
+
+  &:first-child {
+    top: 10px;
+    transform-origin: left;
+  }
+
+  &:nth-child(2) {
+    top: 15px;
+  }
+
+  &:last-child {
+    top: 20px;
+    transform-origin: left;
+  }
+}
+
+.navigation_ctr_menu {
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 350px;
+  height: 100vh;
+  background-color: $beanGreen;
+  font-size: 24px;
+  color: $white;
+  transition: 1s all ease-in-out;
+  z-index: 1500;
+
+  >div {
+    position: relative;
+    height: calc(100vh - 130px);
+    padding: 100px 30px 30px 75px;
+
+    @media(max-width: $tablet) {
+      padding-left: 25px;
+    }
+
+    >div {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &:first-child {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      li:first-child {
+        font-size: 0.6em;
+        text-transform: uppercase;
+      }
+    }
+
+    li {
+      font-size: 24px;
+      text-indent: 0;
+
+      &::before {
+        content: "";
+        margin-right: 0;
+      }
+    }
+  }
+
+  a {
+    background-color: transparent;
+    font: 24px $serifText;
+    color: $white;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

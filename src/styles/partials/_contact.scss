@@ -1,0 +1,199 @@
+$border: 1px solid $linesBdrs;
+
+.contact_ctr {
+  // min-height: calc(100vh - 170px);
+}
+
+.contact_ctr_content {
+  width: 50%;
+  margin: 0 auto;
+
+  @media(max-width: $tablet) {
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.contact_ctr_form {
+  position: relative;
+  font: 12px $sansText;
+  border: $border;
+
+  @media(max-width: $tablet) {
+    font-size: 14px;
+    border-right: 0;
+    border-left: 0;
+  }
+
+  ._ele_row {
+    display: flex;
+    width: 100%;
+    border-bottom: $border;
+
+    >div {
+      padding: 10px;
+
+      &:first-child {
+        flex: 0 0 80px;
+
+        @media(max-width: $tablet) {
+          padding-top: 14px;
+        }
+      }
+
+      &:last-child {
+        flex: 1 1 auto;
+
+        input {
+          width: 90%;
+          font: 12px $sansText;
+          border: none;
+          outline: none;
+
+          @media(max-width: $tablet) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  ._ele_message {
+    padding: 10px;
+    border-bottom: $border;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      font: 12px $sansText;
+      padding: 0;
+      border: none;
+      outline: none;
+      resize: none;
+
+      @media(max-width: $tablet) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  ._ele_check {
+    padding: 10px;
+  }
+}
+
+.contact_ctr_submit,
+.contact_ctr_news-submit {
+  width: 100%;
+  padding: 20px 0;
+
+  button {
+    @media(max-width: $tablet) {
+      margin-left: 10px;
+    }
+  }
+}
+
+.contact_ctr_news-submit,
+.contact_txt_sign-up-instruct {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+  }
+}
+
+.contact_ttl_newsletter {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    font-size: 24px;
+    margin: 40px 0 20px 10px;
+  }
+}
+
+.contact_ctr_news-form {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    padding: 10px;
+    border-top: $border;
+    border-bottom: $border;
+
+    input {
+      width: 90%;
+      font: 18px $sansText;
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.contact_img,
+.contact_img_mobile {
+  img {
+    width: 100%;
+  }
+}
+
+.contact_img {
+  position: absolute;
+  width: 110px;
+  right: -120px;
+  bottom: 40px;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.contact_img_mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+  }
+}
+
+.contact_frm_newsletter {
+  position: relative;
+  margin-bottom: 100px;
+  padding: 10px 0;
+  border-top: $border;
+  border-bottom: $border;
+
+  input {
+    width: 95%;
+    font: 18px $sansText;
+    padding-left: 6px;
+    border: 0;
+    outline: none;
+  }
+
+  button {
+    position: absolute;
+    bottom: -45px;
+    left: 10px;
+  }
+
+  .msg-alert {
+    font-family: $sansText;
+
+    p {
+      text-align: left;
+      padding: 6px;
+    }
+  }
+}

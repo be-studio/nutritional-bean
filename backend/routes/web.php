@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/utility/csrf", "UserController@getCsrfToken");
+Route::get("/content/{type}", "ContentController@getContent");
+Route::get("/marquee", "MarqueeController@getMarqueeItems");
+Route::get("/blog/articles-recipes", "BlogRecipeController@getAllBlogArticlesRecipes");
+Route::get("/blog/articles", "BlogRecipeController@getAllBlogArticles");
+Route::get("/recipes", "BlogRecipeController@getAllRecipes");
+Route::post("/contact", "MailController@sendMail");
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

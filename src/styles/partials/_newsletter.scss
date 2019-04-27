@@ -1,0 +1,48 @@
+.newsletter_ctr {
+  width: 200px;
+  font: 11px $sansText;
+  color: $darkGrey;
+  margin-left: auto;
+
+  table {
+    td {
+      &:first-child {
+        width: 80%;
+      }
+    }
+  }
+
+  input {
+    background-color: transparent;
+    font: 11px $sansText;
+    margin-left: -3px;
+    border: 0;
+    outline: none;
+  }
+
+  button {
+    background-color: transparent;
+    font: 11px $sansText;
+    color: $beanGreen;
+    margin-left: 30px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .msg-alert {
+    margin-left: -3px;
+  }
+}
+
+.newsletter_ele_line {
+  width: 100%;
+  height: 1px;
+  background-color: $lightGrey;
+  margin: 5px 0;
+}
+
+.newsletter_txt_copyright {
+  font-size: 1.5em;
+  vertical-align: -5px;
+}

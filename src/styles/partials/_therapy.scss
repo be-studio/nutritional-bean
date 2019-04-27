@@ -1,0 +1,213 @@
+.therapy_ctr_panel {
+  width: 100%;
+  background-color: $white;
+  padding-bottom: 150px;
+
+  @media(max-width: $tablet) {
+    padding-bottom: 100px;
+  }
+
+  &._mod_pad-top {
+    padding-top: 200px;
+
+    @media(max-width: $tablet) {
+      padding-top: 100px;
+    }
+  }
+
+  &._ele_top-panel {
+    padding-top: 100px;
+  }
+}
+
+.therapy_ctr_poster {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: {
+    image: url("/assets/tnb-therapy.jpg");
+    position: center;
+    size: cover;
+  }
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.therapy_img_chem-guts {
+  position: absolute;
+  bottom: -280px;
+  right: 15%;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+
+  img {
+    width: 220px;
+  }
+}
+
+.therapy_img_chem-guts-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    position: absolute;
+    display: block;
+    top: 550px;
+    right: 20px;
+
+    img {
+      width: 150px;
+    }
+  }
+}
+
+.therapy_ctr_mobile-poster {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    width: 100%;
+    height: 90vh;
+    background: {
+      image: url("/assets/tnb-therapy-mobile.jpg");
+      position: bottom;
+      size: cover;
+    }
+    z-index: -1;
+  }
+}
+
+.therapy_ctr_content {
+  width: 80%;
+  margin: 0 auto;
+
+  @media(max-width: $tablet) {
+    width: 90%;
+  }
+}
+
+.therapy_ctr_block {
+  display: flex;
+  width: 100%;
+
+  @media(max-width: $tablet) {
+    flex-wrap: wrap;
+  }
+
+  >div {
+    flex: 0 0 50%;
+
+    &:first-child {
+      >div {
+        width: 70%;
+
+        @media(max-width: $tablet) {
+          width: 100%;
+        }
+      }
+    }
+
+    &:last-child {
+      padding-top: 20px;
+    }
+
+    @media(max-width: $tablet) {
+      flex: 0 0 100% !important;
+      width: 100% !important;
+    }
+  }
+}
+
+.therapy_img_puzzle {
+  display: block;
+  width: 40%;
+  margin: 100px auto 0 20px;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.therapy_img_puzzle-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    width: 50%;
+    margin: 50px auto 0;
+  }
+}
+
+.therapy_ctr_parallax,
+.therapy_ctr_parallax-mobile {
+  position: relative;
+}
+
+.therapy_ctr_parallax {
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.therapy_ctr_parallax-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+  }
+}
+
+.therapy_ctr_parallax-image-mobile {
+  width: 100%;
+  height: 600px;
+  background: {
+    image: url("/assets/tnb-therapy-mobile-2.jpg");
+    position: center;
+    size: cover;
+  }
+}
+
+.therapy_ctr_parallax-image {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+
+  @media(max-width: $tablet) {
+    height: 400px;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+  }
+}
+
+.therapy_img_arrow {
+  width: 60px;
+  margin-bottom: -20px;
+  margin-left: -22px;
+  transform: rotateZ(90deg);
+}
+
+.therapy_img_infographic {
+  width: 70%;
+
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.therapy_img_infographic-mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+  }
+}
