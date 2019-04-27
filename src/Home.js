@@ -71,17 +71,17 @@ export class Home extends Component {
       );
     }
 
-    let marqueeMarkup = "<ul class='home_lst_marquee'>";
+    let marqueeMarkup = "<span class='home_lst_marquee'>";
 
     this.state.marqueeItems.forEach(item => {
       if(item.link) {
-        marqueeMarkup += `<li class="home_txt_marquee-item"><a href=${item.url} target="_blank" rel="noopener noreferrer" title=${item.text}>${item.text}</a></li>`;
+        marqueeMarkup += `<span class="home_txt_marquee-item"><a href=${item.url} target="_blank" rel="noopener noreferrer" title=${item.text}>${item.text}</a></span>`;
       } else {
-        marqueeMarkup += `<li class="home_txt_marquee-item">${item.text}</li>`;
+        marqueeMarkup += `<span class="home_txt_marquee-item">${item.text}</span>`;
       }
     });
 
-    marqueeMarkup += "</ul>";
+    marqueeMarkup += "</span>";
 
     console.log(marqueeMarkup);
 
@@ -199,9 +199,9 @@ export class Home extends Component {
         </div>
 
         <div className="home_ctr_marquee">
-          <Ticker mode="chain">
+          <Ticker mode="chain" height={23}>
             {() => (
-              <SanitizedHTML allowedAttributes={{ "ul": ["class"], "a": ["href", "target", "rel", "title"] }} allowedTags={["a", "div", "ul", "li"]} html={marqueeMarkup} />
+              <SanitizedHTML allowedAttributes={{ "ul": ["class"], "a": ["href", "target", "rel", "title"], "span": ["class"] }} allowedTags={["a", "div", "ul", "li", "p", "span"]} html={marqueeMarkup} />
             )}
           </Ticker>
         </div>

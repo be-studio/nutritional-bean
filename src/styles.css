@@ -606,7 +606,7 @@ button {
       background-size: cover; } }
 
 .home_ctr_marquee {
-  width: 100%;
+  width: 150%;
   background-color: #57ab53;
   font-size: 16px;
   color: white;
@@ -617,8 +617,15 @@ button {
     color: white; }
 
 .home_txt_marquee-item {
-  display: inline;
+  display: inline-block;
+  text-transform: uppercase;
+  white-space: nowrap;
   margin: 0 20px; }
+  .home_txt_marquee-item a {
+    display: inline-block;
+    color: white;
+    padding-bottom: 1px;
+    border-bottom: 1px solid white; }
 
 .home_ctr_bottom-panel {
   width: 100%;
@@ -676,17 +683,19 @@ button {
 .home_lst_marquee {
   list-style-type: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  width: auto; }
   .home_lst_marquee li {
     display: inline-block;
+    vertical-align: top;
     text-indent: 0;
     text-transform: uppercase;
-    margin: 0 20px; }
+    margin: 0 20px;
+    width: auto; }
     .home_lst_marquee li::before {
       content: "";
       margin-right: 0; }
     .home_lst_marquee li a {
-      display: inline-block;
       color: white;
       padding-bottom: 1px;
       border-bottom: 1px solid white; }

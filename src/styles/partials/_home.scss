@@ -235,7 +235,7 @@
 }
 
 .home_ctr_marquee {
-  width: 100%;
+  width: 150%;
   background-color: $beanGreen;
   font-size: 16px;
   color: $white;
@@ -249,8 +249,17 @@
 }
 
 .home_txt_marquee-item {
-  display: inline;
+  display: inline-block;
+  text-transform: uppercase;
+  white-space: nowrap;
   margin: 0 20px;
+
+  a {
+    display: inline-block;
+    color: $white;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $white;
+  }
 }
 
 .home_ctr_bottom-panel {
@@ -318,14 +327,17 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: auto;
 
   li {
     display: inline-block;
+    vertical-align: top;
     text: {
       indent: 0;
       transform: uppercase;
     }
     margin: 0 20px;
+    width: auto;
 
     &::before {
       content: "";
@@ -333,7 +345,6 @@
     }
 
     a {
-      display: inline-block;
       color: $white;
       padding-bottom: 1px;
       border-bottom: 1px solid $white;
