@@ -1,6 +1,6 @@
 {
   "name": "nutritional-bean",
-  "homepage": "http://www.thenutritionalbean.com/stage",
+  "homepage": "http://www.thenutritionalbean.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

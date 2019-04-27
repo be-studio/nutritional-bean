@@ -1256,6 +1256,7 @@ button {
     width: 95%;
     font: 18px "Space Mono", "Courier", monospace;
     padding-left: 6px;
+    border: 0;
     outline: none; }
   .contact_frm_newsletter button {
     position: absolute;
