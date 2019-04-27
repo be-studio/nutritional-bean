@@ -1,0 +1,22 @@
+.blog_ctr {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.blog_grd_item {
+  width: 500px;
+  height: auto;
+
+  >div {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 32px;
+    text-transform: none;
+  }
+}
