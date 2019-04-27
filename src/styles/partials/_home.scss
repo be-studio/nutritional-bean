@@ -321,7 +321,10 @@
 
   li {
     display: inline-block;
-    text-indent: 0;
+    text: {
+      indent: 0;
+      transform: uppercase;
+    }
     margin: 0 20px;
 
     &::before {

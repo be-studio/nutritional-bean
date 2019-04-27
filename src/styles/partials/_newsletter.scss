@@ -24,9 +24,14 @@
     background-color: transparent;
     font: 11px $sansText;
     color: $beanGreen;
+    margin-left: 30px;
     border: 0;
     outline: none;
     cursor: pointer;
+  }
+
+  .msg-alert {
+    margin-left: -3px;
   }
 }
 

@@ -407,9 +407,12 @@ button {
     background-color: transparent;
     font: 11px "Space Mono", "Courier", monospace;
     color: #57ab53;
+    margin-left: 30px;
     border: 0;
     outline: none;
     cursor: pointer; }
+  .newsletter_ctr .msg-alert {
+    margin-left: -3px; }
 
 .newsletter_ele_line {
   width: 100%;
@@ -677,6 +680,7 @@ button {
   .home_lst_marquee li {
     display: inline-block;
     text-indent: 0;
+    text-transform: uppercase;
     margin: 0 20px; }
     .home_lst_marquee li::before {
       content: "";

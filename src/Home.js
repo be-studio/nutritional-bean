@@ -199,7 +199,7 @@ export class Home extends Component {
         </div>
 
         <div className="home_ctr_marquee">
-          <Ticker mode="await">
+          <Ticker mode="chain">
             {() => (
               <SanitizedHTML allowedAttributes={{ "ul": ["class"], "a": ["href", "target", "rel", "title"] }} allowedTags={["a", "div", "ul", "li"]} html={marqueeMarkup} />
             )}

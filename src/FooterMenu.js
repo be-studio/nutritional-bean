@@ -25,7 +25,7 @@ export function FooterMenu(props) {
             <Link to="/about" title="About Harriet">About Harriet</Link>
           </li>
           <li>
-            <Link to="/blog" title="Blog">Blog</Link>
+            <Link to="" title="Blog">Blog</Link>
           </li>
           <li>
             <a href={noHref} title="Bookings">Bookings</a>
