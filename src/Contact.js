@@ -182,9 +182,9 @@ export class Contact extends Component {
 
           <div className="_spc _dim_20"></div>
 
-          <p className="contact_txt_sign-up-instruct">Please sign-up for our newsletter:</p>
+          <p className="contact_txt_sign-up-instruct contact_are_mobile">Please sign-up for our newsletter:</p>
 
-          <Mailchimp action="https://facebook.us17.list-manage.com/subscribe/post?u=658695baea1965896de1eda7f&amp;id=1ff770049c" fields={ [{ name: "EMAIL", placeholder: "Email", type: "email", required: true }] } className="contact_frm_newsletter" messages = { { sending: "Submitting...", success: "Thank you for subscribing!", error: "There has been a problem. Please try again later.", empty: "Email address is required.",
+          <Mailchimp action="https://facebook.us17.list-manage.com/subscribe/post?u=658695baea1965896de1eda7f&amp;id=1ff770049c" fields={ [{ name: "EMAIL", placeholder: "Email", type: "email", required: true }] } className="contact_frm_newsletter contact_are_mobile" messages = { { sending: "Submitting...", success: "Thank you for subscribing!", error: "There has been a problem. Please try again later.", empty: "Email address is required.",
             duplicate: "This email address has already been used to subscribe.", button: "OK" } } styles={styles} />
 
           <div className="contact_img_mobile">

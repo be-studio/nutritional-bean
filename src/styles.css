@@ -1255,7 +1255,7 @@ button {
   .contact_frm_newsletter input {
     width: 95%;
     font: 18px "Space Mono", "Courier", monospace;
-    padding-left: 6px;
+    padding-left: 12px;
     border: 0;
     outline: none; }
   .contact_frm_newsletter button {
@@ -1267,6 +1267,12 @@ button {
     .contact_frm_newsletter .msg-alert p {
       text-align: left;
       padding: 6px; }
+
+.contact_are_mobile {
+  display: none; }
+  @media (max-width: 800px) {
+    .contact_are_mobile {
+      display: block; } }
 
 .privacy_ctr_content,
 .terms_ctr_content {

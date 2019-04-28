@@ -177,7 +177,7 @@ $border: 1px solid $linesBdrs;
   input {
     width: 95%;
     font: 18px $sansText;
-    padding-left: 6px;
+    padding-left: 12px;
     border: 0;
     outline: none;
   }
@@ -195,5 +195,13 @@ $border: 1px solid $linesBdrs;
       text-align: left;
       padding: 6px;
     }
+  }
+}
+
+.contact_are_mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
   }
 }
