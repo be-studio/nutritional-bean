@@ -101,7 +101,7 @@ export class Privacy extends Component {
 
           <p>We do not carry out any automated processing, which may lead to automated decision based on your personal data.</p>
 
-          <p>If you would like to invoke any of the above rights then please write to the Data Controller at 36a Grayling Road, London, N16 0BT or by <Link to="/contact">email</Link>.</p>
+          <p>If you would like to invoke any of the above rights then please write to the Data Controller at 21 Quaperlake Street, Bruton, Somerset, BA10 0HF or by <Link to="/contact">email</Link>.</p>
 
           <h2 className="_ttl_other-info">6. WHAT SAFEGUARDS ARE IN PLACE TO ENSURE DATA THAT IDENTIFIES ME IS SECURE?</h2>
           <p>We only use information that may identify you in accordance with GDPR. This requires us to process personal data only if there is a legitimate basis for doing so and that any processing must be fair and lawful.</p>
@@ -164,7 +164,7 @@ export class Privacy extends Component {
           <p>Like most websites, we make use of analytics software in order to help us understand the trends in popularity of our website and of different sections. We make no use of personally identifiable information in any of the statistical reports we use from this package. We use an analytics package called Google Analytics who provide details of their privacy policy on the Google website.</p>
 
           <h2 className="_ttl_other-info">10. COMPLAINTS</h2>
-          <p>If you have a complaint regarding the use of your personal data then please contact us by writing to Harriet Bindloss at 36a Grayling Road, London, N16 0BT or <Link to="/contact">email</Link> and we will do our best to help you.</p>
+          <p>If you have a complaint regarding the use of your personal data then please contact us by writing to Harriet Bindloss at 21 Quaperlake Street, Bruton, Somerset, BA10 0HF or <Link to="/contact">email</Link> and we will do our best to help you.</p>
 
           <p>If your complaint is not resolved to your satisfaction and you wish to make a formal complaint to the Information Commissioner’s Office (ICO), you can contact them on 01625 545745 or 0303 1231113.</p>
         </div>
