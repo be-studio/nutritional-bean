@@ -14,6 +14,7 @@ export class Navigation extends Component {
 
     this.toggleMenu = this.toggleMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
+    this.showAlert = this.showAlert.bind(this);
   }
 
   toggleMenu() {
@@ -30,7 +31,14 @@ export class Navigation extends Component {
   }
 
 
+  showAlert() {
+    alert("This feature is coming soon. Please do come back.");
+  }
+
+
   render() {
+    const noHref = "#";
+
     return (
       <>
         <div className="navigation_ctr_bean" onClick={this.toggleMenu}>
@@ -72,9 +80,11 @@ export class Navigation extends Component {
                   <Link to="/about" onClick={this.closeMenu}>About Harriet</Link>
                 </li>
                 <li>
-                  <Link to="/blog" onClick={this.closeMenu}>Blog</Link>
+                  <a href={noHref} onClick={this.showAlert}>Blog</a>
                 </li>
-                <li>Bookings</li>
+                <li>
+                  <a href={noHref} onClick={this.showAlert}>Bookings</a>
+                </li>
                 <li>
                   <Link to="/privacy" onClick={this.closeMenu}>Privacy</Link>
                 </li>

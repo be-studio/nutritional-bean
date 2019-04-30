@@ -67,22 +67,22 @@ export class Therapy extends Component {
               </div>
 
               <div>
-                <p>Nutritional Therapy uses up-to-date nutrition science to promote mental and physical health - YOUR health and wellbeing. Nutritional therapy is not an ‘off-the peg’ remedy or set of instructions because:</p>
+                <p>Nutritional Therapy uses up-to-date nutrition science to promote mental and physical health – your health and wellbeing. Nutritional therapy is not an ‘off-the-peg’ remedy or set of instructions because:</p>
 
                 <ul>
-                  <li>it considers you to be entirely unique, down to your biochemistry;</li>
-                  <li>it recognises that your body works as a whole – that all your systems are interconnected, and not working in isolation;</li>
-                  <li>it aims to uncover the root cause(s) of your health concern. It asks WHY your symptoms have arisen, not how to patch them up.</li>
+                  <li>you are entirely unique, right down to your biochemistry;</li>
+                  <li>your body works as a whole and all your systems (immune, digestive, hormonal etc.) are interconnected, not operating in isolation;</li>
                 </ul>
 
-                <p className="_mod_pad-top">To do this requires detective work, using a thorough case history to develop an in-depth understanding of your health. Therefore:</p>
+                <p className="_mod_pad-top">To do this requires detective work, using a thorough case history to develop an in-depth understanding of your health.</p>
 
                 <ul>
-                  <li>it is highly personalised to you and tailored your needs.</li>
-                  <li>it recognises that nutrition is one of the central pillars of health, with environment, exercise, sleep and stress close behind.</li>
+                  <li>it aims to uncover the root biochemical imbalance(s) that undermine your health. It asks why these have arisen (and therefore how to rebalance them), not just to how to patch them up.</li>
+                  <li>it is personalised to you and tailored your needs.</li>
+                  <li>it recognises that nutrition is just one of the central pillars of health, and that considering your environment, exercise, sleep and stress is also necessary.</li>
                 </ul>
 
-                <p className="_mod_pad-top">Ultimately, Nutritional Therapy seeks to use personalised dietary and life- style analysis and changes to overcome barriers to your body realising its optimal health.</p>
+                <p className="_mod_pad-top">Ultimately, Nutritional Therapy uses personalised diet and lifestyle analysis to find out what changes are needed to rebalance your biochemistry so you can reach optimal health and feel terrific.</p>
 
                 <img className="therapy_img_puzzle-mobile" src="/assets/tnb-therapy-puzzle.jpg" alt="" />
               </div>
@@ -142,15 +142,15 @@ export class Therapy extends Component {
                 </ScrollAnimation>
 
                 <ScrollAnimation animateIn="fadeInDown">
-                  <p>...during the initial consultation (90 minutes) we discuss your health goal(s) and start the exploring your...</p>
+                  <p>...during the initial consultation (90 minutes) we discuss your health goal(s) and questionnaire, exploring your...</p>
 
-                  <p>...family history, mother’s prenatal health and birth, health and diet in infancy, childhood and up until now, formal diagnoses and medical history, sleep and major stresses...</p>
+                  <p>...family history, mother’s prenatal health and your birth, your health and diet in infancy, childhood and up until now, formal diagnoses and medical history, sleep, major stresses and other relevant events...</p>
 
-                  <p>...in order to develop an understanding of how your body works and what might have brought you to this point. It helps to identify important factors that might have triggered ill health. It is essential to unearthing underlying cause(s).</p>
+                  <p>This is to develop an understanding of how your body works and what might have brought you to this point. It identifies important factors that may have triggered or contributed to your health concern.</p>
 
-                  <p>This is considered alongside your symptoms, diet, sleep, and other important aspects of your life. It starts to reveal what specific biochemical factors might be holding you back from good health. For example, the intestinal and detoxification systems are often involved.</p>
+                  <p>We consider this information alongside your symptoms, diet, sleep, and other important aspects of your life. It starts to reveal what specific biochemical factors might be holding you back from good health. For example, the intestinal and detoxification systems are often involved.</p>
 
-                  <p>Then, TOGETHER, we develop an initial dietary and lifestyle plan that is achievable and works for YOU.</p>
+                  <p>Then, together, we develop an initial dietary and lifestyle plan that is achievable and works for you.</p>
                 </ScrollAnimation>
 
                 <ScrollAnimation animateIn="fadeInDown">
@@ -164,13 +164,13 @@ export class Therapy extends Component {
                 </ScrollAnimation>
 
                 <ScrollAnimation animateIn="fadeInDown">
-                  <p>...while you start implementing the new tweaks and changes, the detective work really begins! I beaver away, researching the information we’ve discussed, digging deeper in the process of revealing the root(s) of an imbalance.</p>
+                  <p>...while you start implementing the new changes, the detective work really begins. I research the information we’ve discussed, digging deeper to try to reveal the root(s) causes of your symptoms.</p>
 
-                  <p>Sometimes, this is straightforward. Sometimes it is not. We may discuss using blood, urine, stool and/or other tests to help reveal more detail of how your body is working.</p>
+                  <p>Sometimes, this is straightforward. Sometimes it is not. We may discuss using blood, urine, stool and/or other tests to help reveal more detail about how your body is working.</p>
 
-                  <p>The detective work and test results are used to make further changes increasingly personalised.</p>
+                  <p>This research and any test results are used to inform what specific changes may be necessary. This is discussed during subsequent consultations.</p>
 
-                  <p>This process requires time – our bodies are incredibly complex. It also requires a degree of effort from you. Therefore, Nutritional Therapy works really well with health coaching which I use to support you to establish the new habits and help you overcome any challenges that may emerge.</p>
+                  <p>This process requires time – our bodies are incredibly complex. It also takes a degree of effort from you. Nutritional Therapy works really well with health coaching which I use to support you establish new habits and help you overcome any challenges that may emerge.</p>
                 </ScrollAnimation>
 
                 <img className="therapy_img_infographic-mobile" src="/assets/tnb-infographic-all.jpg" alt="" />

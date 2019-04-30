@@ -1,11 +1,24 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export function FooterMenu(props) {
-  const noHref = "#";
+export class FooterMenu extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <div className="footer_ctr_menu">
+    this.showAlert = this.showAlert.bind(this);
+  }
+
+
+  showAlert() {
+    alert("This feature is coming soon. Please come back.");
+  }
+
+
+  render() {
+    const noHref = "#";
+
+    return (
+      <div className="footer_ctr_menu">
       <div>
         The<br />
         Nutritional<br />
@@ -25,10 +38,10 @@ export function FooterMenu(props) {
             <Link to="/about" title="About Harriet">About Harriet</Link>
           </li>
           <li>
-            <Link to="/blog" title="Blog">Blog</Link>
+            <a href={noHref} onClick={this.showAlert} title="Blog">Blog</a>
           </li>
           <li>
-            <a href={noHref} title="Bookings">Bookings</a>
+            <a href={noHref} onClick={this.showAlert} title="Bookings">Bookings</a>
           </li>
         </ul>
       </div>
@@ -53,5 +66,6 @@ export function FooterMenu(props) {
         </ul>
       </div>
     </div>
-  );
+    );
+  }
 }

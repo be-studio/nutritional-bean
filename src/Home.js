@@ -83,8 +83,6 @@ export class Home extends Component {
 
     marqueeMarkup += "</span>";
 
-    console.log(marqueeMarkup);
-
     //noinspection HtmlDeprecatedTag
     return (
       <div className="home_ctr">
@@ -140,7 +138,7 @@ export class Home extends Component {
 
               <ScrollAnimation animateIn="fadeInDown">
                 <p className="home_txt_intro">
-                  a registered Nutritional Therapist, Health Coach, wife and mother. I work with adults and children to restore health and wellbeing. My personal/primary mission is to educate, motivate and support YOU to make diet and lifestyle changes so that work for YOU.
+                  a registered Nutritional Therapist, wife, mother and a Leith’s trained cook. I work with children and adults to restore health and wellbeing. My personal and primary mission is to educate, motivate and support you to make diet and lifestyle changes that work for you.
                 </p>
               </ScrollAnimation>
 

@@ -50,23 +50,23 @@ export class About extends Component {
 
           <div>
             <ScrollAnimation animateIn="fadeInDown">
-              <p className="_txt_intro">I AM HARRIET BINDLOSS, A FULLY QUALIFIED NUTRITIONAL THERAPIST PRACTISING IN BRUTON, SOMERSET, UK.</p>
+              <p className="_txt_intro">I’m Harriet Bindloss, a registered Nutritional Therapist practising in Bruton, Somerset, UK.</p>
             </ScrollAnimation>
 
             <ScrollAnimation animateIn="fadeInDown">
-              <p>I use a robust but efficient method for assessing your health. Based on Functional Medicine. Science, research, clinical insights.</p>
+              <p>I use robust science- and evidence-based methods for assessing your health and informing the solutions we discuss.</p>
 
-              <p>As a mother, I have a good family understanding. Keen to support you make changes manageable and practical with family life. Manage it easily.</p>
+              <p>As a mother, I have a good family understanding, and I help you make adjustments that are manageable and practical with family life.</p>
 
-              <p>I use health coaching to complement and support the nutrition changes you make, and help you find the motivation you need. Provide support and accountability to make your changes successful and right for you. Guide you through any resistance. So that you manage it.</p>
+              <p>Complementing the nutrition changes you make, I help you find the motivation you need, provide lots of support and accountability, and guide you through any challenges or resistance you may encounter, so the improvements are successful and lasting.</p>
 
-              <p>I use my cooking background to make really practical/simple dietary changes that are delicious so you enjoy the process and develop a renewed relationship with food. This is not going to be a process involving abstinence and sacrifice.</p>
+              <p>I use my cooking background to make practical and simple dietary recommendations that are delicious, so you enjoy the process and develop a renewed relationship with food. This is not going to be a process involving abstinence and sacrifice.</p>
 
-              <p>I will meet you where you are and work with you and what you can do, not impose a list of requirements that aren’t compatible; my primary concern is to make it achievable and easily incorporated into your life. Together we’ll work out the right plan for you.</p>
+              <p>I will work with you according to what you can do and what your situation is. I do not impose a list of requirements that aren’t compatible; my primary concern is to make it achievable and easily incorporated into your life. Together we’ll work out the right plan for you.</p>
 
-              <p>I am a qualified Nutritional Therapist with a diploma from The Institute of Optimum Nutrition (ION) in Richmond, a leading school of science and evidence-based Nutritional Therapy in the UK.</p>
+              <p>I am a qualified and registered Nutritional Therapist with a diploma from The Institute for Optimum Nutrition (ION) in Richmond, a leading school of science and evidence-based Nutritional Therapy in the UK.</p>
 
-              <p>I am registered with our professional body, The British Association of Applied Nutrition and Nutritional Therapy (BANT), and with the Complementary and Natural Healthcare Council (CNHC), which demand high standards of practice.</p>
+              <p>I am registered with The British Association of Applied Nutrition and Nutritional Therapy (BANT), and with the Complementary and Natural Healthcare Council (CNHC).</p>
 
               <p>I am fully insured. To keep abreast of the latest science and developments, I attend professional training events and seminars regularly.</p>
             </ScrollAnimation>
