@@ -1,7 +1,6 @@
 .navigation_ctr_bean,
 .navigation_ctr_bean-mobile {
   position: fixed;
-  top: 50px;
   left: 60px;
   width: 50px;
   height: 31px;
@@ -21,6 +20,8 @@
 }
 
 .navigation_ctr_bean {
+  top: 50px;
+
   @media(max-width: $tablet) {
     display: none;
   }
@@ -35,6 +36,7 @@
 
   @media(max-width: $tablet) {
     display: block;
+    top: 53px;
     left: 10px;
     background-size: 0;
     transform: scale(0.8);

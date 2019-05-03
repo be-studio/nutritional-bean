@@ -13,7 +13,7 @@
   padding-bottom: 150px;
 
   &._mod_pad-top {
-    padding-top: 200px;
+    padding-top: 150px;
 
     @media(max-width: $tablet) {
       padding-top: 100px;
@@ -68,8 +68,8 @@
 }
 
 .services_img_consult {
-  width: 80%;
-  margin: 150px auto 0;
+  width: 50%;
+  margin-top: 50px;
 
   @media(max-width: $tablet) {
     display: none;

@@ -75,7 +75,7 @@
 
 .home_ctr_top-panel-content {
   display: flex;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 
   @media(max-width: $tablet) {
@@ -84,10 +84,9 @@
   }
 
   >div {
-    flex: 1 1 auto;
-
     &:first-child {
-      padding-right: 80px;
+      flex: 1 1 auto;
+      padding-right: 120px;
 
       @media(max-width: $tablet) {
         padding: 0 10px 0 20px;
@@ -95,6 +94,7 @@
     }
 
     &:last-child {
+      flex: 0 0 30%;
       text-align: right;
       padding-top: 40px;
 
@@ -122,7 +122,8 @@
 }
 
 .home_txt_intro {
-  font-size: 18px;
+  font-size: 22px;
+  line-height: 1.4em;
 
   @media(max-width: $tablet) {
     font-size: 13px;
@@ -154,9 +155,9 @@
 }
 
 .home_ctr_accreditations {
-  width: 70%;
+  width: 80%;
   text-align: right;
-  margin: 100px auto;
+  margin: 50px auto;
 
   @media(max-width: $tablet) {
     width: 100%;
@@ -164,7 +165,7 @@
   }
 
   img {
-    height: 20px;
+    height: 25px;
     margin-right: 10px;
 
     @media(max-width: $tablet) {
@@ -274,7 +275,7 @@
 
   >div {
     display: flex;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 
     @media(max-width: $tablet) {
@@ -284,7 +285,7 @@
 
     >div {
       &:first-child {
-        flex: 0 0 50%;
+        flex: 0 0 60%;
         padding-top: 20px;
 
         @media(max-width: $tablet) {
@@ -297,8 +298,8 @@
       }
 
       &:last-child {
-        flex: 0 0 50%;
-        padding-left: 100px;
+        flex: 0 0 40%;
+        padding: 50px 0 0 100px;
 
         @media(max-width: $tablet) {
           flex: 0 0 100%;
@@ -312,6 +313,13 @@
 
           @media(max-width: $tablet) {
             font-size: 24px;
+            margin: 30px 0 25px -10px;
+          }
+        }
+
+        a {
+          @media(max-width: $tablet) {
+            margin-left: -10px;
           }
         }
       }

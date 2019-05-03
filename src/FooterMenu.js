@@ -20,10 +20,12 @@ export class FooterMenu extends Component {
     return (
       <div className="footer_ctr_menu">
       <div>
+        <Link to="/">
         The<br />
         Nutritional<br />
         Bean<br />
         <img src="/assets/bean.svg" alt="Bean" />
+        </Link>
       </div>
 
       <div>
@@ -32,7 +34,7 @@ export class FooterMenu extends Component {
             <Link to="/services" title="Services">Services</Link>
           </li>
           <li>
-            <Link to="/therapy" title="Therapy">Therapy</Link>
+            <Link to="/nutrition" title="Nutrition">Nutrition</Link>
           </li>
           <li>
             <Link to="/about" title="About Harriet">About Harriet</Link>

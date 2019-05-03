@@ -24,7 +24,7 @@
 
   >div {
     display: flex;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 
     @media(max-width: $tablet) {
@@ -52,6 +52,18 @@
       font-size: 24px;
       text-transform: lowercase;
       line-height: 1.2em;
+
+      a {
+        font: 24px $serifText;
+        text-transform: lowercase;
+        line-height: 1.2em;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $textColour;
+        }
+      }
 
       img {
         width: 15px;

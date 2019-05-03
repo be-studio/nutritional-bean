@@ -7,7 +7,7 @@ import { Title } from "./Title";
 
 
 
-export class Therapy extends Component {
+export class Nutrition extends Component {
   componentDidMount() {
     window.scroll(0, 0);
   }
@@ -16,7 +16,7 @@ export class Therapy extends Component {
   render() {
     return (
       <div className="therapy_ctr">
-        <Title absolute page="Therapy" />
+        <Title absolute page="Nutrition" />
 
         <div className="therapy_ctr_poster">
           <Controller>
@@ -107,7 +107,7 @@ export class Therapy extends Component {
             <Scene triggerHook="onEnter" duration="250%">
               <Timeline wrapper={<div className="therapy_ctr_parallax-image" />}>
                 <Tween position="0" from={{ yPercent: -50 }} to={{ yPercent: 0 }}>
-                  <div className="therapy_ctr_parallax-image-mobile"></div>
+                  <div className="therapy_ctr_parallax-image-mobile parallax1"></div>
                 </Tween>
               </Timeline>
             </Scene>
@@ -177,6 +177,30 @@ export class Therapy extends Component {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="therapy_ctr_parallax">
+          <Controller>
+            <Scene triggerHook="onEnter" duration="200%">
+              <Timeline wrapper={<div className="therapy_ctr_parallax-image" />}>
+                <Tween position="0" from={{ yPercent: -30 }} to={{ yPercent: 10 }}>
+                  <img src="/assets/tnb_nutrition_3.jpg" alt="" />
+                </Tween>
+              </Timeline>
+            </Scene>
+          </Controller>
+        </div>
+
+        <div className="therapy_ctr_parallax-mobile">
+          <Controller>
+            <Scene triggerHook="onEnter" duration="250%">
+              <Timeline wrapper={<div className="therapy_ctr_parallax-image" />}>
+                <Tween position="0" from={{ yPercent: -50 }} to={{ yPercent: 0 }}>
+                  <div className="therapy_ctr_parallax-image-mobile parallax2"></div>
+                </Tween>
+              </Timeline>
+            </Scene>
+          </Controller>
         </div>
       </div>
     );

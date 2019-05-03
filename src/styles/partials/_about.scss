@@ -14,7 +14,7 @@
 
 .about_ctr_content {
   display: flex;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 
   @media(max-width: $tablet) {
@@ -40,7 +40,7 @@
 }
 
 .about_img_harriet {
-  width: 90%;
+  width: 85%;
 }
 
 .about_ctr_harriet {
@@ -118,6 +118,7 @@
 
       li {
         font-size: 0.7em;
+        text-indent: -2px;
 
         &::before {
           content: "";

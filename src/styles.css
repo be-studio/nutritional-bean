@@ -29,12 +29,14 @@ h2 {
   h2._ttl_other-info {
     font-size: 18px; }
 
-h3 {
+h3,
+h3 p {
   font-size: 24px;
   font-weight: normal;
   text-transform: uppercase;
   line-height: 1.2em; }
-  h3._ttl_other-info {
+  h3._ttl_other-info,
+  h3 p._ttl_other-info {
     font-size: 14px; }
 
 h4 {
@@ -203,7 +205,6 @@ button {
 .navigation_ctr_bean,
 .navigation_ctr_bean-mobile {
   position: fixed;
-  top: 50px;
   left: 60px;
   width: 50px;
   height: 31px;
@@ -220,9 +221,11 @@ button {
     -webkit-transform: scale(1.2);
             transform: scale(1.2); }
 
-@media (max-width: 800px) {
-  .navigation_ctr_bean {
-    display: none; } }
+.navigation_ctr_bean {
+  top: 50px; }
+  @media (max-width: 800px) {
+    .navigation_ctr_bean {
+      display: none; } }
 
 .navigation_ctr_bean-mobile {
   display: none; }
@@ -232,6 +235,7 @@ button {
   @media (max-width: 800px) {
     .navigation_ctr_bean-mobile {
       display: block;
+      top: 53px;
       left: 10px;
       background-size: 0;
       -webkit-transform: scale(0.8);
@@ -321,7 +325,7 @@ button {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
-    width: 70%;
+    width: 80%;
     margin: 0 auto; }
     @media (max-width: 800px) {
       .footer_ctr_top > div {
@@ -350,6 +354,12 @@ button {
       font-size: 24px;
       text-transform: lowercase;
       line-height: 1.2em; }
+      .footer_ctr_menu > div:first-child a {
+        font: 24px "Domaine", "Georgia", "Times New Roman", serif;
+        text-transform: lowercase;
+        line-height: 1.2em; }
+        .footer_ctr_menu > div:first-child a:hover, .footer_ctr_menu > div:first-child a:focus, .footer_ctr_menu > div:first-child a:active {
+          color: #2c3042; }
       .footer_ctr_menu > div:first-child img {
         width: 15px;
         margin-top: 20px; }
@@ -398,6 +408,7 @@ button {
   .newsletter_ctr table td:first-child {
     width: 80%; }
   .newsletter_ctr input {
+    width: 70%;
     background-color: transparent;
     font: 11px "Space Mono", "Courier", monospace;
     margin-left: -3px;
@@ -484,7 +495,7 @@ button {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  width: 70%;
+  width: 80%;
   margin: 0 auto; }
   @media (max-width: 800px) {
     .home_ctr_top-panel-content {
@@ -493,21 +504,23 @@ button {
       -webkit-flex-direction: row-reverse;
               flex-direction: row-reverse;
       width: 100%; } }
-  .home_ctr_top-panel-content > div {
+  .home_ctr_top-panel-content > div:first-child {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
-            flex: 1 1 auto; }
-    .home_ctr_top-panel-content > div:first-child {
-      padding-right: 80px; }
-      @media (max-width: 800px) {
-        .home_ctr_top-panel-content > div:first-child {
-          padding: 0 10px 0 20px; } }
-    .home_ctr_top-panel-content > div:last-child {
-      text-align: right;
-      padding-top: 40px; }
-      @media (max-width: 800px) {
-        .home_ctr_top-panel-content > div:last-child {
-          padding-top: 0; } }
+            flex: 1 1 auto;
+    padding-right: 120px; }
+    @media (max-width: 800px) {
+      .home_ctr_top-panel-content > div:first-child {
+        padding: 0 10px 0 20px; } }
+  .home_ctr_top-panel-content > div:last-child {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 30%;
+            flex: 0 0 30%;
+    text-align: right;
+    padding-top: 40px; }
+    @media (max-width: 800px) {
+      .home_ctr_top-panel-content > div:last-child {
+        padding-top: 0; } }
 
 .home_txt_intro-title {
   display: inline-block;
@@ -522,7 +535,8 @@ button {
         display: none; } }
 
 .home_txt_intro {
-  font-size: 18px; }
+  font-size: 22px;
+  line-height: 1.4em; }
   @media (max-width: 800px) {
     .home_txt_intro {
       font-size: 13px;
@@ -545,15 +559,15 @@ button {
         margin-top: 26px; } }
 
 .home_ctr_accreditations {
-  width: 70%;
+  width: 80%;
   text-align: right;
-  margin: 100px auto; }
+  margin: 50px auto; }
   @media (max-width: 800px) {
     .home_ctr_accreditations {
       width: 100%;
       text-align: center; } }
   .home_ctr_accreditations img {
-    height: 20px;
+    height: 25px;
     margin-right: 10px; }
     @media (max-width: 800px) {
       .home_ctr_accreditations img {
@@ -639,7 +653,7 @@ button {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
-    width: 70%;
+    width: 80%;
     margin: 0 auto; }
     @media (max-width: 800px) {
       .home_ctr_bottom-panel > div {
@@ -648,8 +662,8 @@ button {
         width: 88%; } }
     .home_ctr_bottom-panel > div > div:first-child {
       -webkit-box-flex: 0;
-      -webkit-flex: 0 0 50%;
-              flex: 0 0 50%;
+      -webkit-flex: 0 0 60%;
+              flex: 0 0 60%;
       padding-top: 20px; }
       @media (max-width: 800px) {
         .home_ctr_bottom-panel > div > div:first-child {
@@ -660,9 +674,9 @@ button {
         width: 100%; }
     .home_ctr_bottom-panel > div > div:last-child {
       -webkit-box-flex: 0;
-      -webkit-flex: 0 0 50%;
-              flex: 0 0 50%;
-      padding-left: 100px; }
+      -webkit-flex: 0 0 40%;
+              flex: 0 0 40%;
+      padding: 50px 0 0 100px; }
       @media (max-width: 800px) {
         .home_ctr_bottom-panel > div > div:last-child {
           -webkit-box-flex: 0;
@@ -675,7 +689,11 @@ button {
         text-transform: uppercase; }
         @media (max-width: 800px) {
           .home_ctr_bottom-panel > div > div:last-child p {
-            font-size: 24px; } }
+            font-size: 24px;
+            margin: 30px 0 25px -10px; } }
+      @media (max-width: 800px) {
+        .home_ctr_bottom-panel > div > div:last-child a {
+          margin-left: -10px; } }
 
 .MarqueeContent {
   display: inline-block; }
@@ -714,7 +732,7 @@ button {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  width: 70%;
+  width: 80%;
   margin: 0 auto; }
   @media (max-width: 800px) {
     .about_ctr_content {
@@ -734,7 +752,7 @@ button {
         padding-top: 40px; } }
 
 .about_img_harriet {
-  width: 90%; }
+  width: 85%; }
 
 .about_ctr_harriet {
   position: relative;
@@ -791,7 +809,8 @@ button {
         margin: 0;
         padding: 0; }
         .about_ctr_media-accred ul li {
-          font-size: 0.7em; }
+          font-size: 0.7em;
+          text-indent: -2px; }
           .about_ctr_media-accred ul li::before {
             content: "";
             margin-right: 0; } }
@@ -808,7 +827,7 @@ button {
   background-color: white;
   padding-bottom: 150px; }
   .services_ctr_panel._mod_pad-top {
-    padding-top: 200px; }
+    padding-top: 150px; }
     @media (max-width: 800px) {
       .services_ctr_panel._mod_pad-top {
         padding-top: 100px; } }
@@ -852,8 +871,8 @@ button {
   display: block; }
 
 .services_img_consult {
-  width: 80%;
-  margin: 150px auto 0; }
+  width: 50%;
+  margin-top: 50px; }
   @media (max-width: 800px) {
     .services_img_consult {
       display: none; } }
@@ -1068,9 +1087,12 @@ button {
 .therapy_ctr_parallax-image-mobile {
   width: 100%;
   height: 600px;
-  background-image: url("/assets/tnb-therapy-mobile-2.jpg");
   background-position: center;
   background-size: cover; }
+  .therapy_ctr_parallax-image-mobile.parallax1 {
+    background-image: url("/assets/tnb-therapy-mobile-2.jpg"); }
+  .therapy_ctr_parallax-image-mobile.parallax2 {
+    background-image: url("/assets/tnb_nutrition_mobile_4.jpg"); }
 
 .therapy_ctr_parallax-image {
   width: 100%;

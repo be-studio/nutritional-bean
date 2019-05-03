@@ -164,9 +164,16 @@
   width: 100%;
   height: 600px;
   background: {
-    image: url("/assets/tnb-therapy-mobile-2.jpg");
     position: center;
     size: cover;
+  }
+
+  &.parallax1 {
+    background-image: url("/assets/tnb-therapy-mobile-2.jpg");
+  }
+
+  &.parallax2 {
+    background-image: url("/assets/tnb_nutrition_mobile_4.jpg");
   }
 }
 
