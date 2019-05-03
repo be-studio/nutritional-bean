@@ -182,6 +182,10 @@
   height: 800px;
   overflow: hidden;
 
+  &.parallax_alt {
+    height: 700px;
+  }
+
   @media(max-width: $tablet) {
     height: 400px;
   }

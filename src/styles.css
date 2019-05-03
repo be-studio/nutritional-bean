@@ -1098,6 +1098,8 @@ button {
   width: 100%;
   height: 800px;
   overflow: hidden; }
+  .therapy_ctr_parallax-image.parallax_alt {
+    height: 700px; }
   @media (max-width: 800px) {
     .therapy_ctr_parallax-image {
       height: 400px; } }

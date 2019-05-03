@@ -182,7 +182,7 @@ export class Nutrition extends Component {
         <div className="therapy_ctr_parallax">
           <Controller>
             <Scene triggerHook="onEnter" duration="200%">
-              <Timeline wrapper={<div className="therapy_ctr_parallax-image" />}>
+              <Timeline wrapper={<div className="therapy_ctr_parallax-image parallax_alt" />}>
                 <Tween position="0" from={{ yPercent: -30 }} to={{ yPercent: 10 }}>
                   <img src="/assets/tnb_nutrition_3.jpg" alt="" />
                 </Tween>
