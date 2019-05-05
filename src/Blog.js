@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+
+import { Masonry } from "./Masonry";
+
 import { Title } from "./Title";
-// import { Masonry } from "./Masonry";
-import MasonryInfiniteScroller from "react-masonry-infinite";
+
 
 export class Blog extends Component {
   constructor(props) {
@@ -12,12 +14,9 @@ export class Blog extends Component {
     this.state = {
       articles: null,
       recipes: null,
-      articlesRecipes: null,
-      page: 1,
-      moreToLoad: false,
-      loadedArticlesRecipes: [],
-      errorMsg: "There has been a problem retrieving data for the blog. Please try again later."
-    }
+      articlesRecipes: [],
+      errorMsg: "There has been a problem retrieving data for the blog. Please try again later.",
+    };
   }
 
 
@@ -45,29 +44,6 @@ export class Blog extends Component {
 
         this.setState({
           articlesRecipes: articlesRecipes
-        });
-
-        let loadedArticlesRecipes = [];
-        let maxIndex;
-
-        if(this.state.articlesRecipes.length <= 3) {
-          maxIndex = this.state.articlesRecipes.length;
-          this.setState({
-            moreToLoad: false
-          });
-        } else {
-          maxIndex = 3;
-          this.setState({
-            moreToLoad: true
-          });
-        }
-
-        for(let i = 0; i < maxIndex; i++) {
-          loadedArticlesRecipes.push(this.state.articlesRecipes[i]);
-        }
-
-        this.setState({
-          loadedArticlesRecipes: loadedArticlesRecipes
         });
       })
       .catch(() => alert(this.state.errorMsg));
@@ -109,52 +85,25 @@ export class Blog extends Component {
   }
 
 
-  loadMoreArticlesRecipes(page) {
-    this.setState({
-      page: page
-    });
-
-    let maxIndex;
-    if(this.state.articlesRecipes.length <= (page * 3)) {
-      maxIndex = this.state.articlesRecipes.length;
-      this.setState({
-        moreToLoad: false
-      });
-    } else {
-      maxIndex = page * 3;
-      this.setState({
-        moreToLoad: true
-      });
-    }
-
-    let loadedArticlesRecipes = this.state.loadedArticlesRecipes;
-    for(let i = page * 3 - 3; i < maxIndex; i++) {
-      loadedArticlesRecipes.push(this.state.articlesRecipes[i]);
-    }
-    this.setState({
-      loadedArticlesRecipes: loadedArticlesRecipes
-    });
-  }
-
-
   render() {
-    if(!this.state.loadedArticlesRecipes) {
+    if(!this.state.articlesRecipes) {
       return (
         <div></div>
       );
     }
 
+    //noinspection ThisExpressionReferencesGlobalObjectJS
     return (
       <div className="blog_ctr">
         <Title page="Blog" />
 
-        <MasonryInfiniteScroller initialLoad={false} pageStart={1} hasMore={this.state.moreToLoad} loadMore={this.loadMoreArticlesRecipes.bind(this)} sizes={[{ columns: 2, gutter: 20 }]} threshold={200} pack={true}>
+        <Masonry>
           {
-            this.state.loadedArticlesRecipes.map(articleRecipe => {
+            this.state.articlesRecipes.map((articleRecipe, i) => {
               return (
-                <div className="blog_grd_item">
+                <div className="blog_grd_item" key={i}>
                   <div>
-                    <img src={process.env.REACT_APP_API_PUBLIC_URL + articleRecipe.poster} /><br />
+                    <img src={process.env.REACT_APP_API_PUBLIC_URL + articleRecipe.poster} alt={articleRecipe.title} /><br />
                   </div>
 
                   <div>
@@ -168,7 +117,7 @@ export class Blog extends Component {
               );
             })
           }
-        </MasonryInfiniteScroller>
+        </Masonry>
       </div>
     );
   }

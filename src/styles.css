@@ -1134,16 +1134,15 @@ button {
   width: 70%;
   margin: 0 auto; }
 
-.blog_grd_item {
-  width: 500px;
-  height: auto; }
-  .blog_grd_item > div {
-    width: 100%; }
-  .blog_grd_item img {
-    width: 100%; }
-  .blog_grd_item h2 {
-    font-size: 32px;
-    text-transform: none; }
+.blog_grd_item > div {
+  width: 100%; }
+
+.blog_grd_item img {
+  width: 100%; }
+
+.blog_grd_item h2 {
+  font-size: 32px;
+  text-transform: none; }
 
 .contact_ctr_content {
   width: 50%;
