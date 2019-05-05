@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-
 import { Masonry } from "./Masonry";
-
 import { Title } from "./Title";
+import { BlogItem } from "./BlogItem";
 
 
 export class Blog extends Component {
@@ -57,13 +56,29 @@ export class Blog extends Component {
     let recipesArr;
 
     if(articles) {
-      articlesArr = articles.map(article => ({
-        title: article.title,
-        excerpt: article.excerpt,
-        poster: article.poster,
-        updated: article.updated_at,
-        epoch: new Date(article.updated_at).getTime()
-      }));
+      articlesArr = articles.map(article => {
+        let categoryStr = "";
+        if(article.categories) {
+          article.categories.forEach((cat, index) => {
+            categoryStr += cat.name;
+
+            if(index != article.categories.length - 1) {
+              categoryStr += ", ";
+            } else {
+              categoryStr += " - ";
+            }
+          });
+        }
+
+        return {
+          title: article.title,
+          excerpt: article.excerpt,
+          poster: article.poster,
+          updated: article.updated_at,
+          epoch: new Date(article.updated_at).getTime(),
+          categories: categoryStr
+        };
+      });
     }
 
     if(recipes) {
@@ -72,7 +87,8 @@ export class Blog extends Component {
         excerpt: recipe.excerpt,
         poster: recipe.poster,
         updated: recipe.updated_at,
-        epoch: new Date(recipe.updated_at).getTime()
+        epoch: new Date(recipe.updated_at).getTime(),
+        categories: "Recipe - "
       }));
     }
 
@@ -82,6 +98,17 @@ export class Blog extends Component {
 
   sortByDate(articlesRecipes) {
     return articlesRecipes.sort((a, b) => a.epoch - b.epoch);
+  }
+
+
+  formatDate(date) {
+    const rawDate = new Date(date);
+
+    const day = rawDate.getDate() < 10 ? "0" + rawDate.getDate() : rawDate.getDate();
+    const adjMonth = rawDate.getMonth() + 1;
+    const month = adjMonth < 10 ? "0" + adjMonth : adjMonth;
+
+    return `${day}.${month}.${rawDate.getFullYear()}`;
   }
 
 
@@ -97,23 +124,12 @@ export class Blog extends Component {
       <div className="blog_ctr">
         <Title page="Blog" />
 
-        <Masonry>
+        <Masonry gap={40}>
           {
-            this.state.articlesRecipes.map((articleRecipe, i) => {
+            this.state.articlesRecipes.map((articleRecipe, index) => {
+              //noinspection ThisExpressionReferencesGlobalObjectJS
               return (
-                <div className="blog_grd_item" key={i}>
-                  <div>
-                    <img src={process.env.REACT_APP_API_PUBLIC_URL + articleRecipe.poster} alt={articleRecipe.title} /><br />
-                  </div>
-
-                  <div>
-                    <h2>{articleRecipe.title}</h2>
-                  </div>
-
-                  <div>
-                    {articleRecipe.excerpt}
-                  </div>
-                </div>
+                <BlogItem itemKey={index} title={articleRecipe.title} poster={articleRecipe.poster} excerpt={articleRecipe.excerpt} categories={articleRecipe.categories} updated={this.formatDate(articleRecipe.updated)} />
               );
             })
           }

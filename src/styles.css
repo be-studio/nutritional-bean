@@ -1131,18 +1131,24 @@ button {
       margin-top: 50px; } }
 
 .blog_ctr {
-  width: 70%;
+  width: 80%;
   margin: 0 auto; }
 
-.blog_grd_item > div {
-  width: 100%; }
+.blog_grd_item {
+  padding-bottom: 50px; }
+  .blog_grd_item > div {
+    width: 100%; }
+  .blog_grd_item img {
+    width: 100%; }
+  .blog_grd_item h2 {
+    font-size: 32px;
+    text-transform: none; }
 
-.blog_grd_item img {
-  width: 100%; }
+.blog_txt_updated {
+  font: 12px "Space Mono", "Courier", monospace; }
 
-.blog_grd_item h2 {
-  font-size: 32px;
-  text-transform: none; }
+.blog_lnk_read {
+  margin-top: 30px; }
 
 .contact_ctr_content {
   width: 50%;

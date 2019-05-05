@@ -1,9 +1,11 @@
 .blog_ctr {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 
 .blog_grd_item {
+  padding-bottom: 50px;
+
   >div {
     width: 100%;
   }
@@ -16,4 +18,12 @@
     font-size: 32px;
     text-transform: none;
   }
+}
+
+.blog_txt_updated {
+  font: 12px $sansText;
+}
+
+.blog_lnk_read {
+  margin-top: 30px;
 }

@@ -18,9 +18,24 @@ class BlogRecipeController extends Controller {
     $articles = BlogArticle::all();
     $recipes = Recipe::all();
 
+    $articlesWithCatsTags = [];
+    foreach($articles as $article) {
+      $article->categories;
+      $article->tags;
+
+      $articlesWithCatsTags[] = $article;
+    }
+
+    $recipesWithCats = [];
+    foreach($recipes as $recipe) {
+      $recipe->categories;
+
+      $recipesWithCats[] = $recipe;
+    }
+
     return response()->json([
-      "articles" => $articles,
-      "recipes" => $recipes
+      "articles" => $articlesWithCatsTags,
+      "recipes" => $recipesWithCats
     ]);
   }
 
