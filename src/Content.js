@@ -7,6 +7,7 @@ import { About } from "./About";
 import { Services } from "./Services";
 import { Nutrition } from "./Nutrition";
 import { Blog } from "./Blog";
+import { BlogArticle } from "./BlogArticle";
 import { Contact } from "./Contact";
 import { Privacy } from "./Privacy";
 import { Terms } from "./Terms";
@@ -26,7 +27,8 @@ export class Content extends Component {
         <Route path="/about" component ={About} />
         <Route path="/services" component={Services} />
         <Route path="/nutrition" component={Nutrition} />
-        <Route path="/blog" component={Blog} />
+        <Route exact path="/blog" component={Blog} />
+        <Route path="/blog/article/:permalink" component={BlogArticle} />
         <Route path="/contact" component={Contact} />
         <Route path="/terms" component={Terms} />
         <Route path="/privacy" component={Privacy} />

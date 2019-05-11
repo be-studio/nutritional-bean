@@ -4,7 +4,7 @@ import axios from "axios";
 import { Masonry } from "./Masonry";
 import { Title } from "./Title";
 import { BlogItem } from "./BlogItem";
-
+import { Loader } from "./Loader";
 
 export class Blog extends Component {
   constructor(props) {
@@ -62,7 +62,7 @@ export class Blog extends Component {
           article.categories.forEach((cat, index) => {
             categoryStr += cat.name;
 
-            if(index != article.categories.length - 1) {
+            if(index !== article.categories.length - 1) {
               categoryStr += ", ";
             } else {
               categoryStr += " - ";
@@ -72,6 +72,7 @@ export class Blog extends Component {
 
         return {
           title: article.title,
+          permalink: article.permalink,
           excerpt: article.excerpt,
           poster: article.poster,
           updated: article.updated_at,
@@ -84,6 +85,7 @@ export class Blog extends Component {
     if(recipes) {
       recipesArr = recipes.map(recipe => ({
         title: recipe.title,
+        permalink: recipe.permalink,
         excerpt: recipe.excerpt,
         poster: recipe.poster,
         updated: recipe.updated_at,
@@ -97,7 +99,7 @@ export class Blog extends Component {
 
 
   sortByDate(articlesRecipes) {
-    return articlesRecipes.sort((a, b) => a.epoch - b.epoch);
+    return articlesRecipes.sort((a, b) => b.epoch - a.epoch);
   }
 
 
@@ -115,7 +117,7 @@ export class Blog extends Component {
   render() {
     if(!this.state.articlesRecipes) {
       return (
-        <div></div>
+        <Loader />
       );
     }
 
@@ -124,12 +126,12 @@ export class Blog extends Component {
       <div className="blog_ctr">
         <Title page="Blog" />
 
-        <Masonry gap={40}>
+        <Masonry gap={60}>
           {
             this.state.articlesRecipes.map((articleRecipe, index) => {
               //noinspection ThisExpressionReferencesGlobalObjectJS
               return (
-                <BlogItem itemKey={index} title={articleRecipe.title} poster={articleRecipe.poster} excerpt={articleRecipe.excerpt} categories={articleRecipe.categories} updated={this.formatDate(articleRecipe.updated)} />
+                <BlogItem key={index} itemKey={index} index={index} title={articleRecipe.title} permalink={articleRecipe.permalink} poster={articleRecipe.poster} excerpt={articleRecipe.excerpt} categories={articleRecipe.categories} updated={this.formatDate(articleRecipe.updated)} />
               );
             })
           }

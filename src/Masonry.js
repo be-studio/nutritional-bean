@@ -24,7 +24,7 @@ export function Masonry(props) {
   props.children.forEach((child, index) => {
     const columnIndex = index % props.columns;
     columnWrapper[`column${columnIndex}`].push(
-      <div style={{ marginBottom: `${props.gap}px`}}>
+      <div key={index} style={{ marginBottom: `${props.gap}px`}}>
         {child}
       </div>
     );
@@ -32,7 +32,7 @@ export function Masonry(props) {
 
   for(let i = 0; i < props.columns; i++) {
     result.push(
-      <div style={{ marginLeft: `${i > 0 ? props.gap : 0}px`, flex: 1 }}>
+      <div key={i} style={{ marginLeft: `${i > 0 ? props.gap : 0}px`, flex: 1 }}>
         {columnWrapper[`column${i}`]}
       </div>
     );

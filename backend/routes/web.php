@@ -19,7 +19,9 @@ Route::get("/utility/csrf", "UserController@getCsrfToken");
 Route::get("/content/{type}", "ContentController@getContent");
 Route::get("/marquee", "MarqueeController@getMarqueeItems");
 Route::get("/blog/articles-recipes", "BlogRecipeController@getAllBlogArticlesRecipes");
+Route::get("/blog/prevnextpost/{permalink}", "BlogRecipeController@getPrevNextPost");
 Route::get("/blog/articles", "BlogRecipeController@getAllBlogArticles");
+Route::get("/blog/article/{permalink}", "BlogRecipeController@getBlogArticle");
 Route::get("/recipes", "BlogRecipeController@getAllRecipes");
 Route::post("/contact", "MailController@sendMail");
 

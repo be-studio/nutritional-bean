@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Mailchimp from "react-mailchimp-form";
 
-import { LinkArrow } from "./LinkArrow";
-
 
 export class NewsletterSignUp extends Component {
   render() {
