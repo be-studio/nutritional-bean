@@ -35,17 +35,19 @@ export function BlogItem(props) {
         {newPost}
       </div>
 
-      <div>
-        <h2>{props.title}</h2>
-        <p className="blog_txt_updated">{props.categories}{props.updated}</p>
-      </div>
+      <div className="blog-item_ctr_detail">
+        <div>
+          <h2>{props.title}</h2>
+          <p className="blog_txt_updated">{props.categories}{props.updated}</p>
+        </div>
 
-      <div>
-        {props.excerpt}
-      </div>
+        <div>
+          {props.excerpt}
+        </div>
 
-      <div className="blog_lnk_read">
-        {link}
+        <div className="blog_lnk_read">
+          {link}
+        </div>
       </div>
     </div>
   );

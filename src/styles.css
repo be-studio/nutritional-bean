@@ -1136,6 +1136,9 @@ button {
 .blog_ctr {
   width: 80%;
   margin: 0 auto; }
+  @media (max-width: 800px) {
+    .blog_ctr {
+      width: 100%; } }
 
 .blog-menu_ctr {
   width: 100%;
@@ -1152,6 +1155,9 @@ button {
       text-indent: 0;
       list-style-position: initial;
       margin: 0 10px; }
+      @media (max-width: 800px) {
+        .blog-menu_ctr ul li {
+          margin: 0 2px; } }
       .blog-menu_ctr ul li::before {
         content: "";
         margin: 0; }
@@ -1304,6 +1310,21 @@ button {
   .recipe_ctr_ingredients ul li::before {
     content: "";
     margin: 0; }
+
+@media (max-width: 800px) {
+  .blog-articles_ctr {
+    display: none; } }
+
+.blog-articles_ctr_mobile {
+  display: none; }
+  @media (max-width: 800px) {
+    .blog-articles_ctr_mobile {
+      display: block; } }
+
+@media (max-width: 800px) {
+  .blog-item_ctr_detail {
+    width: 90% !important;
+    margin: 0 auto; } }
 
 .contact_ctr_content {
   width: 50%;

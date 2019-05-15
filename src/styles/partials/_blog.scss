@@ -1,6 +1,10 @@
 .blog_ctr {
   width: 80%;
   margin: 0 auto;
+
+  @media(max-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .blog-menu_ctr {
@@ -20,6 +24,10 @@
       text-indent: 0;
       list-style-position: initial;
       margin: 0 10px;
+
+      @media(max-width: $tablet) {
+        margin: 0 2px;
+      }
 
       &::before {
         content: "";
@@ -245,5 +253,26 @@
         margin: 0;
       }
     }
+  }
+}
+
+.blog-articles_ctr {
+  @media(max-width: $tablet) {
+    display: none;
+  }
+}
+
+.blog-articles_ctr_mobile {
+  display: none;
+
+  @media(max-width: $tablet) {
+    display: block;
+  }
+}
+
+.blog-item_ctr_detail {
+  @media(max-width: $tablet) {
+    width: 90% !important;
+    margin: 0 auto;
   }
 }

@@ -35,17 +35,27 @@ export class BlogArticles extends Component {
 
   render() {
     if(this.state.articlesRecipes) {
+      const blogArticles = this.state.articlesRecipes.map((articleRecipe, index) => {
+        //noinspection ThisExpressionReferencesGlobalObjectJS
+        return (
+          <BlogItem key={index} itemKey={index} index={index} title={articleRecipe.title} permalink={articleRecipe.permalink} poster={articleRecipe.poster} excerpt={articleRecipe.excerpt} categories={articleRecipe.categories} updated={this.formatDate(articleRecipe.updated)} type={articleRecipe.type} />
+        );
+      });
+
       return (
-        <Masonry gap={60}>
-          {
-            this.state.articlesRecipes.map((articleRecipe, index) => {
-              //noinspection ThisExpressionReferencesGlobalObjectJS
-              return (
-                <BlogItem key={index} itemKey={index} index={index} title={articleRecipe.title} permalink={articleRecipe.permalink} poster={articleRecipe.poster} excerpt={articleRecipe.excerpt} categories={articleRecipe.categories} updated={this.formatDate(articleRecipe.updated)} type={articleRecipe.type} />
-              );
-            })
-          }
-        </Masonry>
+        <>
+          <div className="blog-articles_ctr">
+            <Masonry gap={60}>
+              {blogArticles}
+            </Masonry>
+          </div>
+
+          <div className="blog-articles_ctr_mobile">
+            <Masonry columns={1}>
+              {blogArticles}
+            </Masonry>
+          </div>
+        </>
       );
     } else {
       return (
