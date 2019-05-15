@@ -8,19 +8,21 @@ export function BlogItem(props) {
   let newPost;
   let link;
 
+  const path = props.type == "article" ? "/blog/article/" : "/recipes/";
+
   if(props.index == 0) {
     newPost = (
       <img className="blog_img_new-post" src="/assets/tnb_new_post_2.png" alt="New Post" />
     );
     link = (
-      <Link to={{ pathname: "/blog/article/" + props.permalink, state: { newItem: true, postSequence: props.postSequence } }}>Keep reading<LinkArrow /></Link>
+      <Link to={{ pathname: path + props.permalink, state: { newItem: true, postSequence: props.postSequence } }}>Keep reading<LinkArrow /></Link>
     );
   } else {
     newPost = (
       <></>
     );
     link = (
-      <Link to={{ pathname: "/blog/article/" + props.permalink, state: { newItem: false, postSequence: props.postSequence } }}>Keep reading<LinkArrow /></Link>
+      <Link to={{ pathname: path + props.permalink, state: { newItem: false, postSequence: props.postSequence } }}>Keep reading<LinkArrow /></Link>
     );
   }
 

@@ -8,6 +8,7 @@ import { Services } from "./Services";
 import { Nutrition } from "./Nutrition";
 import { Blog } from "./Blog";
 import { BlogArticle } from "./BlogArticle";
+import { Recipe} from "./Recipe";
 import { Contact } from "./Contact";
 import { Privacy } from "./Privacy";
 import { Terms } from "./Terms";
@@ -29,6 +30,7 @@ export class Content extends Component {
         <Route path="/nutrition" component={Nutrition} />
         <Route exact path="/blog" component={Blog} />
         <Route path="/blog/article/:permalink" component={BlogArticle} />
+        <Route path="/recipes/:permalink" component={Recipe} />
         <Route path="/contact" component={Contact} />
         <Route path="/terms" component={Terms} />
         <Route path="/privacy" component={Privacy} />

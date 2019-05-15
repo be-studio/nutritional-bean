@@ -181,6 +181,10 @@ button {
   vertical-align: 2px;
 }
 
+._txt_sans {
+  font-family: $sansText !important;
+}
+
 ._txt_green-mono {
   font: 13px $sansText;
   color: $beanGreen;

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\BlogCategory;
+use App\RecipeCategory;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -148,10 +150,35 @@ class BlogRecipeController extends Controller {
 
 
   /**
+   * @param $category
    * @return JsonResponse
    * @throws BindingResolutionException
    */
-  public function getAllRecipes() {
+  public function getBlogArticlesByCategory($category): JsonResponse {
+    $filtered = [];
+
+    $articles = BlogArticle::where("publish", true)->get();
+
+    foreach($articles as $article) {
+      $cats = $article->categories()->get()->toArray();
+      $hasCat = false;
+
+      foreach($cats as $cat) {
+        if($cat["name"] == $category) {
+          $filtered[] = $article;
+        }
+      }
+    }
+
+    return response()->json($filtered, 200);
+  }
+
+
+  /**
+   * @return JsonResponse
+   * @throws BindingResolutionException
+   */
+  public function getAllRecipes(): JsonResponse {
     $recipes = Recipe::where("publish", true)->get();
 
     return response()->json($recipes);
@@ -169,5 +196,52 @@ class BlogRecipeController extends Controller {
     $article->tags;
 
     return response()->json($article, 200);
+  }
+
+
+  public function getBlogCategories() {
+    $cats = BlogCategory::all();
+
+    return response()->json($cats, 200);
+  }
+
+
+  public function getRecipe($permalink) {
+    $recipe = Recipe::where("permalink", $permalink)->first();
+
+    if(!$recipe) {
+      return response()->json("ERROR: Unable to retrieve recipe with the specified permalink.", 404);
+    }
+
+    $recipe->categories;
+
+    return response()->json($recipe, 200);
+  }
+
+
+  public function getRecipesByCategory($category): JsonResponse {
+    $filtered = [];
+
+    $recipes = Recipe::where("publish", true)->get();
+
+    foreach($recipes as $recipe) {
+      $cats = $recipe->categories()->get()->toArray();
+      $hasCat = false;
+
+      foreach($cats as $cat) {
+        if($cat["name"] == $category) {
+          $filtered[] = $recipe;
+        }
+      }
+    }
+
+    return response()->json($filtered, 200);
+  }
+
+
+  public function getRecipeCategories() {
+    $cats = RecipeCategory::all();
+
+    return response()->json($cats, 200);
   }
 }

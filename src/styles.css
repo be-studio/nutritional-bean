@@ -134,6 +134,9 @@ button {
   font: 0.5em "bean";
   vertical-align: 2px; }
 
+._txt_sans {
+  font-family: "Space Mono", "Courier", monospace !important; }
+
 ._txt_green-mono {
   font: 13px "Space Mono", "Courier", monospace;
   color: #57ab53; }
@@ -1134,6 +1137,38 @@ button {
   width: 80%;
   margin: 0 auto; }
 
+.blog-menu_ctr {
+  width: 100%;
+  font: 11px "Space Mono", "Courier", monospace;
+  text-align: center;
+  margin: -50px 0 100px; }
+  .blog-menu_ctr ul {
+    list-style-type: none;
+    margin: 0 0 10px;
+    padding: 0; }
+    .blog-menu_ctr ul li {
+      display: inline-block;
+      font-size: 12px;
+      text-indent: 0;
+      list-style-position: initial;
+      margin: 0 10px; }
+      .blog-menu_ctr ul li::before {
+        content: "";
+        margin: 0; }
+
+.blog-menu_lst_filters a,
+.blog-menu_lst_recipe-filters a {
+  background-color: transparent !important;
+  border: 0; }
+  .blog-menu_lst_filters a:hover,
+  .blog-menu_lst_recipe-filters a:hover {
+    border-bottom: 1px solid #57ab53; }
+
+.blog-menu_lst_recipe-filters a {
+  color: #2c3042; }
+  .blog-menu_lst_recipe-filters a:hover {
+    color: #57ab53 !important; }
+
 .blog_grd_item {
   padding-bottom: 50px; }
   .blog_grd_item > div {
@@ -1263,6 +1298,12 @@ button {
       text-align: right; }
     .blog-nav_ctr div img {
       width: 50px; }
+
+.recipe_ctr_ingredients ul {
+  list-style-type: none !important; }
+  .recipe_ctr_ingredients ul li::before {
+    content: "";
+    margin: 0; }
 
 .contact_ctr_content {
   width: 50%;

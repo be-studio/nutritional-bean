@@ -3,7 +3,8 @@ import axios from "axios";
 
 import { Masonry } from "./Masonry";
 import { Title } from "./Title";
-import { BlogItem } from "./BlogItem";
+import { BlogMenu } from "./BlogMenu";
+import { BlogArticles } from "./BlogArticles";
 import { Loader } from "./Loader";
 
 export class Blog extends Component {
@@ -20,40 +21,62 @@ export class Blog extends Component {
 
 
   componentDidMount() {
-    this.getBlogArticlesRecipes();
+    this.getBlogArticlesRecipes("all");
   }
 
 
-  getBlogArticlesRecipes() {
+  getBlogArticlesRecipes(category, recipeCategory) {
+    const recipeUrl = recipeCategory == "all" ? "/recipes" : "/recipes/category/" + recipeCategory;
+    const url = category == "all" ? "/blog/articles-recipes" : category == "recipes" ? recipeUrl : "/blog/category/" + category;
+
     axios.get(process.env.REACT_APP_API_URL + "/utility/csrf", {
-      withCredentials: true
-    })
-    .then(() => {
-      axios.get(process.env.REACT_APP_API_URL + "/blog/articles-recipes", {
-          withCredentials: true
+        withCredentials: true
       })
-      .then(response => {
-        this.setState({
-          articles: response.data.articles,
-          recipes: response.data.recipes
-        });
+      .then(() => {
+        axios.get(process.env.REACT_APP_API_URL + url, {
+            withCredentials: true
+          })
+          .then(response => {
 
-        let articlesRecipes = this.processBlogArticlesRecipes(this.state.articles, this.state.recipes);
-        articlesRecipes = this.sortByDate(articlesRecipes);
+            if(category == "all") {
+              this.setState({
+                articles: response.data.articles,
+                recipes: response.data.recipes
+              });
 
-        this.setState({
-          articlesRecipes: articlesRecipes
-        });
+              let articlesRecipes = this.processBlogArticlesRecipes(this.state.articles, this.state.recipes);
+              articlesRecipes = this.sortByDate(articlesRecipes);
+
+              this.setState({
+                articlesRecipes
+              });
+            } else if(category == "recipes") {
+              let recipes = this.processBlogArticlesRecipes(null, response.data);
+              recipes = this.sortByDate(recipes);
+
+              this.setState({
+                articlesRecipes: recipes
+              });
+            } else {
+              let articles = this.processBlogArticlesRecipes(response.data);
+              articles = this.sortByDate(articles);
+
+              this.setState({
+                articlesRecipes: articles
+              });
+            }
+
+          })
+          .catch(() => alert(this.state.errorMsg));
+
       })
       .catch(() => alert(this.state.errorMsg));
-    })
-    .catch(() => alert(this.state.errorMsg));
   }
 
 
   processBlogArticlesRecipes(articles, recipes) {
-    let articlesArr;
-    let recipesArr;
+    let articlesArr = [];
+    let recipesArr = [];
 
     if(articles) {
       articlesArr = articles.map(article => {
@@ -77,7 +100,8 @@ export class Blog extends Component {
           poster: article.poster,
           updated: article.updated_at,
           epoch: new Date(article.updated_at).getTime(),
-          categories: categoryStr
+          categories: categoryStr,
+          type: "article"
         };
       });
     }
@@ -90,7 +114,8 @@ export class Blog extends Component {
         poster: recipe.poster,
         updated: recipe.updated_at,
         epoch: new Date(recipe.updated_at).getTime(),
-        categories: "Recipe - "
+        categories: "Recipe - ",
+        type: "recipe"
       }));
     }
 
@@ -125,17 +150,9 @@ export class Blog extends Component {
     return (
       <div className="blog_ctr">
         <Title page="Blog" />
+        <BlogMenu callback={this.getBlogArticlesRecipes.bind(this)} />
 
-        <Masonry gap={60}>
-          {
-            this.state.articlesRecipes.map((articleRecipe, index) => {
-              //noinspection ThisExpressionReferencesGlobalObjectJS
-              return (
-                <BlogItem key={index} itemKey={index} index={index} title={articleRecipe.title} permalink={articleRecipe.permalink} poster={articleRecipe.poster} excerpt={articleRecipe.excerpt} categories={articleRecipe.categories} updated={this.formatDate(articleRecipe.updated)} />
-              );
-            })
-          }
-        </Masonry>
+        <BlogArticles articlesRecipes={this.state.articlesRecipes} />
       </div>
     );
   }

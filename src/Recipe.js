@@ -9,17 +9,19 @@ import { Title } from "./Title";
 import { Loader } from "./Loader";
 
 
-export class BlogArticle extends Component {
+export class Recipe extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       title: null,
       poster: null,
+      ingredients: null,
+      servings: null,
+      method: null,
       content: null,
       updated: null,
       categories: null,
-      tags: null,
       postSequence: null,
       loaded: false
     };
@@ -30,62 +32,63 @@ export class BlogArticle extends Component {
     window.scroll(0, 0);
 
     axios.get(process.env.REACT_APP_API_URL + "/utility/csrf", {
-      withCredentials: true
-    })
-    .then(() => {
-      axios.get(process.env.REACT_APP_API_URL + "/blog/article/" + this.props.match.params.permalink, {
         withCredentials: true
       })
-      .then(response => {
-        const article = response.data;
+      .then(() => {
+        axios.get(process.env.REACT_APP_API_URL + "/recipe/" + this.props.match.params.permalink, {
+            withCredentials: true
+          })
+          .then(response => {
+            const recipe = response.data;
 
-        const formatCats = article.categories.map(cat => cat.name);
-        const formatTags = article.tags.map(tag => tag.name);
+            const formatCats = recipe.categories.map(cat => cat.name);
 
-        this.setState({
-          title: article.title,
-          poster: article.poster,
-          content: article.content,
-          updated: this.formatDate(article.updated_at),
-          categories: this.generateCatsTagsStr(formatCats),
-          tags: formatTags
-        });
+            this.setState({
+              title: recipe.title,
+              poster: recipe.poster,
+              ingredients: recipe.ingredients,
+              servings: recipe.servings,
+              method: recipe.method,
+              content: recipe.content,
+              updated: this.formatDate(recipe.updated_at),
+              categories: this.generateCatsTagsStr(formatCats),
+            });
 
-        this.getPrevNextPost();
+            this.getPrevNextPost();
+          })
+          .catch(() => alert("There has been a problem retrieving the recipe."));
       })
-      .catch(() => alert("There has been a problem retrieving the blog article."));
-    })
-    .catch(() => alert("There has been a problem."));
+      .catch(() => alert("There has been a problem."));
   }
 
 
   getPrevNextPost() {
     axios.get(process.env.REACT_APP_API_URL + "/utility/csrf", {
-      withCredentials: true
-    })
-    .then(() => {
-    axios.get(process.env.REACT_APP_API_URL + "/blog/prevnextpost/" + this.props.match.params.permalink, {
         withCredentials: true
       })
-      .then(response => {
-        const posts = response.data;
-        this.setState({
-          postSequence: {
-            prevTitle: posts.prev.title,
-            prevPermalink: posts.prev.permalink,
-            prevPoster: posts.prev.poster,
-            prevType: posts.prev.type,
-            nextTitle: posts.next.title,
-            nextPermalink: posts.next.permalink,
-            nextPoster: posts.next.poster,
-            nextType: posts.next.type
-          },
-          loaded: true
-        });
+      .then(() => {
+        axios.get(process.env.REACT_APP_API_URL + "/blog/prevnextpost/" + this.props.match.params.permalink, {
+            withCredentials: true
+          })
+          .then(response => {
+            const posts = response.data;
+            this.setState({
+              postSequence: {
+                prevTitle: posts.prev.title,
+                prevPermalink: posts.prev.permalink,
+                prevPoster: posts.prev.poster,
+                prevType: posts.prev.type,
+                nextTitle: posts.next.title,
+                nextPermalink: posts.next.permalink,
+                nextPoster: posts.next.poster,
+                nextType: posts.next.type
+              },
+              loaded: true
+            });
+          })
+          .catch(() => alert("There has been a problem retrieving the next and/or previous posts. Please try again later."));
       })
       .catch(() => alert("There has been a problem retrieving the next and/or previous posts. Please try again later."));
-    })
-    .catch(() => alert("There has been a problem retrieving the next and/or previous posts. Please try again later."));
   }
 
 
@@ -133,27 +136,6 @@ export class BlogArticle extends Component {
   }
 
 
-  checkTags() {
-    if(!this.state.tags || this.state.tags == '') {
-      return (
-        <>
-          <em>None</em>
-        </>
-      );
-    }
-
-    return (
-      <>
-        {
-          this.state.tags.map(tag => (
-            <span className="blog-article_ctr_tag">{tag}</span>
-          ))
-        }
-      </>
-    );
-  }
-
-
   render() {
     const posterStyle = {
       backgroundImage: "url('" + process.env.REACT_APP_API_PUBLIC_URL + this.state.poster + "')"
@@ -194,13 +176,18 @@ export class BlogArticle extends Component {
 
               {newDiv}
 
-              <p className="blog-article_txt_cat-updated">{this.checkCats()} {this.state.updated}</p>
+              <p className="blog-article_txt_cat-updated">Recipe/{this.checkCats()} {this.state.updated}</p>
 
               <div className="blog-article_ctr_body">
-                <SanitizedHTML allowedTags={["h1", "h2", "h3", "p", "pre", "blockquote", "span", "ul", "ol", "li", "img", "figure", "figcaption", "strong", "em", "b", "i", "u"]} html={this.state.content} />
+                <h1>Ingredients:</h1>
+                <p>Enough for {this.state.servings} {this.state.servings == 1 ? "serving" : "servings"}.</p>
+                <div className="recipe_ctr_ingredients _txt_sans">
+                  <SanitizedHTML allowedTags={["p", "span", "ul", "li", "strong", "em", "b", "i", "u"]} html={this.state.ingredients} />
+                </div>
 
-                <div className="blog-article_ctr_tags">
-                  Tags: {this.checkTags()}
+                <h1>Method:</h1>
+                <div className="recipe_ctr_method">
+                  <SanitizedHTML allowedTags={["p", "span", "ul", "ol", "li", "strong", "em", "b", "i", "u"]} html={this.state.method} />
                 </div>
               </div>
 

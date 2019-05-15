@@ -28,7 +28,7 @@ export function BlogNavigator(props) {
       prev = (
         <>
           {image}
-          <a href={"/recipe/" + seq.prevPermalink}>Previous Post</a>
+          <a href={"/recipes/" + seq.prevPermalink}>Previous Post</a>
         </>
       );
     }
@@ -54,7 +54,7 @@ export function BlogNavigator(props) {
     } else {
       next = (
         <>
-          <a href={"/recipe/" + seq.nextPermalink}>Next Post</a>
+          <a href={"/recipes/" + seq.nextPermalink}>Next Post</a>
           {image}
         </>
       );
