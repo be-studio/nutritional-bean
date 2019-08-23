@@ -1135,6 +1135,7 @@ button {
 
 .blog_ctr {
   width: 80%;
+  min-height: calc(100vh - 396px);
   margin: 0 auto; }
   @media (max-width: 800px) {
     .blog_ctr {
@@ -1207,9 +1208,6 @@ button {
   background-position: center;
   background-size: cover;
   z-index: -1; }
-  @media (max-width: 800px) {
-    .blog-article_ctr_poster {
-      display: none; } }
 
 .blog-article_img_new {
   position: absolute;

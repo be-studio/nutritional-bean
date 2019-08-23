@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export function BlogNavigator(props) {
-  console.log(props.postSequence);
-
   const seq = props.postSequence;
   let prev;
   let next;
@@ -21,14 +19,14 @@ export function BlogNavigator(props) {
       prev = (
         <>
           {image}
-          <a href={"/blog/article/" + seq.prevPermalink}>Previous Post</a>
+          <Link to={"/blog/article/" + seq.prevPermalink}>Previous Post</Link>
         </>
       );
     } else {
       prev = (
         <>
           {image}
-          <a href={"/recipes/" + seq.prevPermalink}>Previous Post</a>
+          <Link to={"/recipes/" + seq.prevPermalink}>Previous Post</Link>
         </>
       );
     }
@@ -47,14 +45,14 @@ export function BlogNavigator(props) {
     if(seq.nextType == "article") {
       next = (
         <>
-          <a href={"/blog/article/" + seq.nextPermalink}>Next Post</a>
+          <Link to={"/blog/article/" + seq.nextPermalink}>Next Post</Link>
           {image}
         </>
       );
     } else {
       next = (
         <>
-          <a href={"/recipes/" + seq.nextPermalink}>Next Post</a>
+          <Link to={"/recipes/" + seq.nextPermalink}>Next Post</Link>
           {image}
         </>
       );

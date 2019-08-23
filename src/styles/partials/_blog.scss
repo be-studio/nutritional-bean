@@ -1,5 +1,6 @@
 .blog_ctr {
   width: 80%;
+  min-height: calc(100vh - 396px);
   margin: 0 auto;
 
   @media(max-width: $tablet) {
@@ -104,10 +105,6 @@
     size: cover;
   }
   z-index: -1;
-
-  @media(max-width: $tablet) {
-    display: none;
-  }
 }
 
 .blog-article_img_new {

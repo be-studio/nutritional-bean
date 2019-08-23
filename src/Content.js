@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, withRouter } from "react-router-dom";
 import ReactCursorPosition from "react-cursor-position";
 
 import { Home } from "./Home";
@@ -28,8 +28,8 @@ export class Content extends Component {
         <Route path="/about" component ={About} />
         <Route path="/services" component={Services} />
         <Route path="/nutrition" component={Nutrition} />
-        <Route exact path="/blog" component={Blog} />
-        <Route path="/blog/article/:permalink" component={BlogArticle} />
+        <Route path="/blog/article/:permalink" component={withRouter(BlogArticle)} />
+        <Route exact path="/blog-recipes" component={Blog} />
         <Route path="/recipes/:permalink" component={Recipe} />
         <Route path="/contact" component={Contact} />
         <Route path="/terms" component={Terms} />
