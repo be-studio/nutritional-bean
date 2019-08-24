@@ -1227,6 +1227,9 @@ button {
   width: 80%;
   margin: 0 auto;
   padding: 80px 0; }
+  @media (max-width: 800px) {
+    .blog-article_ctr_content {
+      width: 90%; } }
 
 .blog-article_txt_cat-updated {
   font: 14px "Space Mono", "Courier", monospace;
@@ -1237,6 +1240,9 @@ button {
   font-family: "Domaine", "Georgia", "Times New Roman", serif;
   font-size: 14px;
   margin: 80px auto; }
+  @media (max-width: 800px) {
+    .blog-article_ctr_body {
+      width: 100%; } }
   .blog-article_ctr_body h1 {
     font-size: 22px;
     text-transform: uppercase;
@@ -1294,6 +1300,9 @@ button {
   display: flex;
   width: 60%;
   margin: 0 auto; }
+  @media (max-width: 800px) {
+    .blog-nav_ctr {
+      width: 100%; } }
   .blog-nav_ctr div {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 50%;

@@ -108,7 +108,9 @@ export class BlogArticle extends Component {
 
 
   formatDate(date) {
-    const rawDate = new Date(date);
+    // Need to substitute space in date string with 'T' to deal with Safari's
+    // mishandling of the date.
+    const rawDate = new Date(date.replace(/\s/, 'T'));
 
     const day = rawDate.getDate() < 10 ? "0" + rawDate.getDate() : rawDate.getDate();
     const adjMonth = rawDate.getMonth() + 1;
