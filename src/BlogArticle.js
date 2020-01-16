@@ -199,7 +199,7 @@ export class BlogArticle extends Component {
               <p className="blog-article_txt_cat-updated">{this.checkCats()} {this.state.updated}</p>
 
               <div className="blog-article_ctr_body">
-                <SanitizedHTML allowedTags={["h1", "h2", "h3", "p", "pre", "blockquote", "span", "ul", "ol", "li", "img", "figure", "figcaption", "strong", "em", "b", "i", "u"]} html={this.state.content} />
+                <SanitizedHTML allowedTags={["h1", "h2", "h3", "p", "pre", "blockquote", "span", "ul", "ol", "li", "img", "figure", "figcaption", "strong", "em", "b", "i", "u", "a"]} html={this.state.content} />
 
                 <div className="blog-article_ctr_tags">
                   Tags: {this.checkTags()}

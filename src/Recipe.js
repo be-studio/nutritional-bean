@@ -182,12 +182,12 @@ export class Recipe extends Component {
                 <h1>Ingredients:</h1>
                 <p>Enough for {this.state.servings} {this.state.servings == 1 ? "serving" : "servings"}.</p>
                 <div className="recipe_ctr_ingredients _txt_sans">
-                  <SanitizedHTML allowedTags={["p", "span", "ul", "li", "strong", "em", "b", "i", "u"]} html={this.state.ingredients} />
+                  <SanitizedHTML allowedTags={["p", "span", "ul", "li", "strong", "em", "b", "i", "u", "a"]} html={this.state.ingredients} />
                 </div>
 
                 <h1>Method:</h1>
                 <div className="recipe_ctr_method">
-                  <SanitizedHTML allowedTags={["p", "span", "ul", "ol", "li", "strong", "em", "b", "i", "u"]} html={this.state.method} />
+                  <SanitizedHTML allowedTags={["p", "span", "ul", "ol", "li", "strong", "em", "b", "i", "u", "a"]} html={this.state.method} />
                 </div>
               </div>
 
