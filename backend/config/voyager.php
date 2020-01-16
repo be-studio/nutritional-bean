@@ -247,4 +247,13 @@ return [
        'allow_create_folder' => true,
        'allow_rename'        => true,
    ],
+
+    'assets_path' => '/vendor/tcg/voyager/assets',
+
+    'additional_css' => [
+        "css/admin.css"
+    ],
+    'additional_js' => [
+        //'js/custom.js',
+    ]
 ];
