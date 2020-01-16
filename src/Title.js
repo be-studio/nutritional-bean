@@ -35,6 +35,12 @@ export function Title(props) {
     };
   }
 
+  if(props.reduceMargin) {
+    titleCtrStyle = {
+      marginBottom: "20px"
+    };
+  }
+
   return (
     <div className="title_ctr" style={titleCtrStyle}>
       <Link to="/" title="The Nutritional Bean">

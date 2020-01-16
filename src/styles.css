@@ -1333,6 +1333,18 @@ button {
     width: 90% !important;
     margin: 0 auto; } }
 
+.bookings_ctr {
+  padding-bottom: 0; }
+
+.bookings_fra {
+  width: 100%;
+  min-height: 300px;
+  height: calc(100vh - 492px);
+  border: 0; }
+  @media (max-width: 800px) {
+    .bookings_fra {
+      height: calc(100vh - 140px); } }
+
 .contact_ctr_content {
   width: 50%;
   margin: 0 auto; }

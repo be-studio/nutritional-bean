@@ -40,10 +40,10 @@ export class FooterMenu extends Component {
             <Link to="/about" title="About Harriet">About Harriet</Link>
           </li>
           <li>
-            <a href={noHref} onClick={this.showAlert} title="Blog">Blog</a>
+            <Link to="/blog-recipes" title="Blog">Blog</Link>
           </li>
           <li>
-            <a href={noHref} onClick={this.showAlert} title="Bookings">Bookings</a>
+            <Link to="/bookings" title="Bookings">Bookings</Link>
           </li>
         </ul>
       </div>

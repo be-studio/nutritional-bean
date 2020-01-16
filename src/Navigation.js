@@ -83,7 +83,7 @@ export class Navigation extends Component {
                   <Link to="/blog-recipes" onClick={this.closeMenu}>Blog</Link>
                 </li>
                 <li>
-                  <a href={noHref} onClick={this.showAlert}>Bookings</a>
+                  <Link to="/bookings" onClick={this.closeMenu}>Bookings</Link>
                 </li>
                 <li>
                   <Link to="/privacy" onClick={this.closeMenu}>Privacy</Link>

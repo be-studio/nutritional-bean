@@ -8,7 +8,8 @@ import { Services } from "./Services";
 import { Nutrition } from "./Nutrition";
 import { Blog } from "./Blog";
 import { BlogArticle } from "./BlogArticle";
-import { Recipe} from "./Recipe";
+import { Recipe } from "./Recipe";
+import { Bookings } from "./Bookings";
 import { Contact } from "./Contact";
 import { Privacy } from "./Privacy";
 import { Terms } from "./Terms";
@@ -31,6 +32,7 @@ export class Content extends Component {
         <Route path="/blog/article/:permalink" component={withRouter(BlogArticle)} />
         <Route exact path="/blog-recipes" component={Blog} />
         <Route path="/recipes/:permalink" component={Recipe} />
+        <Route path="/bookings" component={Bookings} />
         <Route path="/contact" component={Contact} />
         <Route path="/terms" component={Terms} />
         <Route path="/privacy" component={Privacy} />
