@@ -99,7 +99,7 @@ export class Blog extends Component {
           excerpt: article.excerpt,
           poster: article.poster,
           updated: article.updated_at,
-          epoch: new Date(article.updated_at).getTime(),
+          epoch: new Date(article.updated_at.replace(/-/g, '/')).getTime(),
           categories: categoryStr,
           type: "article"
         };
@@ -113,7 +113,7 @@ export class Blog extends Component {
         excerpt: recipe.excerpt,
         poster: recipe.poster,
         updated: recipe.updated_at,
-        epoch: new Date(recipe.updated_at).getTime(),
+        epoch: new Date(recipe.updated_at.replace(/-/g, '/')).getTime(),
         categories: "Recipe - ",
         type: "recipe"
       }));
