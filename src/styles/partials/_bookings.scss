@@ -1,0 +1,14 @@
+.bookings_ctr {
+  padding-bottom: 0;
+}
+
+.bookings_fra {
+  width: 100%;
+  min-height: 300px;
+  height: calc(100vh - 492px);
+  border: 0;
+
+  @media(max-width: $tablet) {
+    height: calc(100vh - 140px);
+  }
+}
