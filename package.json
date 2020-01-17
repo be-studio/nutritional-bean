@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "kute.js": "^1.6.6",
+    "masonic": "^2.0.19",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
