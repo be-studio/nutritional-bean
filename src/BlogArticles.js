@@ -60,11 +60,11 @@ export class BlogArticles extends Component {
       return (
         <>
           <div className="blog-articles_ctr">
-            <Masonry items={blogArticles} render={MasonryCard} />
+            <Masonry items={blogArticles} render={MasonryCard} columnCount={2} columnGutter={20} />
           </div>
 
           <div className="blog-articles_ctr_mobile">
-            <Masonry items={blogArticles} render={MasonryCard} />
+            <Masonry items={blogArticles} render={MasonryCard} columnCount={1} columnGutter={0} />
           </div>
         </>
       );
