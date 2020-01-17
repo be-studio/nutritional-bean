@@ -1,12 +1,23 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-import { Masonry } from "./Masonry";
 import { Title } from "./Title";
 import { BlogMenu } from "./BlogMenu";
 import { BlogArticles } from "./BlogArticles";
 import { Loader } from "./Loader";
 
+
+/**
+ * BE WEB APPLICATION
+ * THE NUTRITIONAL BEAN
+ *
+ * Blog Component
+ *
+ * @author Eric L., Birute M.
+ * @copyright 2018-2020, BE
+ * @see https://www.its-be-studio.com
+ * @version 1.x
+ */
 export class Blog extends Component {
   constructor(props) {
     super(props);
@@ -21,13 +32,19 @@ export class Blog extends Component {
 
 
   componentDidMount() {
+    window.scroll(0, 0);
+
     this.getBlogArticlesRecipes("all");
   }
 
 
+  /**
+   * @param category
+   * @param recipeCategory
+   */
   getBlogArticlesRecipes(category, recipeCategory) {
-    const recipeUrl = recipeCategory == "all" ? "/recipes" : "/recipes/category/" + recipeCategory;
-    const url = category == "all" ? "/blog/articles-recipes" : category == "recipes" ? recipeUrl : "/blog/category/" + category;
+    const recipeUrl = recipeCategory === "all" ? "/recipes" : "/recipes/category/" + recipeCategory;
+    const url = category === "all" ? "/blog/articles-recipes" : category === "recipes" ? recipeUrl : "/blog/category/" + category;
 
     axios.get(process.env.REACT_APP_API_URL + "/utility/csrf", {
         withCredentials: true
@@ -38,7 +55,7 @@ export class Blog extends Component {
           })
           .then(response => {
 
-            if(category == "all") {
+            if(category === "all") {
               this.setState({
                 articles: response.data.articles,
                 recipes: response.data.recipes
@@ -50,7 +67,7 @@ export class Blog extends Component {
               this.setState({
                 articlesRecipes
               });
-            } else if(category == "recipes") {
+            } else if(category === "recipes") {
               let recipes = this.processBlogArticlesRecipes(null, response.data);
               recipes = this.sortByDate(recipes);
 
@@ -74,6 +91,11 @@ export class Blog extends Component {
   }
 
 
+  /**
+   * @param articles
+   * @param recipes
+   * @returns {*[]}
+   */
   processBlogArticlesRecipes(articles, recipes) {
     let articlesArr = [];
     let recipesArr = [];
@@ -93,6 +115,7 @@ export class Blog extends Component {
           });
         }
 
+        // noinspection JSUnresolvedVariable,JSUnresolvedVariable
         return {
           title: article.title,
           permalink: article.permalink,
@@ -107,6 +130,7 @@ export class Blog extends Component {
     }
 
     if(recipes) {
+      // noinspection JSUnresolvedVariable,JSUnresolvedVariable
       recipesArr = recipes.map(recipe => ({
         title: recipe.title,
         permalink: recipe.permalink,
@@ -123,19 +147,12 @@ export class Blog extends Component {
   }
 
 
+  /**
+   * @param articlesRecipes
+   * @returns {any}
+   */
   sortByDate(articlesRecipes) {
     return articlesRecipes.sort((a, b) => b.epoch - a.epoch);
-  }
-
-
-  formatDate(date) {
-    const rawDate = new Date(date);
-
-    const day = rawDate.getDate() < 10 ? "0" + rawDate.getDate() : rawDate.getDate();
-    const adjMonth = rawDate.getMonth() + 1;
-    const month = adjMonth < 10 ? "0" + adjMonth : adjMonth;
-
-    return `${day}.${month}.${rawDate.getFullYear()}`;
   }
 
 
