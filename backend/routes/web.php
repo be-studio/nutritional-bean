@@ -30,6 +30,8 @@ Route::get("/recipes/category/{category}", "BlogRecipeController@getRecipesByCat
 Route::get("/recipe/{permalink}", "BlogRecipeController@getRecipe");
 Route::post("/contact", "MailController@sendMail");
 
+Route::get("/version", "VersionController@getVersion");
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
