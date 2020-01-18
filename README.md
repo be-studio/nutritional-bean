@@ -38,6 +38,10 @@ This project has been constructed and maintained using the following technologie
 |Laravel|5.8.3|![Packagist Version](https://img.shields.io/packagist/v/laravel/framework?label=laravel)|
 |Voyager|1.2.7|![Packagist Version](https://img.shields.io/packagist/v/tcg/voyager?label=voyager)|
 
+## Repos
+
+The primary location for this project's repository is at Azure DevOps along with all of the pull requests (opened and closed). Please contact BE Studio at [hello@its-be-studio.com](mailto:hello@its-be-studio.com) if you want access to this specific repo. A copy is located here at GitHub excluding the pull requests.
+
 ## Enquiries
 
-If you wish to find out more about this or other projects built by BE Studio, or more about our work then please contact us at [hello@its-be-studio.com](mailto:hello@its-be-studio.com).
+If you wish to find out more about this or other projects built by BE Studio, or more about our work or the authors then please contact us at [hello@its-be-studio.com](mailto:hello@its-be-studio.com). Other information including credentials and CVs can be provided on request.
