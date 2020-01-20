@@ -43,51 +43,52 @@ export class Blog extends Component {
    * @param recipeCategory
    */
   getBlogArticlesRecipes(category, recipeCategory) {
+    // noinspection JSIgnoredPromiseFromCall
+    this.downloadBlogArticlesRecipes(this.getApiUrl(category, recipeCategory), category);
+  }
+
+
+  /**
+   * @param category
+   * @param recipeCategory
+   * @returns {string}
+   */
+  getApiUrl(category, recipeCategory) {
     const recipeUrl = recipeCategory === "all" ? "/recipes" : "/recipes/category/" + recipeCategory;
-    const url = category === "all" ? "/blog/articles-recipes" : category === "recipes" ? recipeUrl : "/blog/category/" + category;
+    return category === "all" ? "/blog/articles-recipes" : category === "recipes" ? recipeUrl : "/blog/category/" + category;
+  }
 
-    axios.get(process.env.REACT_APP_API_URL + "/utility/csrf", {
-        withCredentials: true
-      })
-      .then(() => {
-        axios.get(process.env.REACT_APP_API_URL + url, {
-            withCredentials: true
-          })
-          .then(response => {
 
-            if(category === "all") {
-              this.setState({
-                articles: response.data.articles,
-                recipes: response.data.recipes
-              });
+  /**
+   * @param url
+   * @param category
+   * @returns {Promise<void>}
+   */
+  async downloadBlogArticlesRecipes(url, category) {
+    await axios.get(process.env.REACT_APP_API_URL + url, {
+      withCredentials: true
+    })
+    .then(response => {
+      const processed = this.collateData(response.data, category);
+      this.setAllDataInState(processed);
+    })
+    .catch(() => alert(this.state.errorMsg));
+  }
 
-              let articlesRecipes = this.processBlogArticlesRecipes(this.state.articles, this.state.recipes);
-              articlesRecipes = this.sortByDate(articlesRecipes);
 
-              this.setState({
-                articlesRecipes
-              });
-            } else if(category === "recipes") {
-              let recipes = this.processBlogArticlesRecipes(null, response.data);
-              recipes = this.sortByDate(recipes);
-
-              this.setState({
-                articlesRecipes: recipes
-              });
-            } else {
-              let articles = this.processBlogArticlesRecipes(response.data);
-              articles = this.sortByDate(articles);
-
-              this.setState({
-                articlesRecipes: articles
-              });
-            }
-
-          })
-          .catch(() => alert(this.state.errorMsg));
-
-      })
-      .catch(() => alert(this.state.errorMsg));
+  /**
+   * @param data
+   * @param category
+   * @returns {{recipes: (*|null), articlesRecipes: (*[]), articles: (*|null)}}
+   */
+  collateData(data, category) {
+    return {
+      articles: category === "all" ? data.articles : null,
+      recipes: category === "all" ? data.recipes : null,
+      articlesRecipes: category === "all" ? this.processBlogArticlesRecipes(data.articles, data.recipes)
+        : category === "articles" ? this.processBlogArticlesRecipes(data, null)
+        : this.processBlogArticlesRecipes(null, data)
+    }
   }
 
 
@@ -143,16 +144,24 @@ export class Blog extends Component {
       }));
     }
 
-    return articlesArr.concat(recipesArr);
+    return this.sortByDate(articlesArr.concat(recipesArr));
   }
 
 
   /**
    * @param articlesRecipes
-   * @returns {any}
+   * @returns {*[]}
    */
   sortByDate(articlesRecipes) {
     return articlesRecipes.sort((a, b) => b.epoch - a.epoch);
+  }
+
+
+  /**
+   * @param processed
+   */
+  setAllDataInState(processed) {
+    this.setState(processed);
   }
 
 
