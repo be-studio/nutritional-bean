@@ -44,7 +44,9 @@ export class Blog extends Component {
    */
   getBlogArticlesRecipes(category, recipeCategory) {
     // noinspection JSIgnoredPromiseFromCall
-    this.downloadBlogArticlesRecipes(this.getApiUrl(category, recipeCategory), category);
+    this.downloadBlogArticlesRecipes(this.getApiUrl(category, recipeCategory), category)
+    .then()
+    .catch();
   }
 
 
