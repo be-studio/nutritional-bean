@@ -30,7 +30,8 @@ export class Home extends Component {
     super(props);
 
     this.state = {
-      marqueeItems: null
+      marqueeItems: null,
+      intro: ""
     };
   }
 
@@ -39,6 +40,7 @@ export class Home extends Component {
     window.scroll(0, 0);
 
     this.getMarqueeItems();
+    this.getIntro();
   }
 
 
@@ -56,16 +58,37 @@ export class Home extends Component {
         this.setState({
           marqueeItems: response.data
         });
-        console.log(this.state.marqueeItems);
       })
-      .catch(() => alert(errorMsg))
+      .catch(() => alert(errorMsg));
+    })
+    .catch(() => alert(errorMsg));
+  }
+
+
+  getIntro() {
+    const errorMsg = "There has been a problem retrieving certain data required for the home page. Please try again later.";
+
+    axios.get(process.env.REACT_APP_API_URL + "/utility/csrf", {
+      withCredentials: true
+    })
+    .then(() => {
+      axios.get(process.env.REACT_APP_API_URL + "/content/home", {
+        withCredentials: true
+      })
+      .then(response => {
+        this.setState({
+          intro: response.data[0].content
+        });
+        console.log(this.state.intro);
+      })
+      .catch(() => alert(errorMsg));
     })
     .catch(() => alert(errorMsg));
   }
 
 
   render() {
-    if(!this.state.marqueeItems) {
+    if(!this.state.marqueeItems || !this.state.intro) {
       return (
         <Loader />
       );
@@ -137,9 +160,7 @@ export class Home extends Component {
               </ScrollAnimation>
 
               <ScrollAnimation animateIn="fadeInDown">
-                <p className="home_txt_intro">
-                  a registered Nutritional Therapist, wife, mother and a Leith’s trained cook. I work with children and adults to restore health and wellbeing. My personal and primary mission is to educate, motivate and support you to make diet and lifestyle changes that work for you.
-                </p>
+                <SanitizedHTML className="home_txt_intro" html={this.state.intro} />
               </ScrollAnimation>
 
               <ScrollAnimation animateIn="fadeInDown">
